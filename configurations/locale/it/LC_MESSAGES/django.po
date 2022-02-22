@@ -1,0 +1,83 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-20 17:18+0100\n"
+"PO-Revision-Date: 2022-02-22 09:42+0000\n"
+"Last-Translator:   <admin@defynd.it>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.9.8\n"
+
+#: .\configurations\models.py:6 .\configurations\models.py:18
+#: .\configurations\models.py:30 .\configurations\models.py:42
+#: .\configurations\models.py:54 .\configurations\models.py:66
+#: .\configurations\models.py:78
+msgid "name"
+msgstr "nome"
+
+#: .\configurations\models.py:13
+msgid "area-type"
+msgstr ""
+
+#: .\configurations\models.py:14
+msgid "area-types"
+msgstr ""
+
+#: .\configurations\models.py:25
+msgid "constraint-type"
+msgstr ""
+
+#: .\configurations\models.py:26
+msgid "constraint-types"
+msgstr ""
+
+#: .\configurations\models.py:37
+msgid "culture-type"
+msgstr ""
+
+#: .\configurations\models.py:38
+msgid "culture-types"
+msgstr ""
+
+#: .\configurations\models.py:49
+msgid "reclamation-intervention-type"
+msgstr ""
+
+#: .\configurations\models.py:50
+msgid "reclamation-intervention-types"
+msgstr "tipologia_intervento_bonifica"
+
+#: .\configurations\models.py:61
+msgid "urban-destination"
+msgstr "destinazione_urbanistica "
+
+#: .\configurations\models.py:62
+msgid "urban-destinations"
+msgstr ""
+
+#: .\configurations\models.py:73
+msgid "dispute-matter"
+msgstr "materia_controversia"
+
+#: .\configurations\models.py:74
+msgid "dispute-matters"
+msgstr "materia_controversia"
+
+#: .\configurations\models.py:85
+msgid "dispute-object"
+msgstr "oggetto_controversia"
+
+#: .\configurations\models.py:86
+msgid "dispute-objects"
+msgstr "oggetto_controversia"

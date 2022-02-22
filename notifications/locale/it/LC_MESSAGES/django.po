@@ -1,0 +1,114 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-20 17:18+0100\n"
+"PO-Revision-Date: 2022-02-22 09:47+0000\n"
+"Last-Translator:   <admin@defynd.it>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.9.8\n"
+
+#: .\notifications\admin.py:46 .\notifications\models.py:57
+msgid "Possible Variables"
+msgstr ""
+
+#: .\notifications\mail.py:72
+msgid "invalid-header-found"
+msgstr ""
+
+#: .\notifications\models.py:41
+msgid "Notifications"
+msgstr ""
+
+#: .\notifications\models.py:42
+msgid "e-mail"
+msgstr ""
+
+#: .\notifications\models.py:43
+msgid "Recipients"
+msgstr ""
+
+#: .\notifications\models.py:44
+msgid ""
+"Separate with; for more than one email. If left blank,                      "
+"the model email will be used"
+msgstr ""
+
+#: .\notifications\models.py:46
+msgid "Notifications Type"
+msgstr "Tipo di notifiche"
+
+#: .\notifications\models.py:48
+msgid "Customer Registration"
+msgstr "Registrazione cliente"
+
+#: .\notifications\models.py:49
+msgid "Litigation Form"
+msgstr "Modulo di contenzioso"
+
+#: .\notifications\models.py:51
+msgid "Notifications On"
+msgstr "Notifiche attive"
+
+#: .\notifications\models.py:52
+msgid "Form Send"
+msgstr "Invia modulo"
+
+#: .\notifications\models.py:53
+msgid "Click On Url"
+msgstr ""
+
+#: .\notifications\models.py:55
+msgid "Subject"
+msgstr ""
+
+#: .\notifications\models.py:56
+msgid "Message"
+msgstr ""
+
+#: .\notifications\models.py:58
+msgid "Used In Message Field"
+msgstr ""
+
+#: .\notifications\models.py:63
+msgid "Email Notification"
+msgstr ""
+
+#: .\notifications\models.py:64
+msgid "Email Notifications"
+msgstr ""
+
+#: .\notifications\models.py:68
+msgid "Server Host"
+msgstr ""
+
+#: .\notifications\models.py:69
+msgid "Port"
+msgstr ""
+
+#: .\notifications\models.py:70
+msgid "Security Type"
+msgstr ""
+
+#: .\notifications\models.py:74
+msgid "User"
+msgstr ""
+
+#: .\notifications\models.py:75
+msgid "Password"
+msgstr ""
+
+#: .\notifications\models.py:81 .\notifications\models.py:82
+msgid "Outgoing Mail Server"
+msgstr ""

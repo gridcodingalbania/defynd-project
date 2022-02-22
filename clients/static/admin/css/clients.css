@@ -1,0 +1,35 @@
+.custom-dropdown {
+  width: fit-content;
+  float: right;
+  position: relative;
+  margin-top: 20px;
+}
+
+.custom-dropdown-content {
+  width: 100%;
+  margin-top: 1px;
+  display: none;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  position: absolute;
+}
+
+.custom-dropdown-option {
+  padding: 8px 20px;
+  width: 100%;
+  background: white;
+  user-select: none;
+  cursor: pointer;
+  display: block;
+}
+
+.custom-dropdown-option:hover {
+  background: lightgray;
+}
+
+.custom-toggle-dropdown {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 8px 20px;
+  background: white;
+  user-select: none;
+  cursor: pointer;
+}

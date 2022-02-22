@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+{% load i18n %}
+{% load static %}
+{% include 'material/includes/material_css.html' %}
+{% include 'material/includes/material_js.html' %}
+{% load material_form %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% translate "litigation" %}</title>
+      <!-- Compiled and minified JavaScript -->
+  <script type="text/javascript" src="/static/admin/js/vendor/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="/static/admin/js/jquery.init.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="module" src="{% static 'admin/js/litigation.js' %}"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+    $(document).ready(function(){
+      $('select').formSelect();
+    });
+  </script>
+
+      <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel = "stylesheet" href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel = "stylesheet" href = "{% static 'admin/css/litigation.css' %}">
+</head>
+
+<body>
+
+<div class="container" style="width:90%;">
+    <div class="col-lg-6" style="float:none;margin:auto;">
+      {% get_current_language as LANGUAGE_CODE %}
+      {% get_available_languages as LANGUAGES %}
+      {% get_language_info_list for LANGUAGES as languages%}
+      
+        <div class="custom-dropdown">
+          <div class="custom-toggle-dropdown" onclick="toggleLanguageDropDown()">
+            {% for lang in languages %}
+              {% if lang.code == language %}
+                {{ lang.name }}
+              {% endif %}
+            {% endfor %}
+          </div>
+            <div class="custom-dropdown-content" id="languageDropdown">
+              {% for lang in languages %}
+                <div>
+                  <a href="/litigation/{{lang.code}}" class="custom-dropdown-option" onclick="toggleLanguageDropDown()">
+                    {{lang.name}}
+                  </a>
+                </div>
+              {% endfor %}
+              
+            </div>
+        </div>
+
+
+        <div id="popup-container" style="display: none;width: 100%;height:100%;position:fixed;top:0;left:0;background:rgba(0, 0, 0, 0.4);z-index:2;">
+            <div style="border-radius:4px;box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;background:white;padding:10px 10px;position:absolute;top:50%;left:50%;transform: translate(-50%, -50%)">
+                <div style="width: 100%; font-size: 28px; margin-left: -3px; margin-top: -5px;">
+                    {% blocktranslate %} Thank You! {% endblocktranslate %}
+                </div>
+                <div style="font-size:16px;">
+                {% blocktranslate %} Thank you for your litigation, we will contact you soon! {% endblocktranslate %}
+                </div>
+                <div style="margin-top:16px;width:100%;display:flex;justify-content:space-between;align-items:center">
+                    <span></span>
+                    <button class="btn" onclick="closePopup()">{% translate "close" %}</button>
+                </div>
+            </div>
+        </div>
+        <form method="POST">
+            {% csrf_token %}
+            {% form form=form %}
+            {% endform %}
+
+            <button type="submit" name="_submit" class="btn" style="margin-bottom: 60px;">{% translate "send" %}</button>
+        </form>
+    </div>
+</div>
+
+ {% for item in elion %}
+    {{item}}
+ {% endfor %}
+
+</body>
+<script>
+
+    const url = window.location.href;
+    const splitted = url.split("?");
+    if(splitted.length >1) {
+        if(splitted[1] == "success=true") {
+            openPopup();
+        }
+    }
+
+  
+  languageDropdownIsOpened = false;
+      function toggleLanguageDropDown() {
+        console.log("clicked!", languageDropdownIsOpened)
+        const languageDropdown = document.getElementById("languageDropdown");
+        if(languageDropdownIsOpened) {
+            // close dropdown
+            languageDropdown.style.display = "none";
+        } else {
+            languageDropdown.style.display = "block";
+        }
+        languageDropdownIsOpened = !languageDropdownIsOpened;
+    }
+
+    function closePopup() {
+        const popUp = document.getElementById("popup-container");
+        if(popUp) {
+            popUp.style.display="none";
+<!--            window.location.href = splitted[0];-->
+        }
+    }
+
+    function openPopup() {
+        const popUp = document.getElementById("popup-container");
+        if(popUp) {
+            popUp.style.display="block";
+        }
+    }
+
+
+</script>
+</html>

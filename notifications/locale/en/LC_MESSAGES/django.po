@@ -1,0 +1,168 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-20 17:18+0100\n"
+"PO-Revision-Date: 2022-02-13 13:01+0000\n"
+"Last-Translator:   <admin@defynd.it>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.9.8\n"
+
+#: .\notifications\admin.py:46 .\notifications\models.py:57
+#, fuzzy
+#| msgid "possible-variables"
+msgid "Possible Variables"
+msgstr "Possible Variables"
+
+#: .\notifications\mail.py:72
+msgid "invalid-header-found"
+msgstr "Invalid Header Found"
+
+#: .\notifications\models.py:41
+#, fuzzy
+#| msgid "notifications"
+msgid "Notifications"
+msgstr "Notifications"
+
+#: .\notifications\models.py:42
+msgid "e-mail"
+msgstr "E-mail"
+
+#: .\notifications\models.py:43
+#, fuzzy
+#| msgid "recipients"
+msgid "Recipients"
+msgstr "Recipients"
+
+#: .\notifications\models.py:44
+msgid ""
+"Separate with; for more than one email. If left blank,                      "
+"the model email will be used"
+msgstr ""
+
+#: .\notifications\models.py:46
+#, fuzzy
+#| msgid "notifications-type"
+msgid "Notifications Type"
+msgstr "Notifications Type"
+
+#: .\notifications\models.py:48
+#, fuzzy
+#| msgid "customer-registration"
+msgid "Customer Registration"
+msgstr "Customer Registration"
+
+#: .\notifications\models.py:49
+#, fuzzy
+#| msgid "litigation-form"
+msgid "Litigation Form"
+msgstr "Litigation Form"
+
+#: .\notifications\models.py:51
+#, fuzzy
+#| msgid "notifications"
+msgid "Notifications On"
+msgstr "Notifications"
+
+#: .\notifications\models.py:52
+msgid "Form Send"
+msgstr ""
+
+#: .\notifications\models.py:53
+msgid "Click On Url"
+msgstr ""
+
+#: .\notifications\models.py:55
+#, fuzzy
+#| msgid "subject"
+msgid "Subject"
+msgstr "Subject"
+
+#: .\notifications\models.py:56
+#, fuzzy
+#| msgid "message"
+msgid "Message"
+msgstr "Message"
+
+#: .\notifications\models.py:58
+#, fuzzy
+#| msgid "used-in-message-field"
+msgid "Used In Message Field"
+msgstr "Used in message field"
+
+#: .\notifications\models.py:63
+#, fuzzy
+#| msgid "email-notification"
+msgid "Email Notification"
+msgstr "Email Notification"
+
+#: .\notifications\models.py:64
+#, fuzzy
+#| msgid "email-notifications"
+msgid "Email Notifications"
+msgstr "Email Notifications"
+
+#: .\notifications\models.py:68
+#, fuzzy
+#| msgid "server-host"
+msgid "Server Host"
+msgstr "Server Host"
+
+#: .\notifications\models.py:69
+msgid "Port"
+msgstr ""
+
+#: .\notifications\models.py:70
+#, fuzzy
+#| msgid "security-type"
+msgid "Security Type"
+msgstr "Security Type"
+
+#: .\notifications\models.py:74
+msgid "User"
+msgstr ""
+
+#: .\notifications\models.py:75
+#, fuzzy
+#| msgid "password"
+msgid "Password"
+msgstr "Password"
+
+#: .\notifications\models.py:81 .\notifications\models.py:82
+#, fuzzy
+#| msgid "outgoing-mail-server"
+msgid "Outgoing Mail Server"
+msgstr "Outgoing Mail Server"
+
+#~ msgid "notifications-on"
+#~ msgstr "Notifications On"
+
+#~ msgid "form-send"
+#~ msgstr "Form Send"
+
+#~ msgid "click-on-url"
+#~ msgstr "Click on URL"
+
+#~ msgid "port"
+#~ msgstr "Port "
+
+#~ msgid "user"
+#~ msgstr "User "
+
+#~ msgid ""
+#~ "separare con; per più di un'e-mail. Se lasciato "
+#~ "vuoto,                     verrà utilizzata l'email del modello"
+#~ msgstr ""
+#~ "separate with; for more than one email. If left blank, \\ the model email "
+#~ "will be used"

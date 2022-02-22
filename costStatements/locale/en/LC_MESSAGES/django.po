@@ -1,0 +1,311 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-20 17:18+0100\n"
+"PO-Revision-Date: 2022-02-13 10:54+0000\n"
+"Last-Translator:   <admin@defynd.it>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.9.8\n"
+
+#: .\costStatements\apps.py:7
+#, fuzzy
+#| msgid "cost-statements"
+msgid "Cost Statements App"
+msgstr "Cost Statements"
+
+#: .\costStatements\models.py:25
+#, fuzzy
+#| msgid "category-name"
+msgid "Category Name"
+msgstr "Category Name"
+
+#: .\costStatements\models.py:26 .\costStatements\models.py:39
+msgid "Code"
+msgstr ""
+
+#: .\costStatements\models.py:27
+#, fuzzy
+#| msgid "code-change-message"
+msgid "Code Change Message"
+msgstr "Code Change Message"
+
+#: .\costStatements\models.py:30
+#, fuzzy
+#| msgid "category"
+msgid "Category"
+msgstr "Category"
+
+#: .\costStatements\models.py:31
+#, fuzzy
+#| msgid "categories"
+msgid "Categories"
+msgstr "Categories"
+
+#: .\costStatements\models.py:38 .\costStatements\models.py:83
+msgid "Name"
+msgstr ""
+
+#: .\costStatements\models.py:40
+#, fuzzy
+#| msgid "priority"
+msgid "Priority"
+msgstr "Priority"
+
+#: .\costStatements\models.py:41
+msgid "category"
+msgstr "Category"
+
+#: .\costStatements\models.py:50 .\costStatements\models.py:96
+msgid "Item"
+msgstr ""
+
+#: .\costStatements\models.py:51
+#, fuzzy
+#| msgid "items"
+msgid "Items"
+msgstr "items"
+
+#: .\costStatements\models.py:58
+msgid "name"
+msgstr "Name"
+
+#: .\costStatements\models.py:59
+msgid "code"
+msgstr "Code"
+
+#: .\costStatements\models.py:61
+#, fuzzy
+#| msgid "client"
+msgid "Client"
+msgstr "Client"
+
+#: .\costStatements\models.py:64
+#, fuzzy
+#| msgid "litigation"
+msgid "Litigation"
+msgstr "Litigation"
+
+#: .\costStatements\models.py:66 .\costStatements\models.py:104
+#, fuzzy
+#| msgid "created-date"
+msgid "Created Date"
+msgstr "Created date"
+
+#: .\costStatements\models.py:68
+#, fuzzy
+#| msgid "init-amount"
+msgid "Init Amount"
+msgstr "Init amoubt"
+
+#: .\costStatements\models.py:69
+#, fuzzy
+#| msgid "total-cost"
+msgid "Total Cost"
+msgstr "Total cost"
+
+#: .\costStatements\models.py:70
+#, fuzzy
+#| msgid "init-negotiation"
+msgid "Init Negotiation"
+msgstr "Init negotiation"
+
+#: .\costStatements\models.py:71
+#, fuzzy
+#| msgid "expected-dealing-term"
+msgid "Expected dealing Term"
+msgstr "Expected dealing term"
+
+#: .\costStatements\models.py:78
+#, fuzzy
+#| msgid "cost-statement"
+msgid "cost Statement"
+msgstr "Cost Statement"
+
+#: .\costStatements\models.py:79
+#, fuzzy
+#| msgid "cost-statements"
+msgid "Cost Statements"
+msgstr "Cost Statements"
+
+#: .\costStatements\models.py:84
+#, fuzzy
+#| msgid "description"
+msgid "Description"
+msgstr "Description"
+
+#: .\costStatements\models.py:91 .\costStatements\models.py:101
+#, fuzzy
+#| msgid "hypothesis"
+msgid "Hypothesis"
+msgstr "Hypothesis"
+
+#: .\costStatements\models.py:92
+#, fuzzy
+#| msgid "hypothesis-plural"
+msgid "hypothesis Plural"
+msgstr "Hypothesis  Plural"
+
+#: .\costStatements\models.py:98
+#, fuzzy
+#| msgid "cost-statement"
+msgid "Cost Statement"
+msgstr "Cost Statement"
+
+#: .\costStatements\models.py:100
+#, fuzzy
+#| msgid "value"
+msgid "Value"
+msgstr "Value"
+
+#: .\costStatements\models.py:112
+#, fuzzy
+#| msgid "cost-statement-item"
+msgid "Cost Statement Item"
+msgstr "Cost statement item"
+
+#: .\costStatements\models.py:113
+#, fuzzy
+#| msgid "cost-statement-items"
+msgid "Cost Statement Items"
+msgstr "Cost Statement items"
+
+#: .\costStatements\templates\admin\costStatements\app_index.html:7
+msgid "home"
+msgstr "Home"
+
+#: .\costStatements\templates\admin\import_export\import.html:13
+#, fuzzy
+#| msgid "Import"
+msgid "import"
+msgstr "Import"
+
+#: .\costStatements\templates\admin\import_export\import.html:23
+#, fuzzy
+#| msgid ""
+#| "Below is a preview of data to be imported. If you are satisfied with the "
+#| "results, click 'Confirm import'"
+msgid ""
+"below is a preview of data to be imported. If you are satisfied with the "
+"results, click 'Confirm import'"
+msgstr ""
+"Below is a preview of data to be imported. If you are satisfied with the "
+"results, click 'Confirm import'"
+
+#: .\costStatements\templates\admin\import_export\import.html:26
+#, fuzzy
+#| msgid "Confirm import"
+msgid "confirm import"
+msgstr "Confirm import"
+
+#: .\costStatements\templates\admin\import_export\import.html:35
+msgid "This importer will import the following fields: "
+msgstr "This importer will import the following fields:"
+
+#: .\costStatements\templates\admin\import_export\import.html:56
+#, fuzzy
+#| msgid "Submit"
+msgid "submit"
+msgstr "Submit"
+
+#: .\costStatements\templates\admin\import_export\import.html:65
+#: .\costStatements\templates\admin\import_export\import.html:94
+#, fuzzy
+#| msgid "Errors"
+msgid "errors"
+msgstr "Errors"
+
+#: .\costStatements\templates\admin\import_export\import.html:76
+#, fuzzy
+#| msgid "Line number"
+msgid "line number"
+msgstr "Line number"
+
+#: .\costStatements\templates\admin\import_export\import.html:86
+#, fuzzy
+#| msgid "Some rows failed to validate"
+msgid "some rows failed to validate"
+msgstr "Some rows field to validate"
+
+#: .\costStatements\templates\admin\import_export\import.html:88
+#, fuzzy
+#| msgid ""
+#| "Please correct these errors in your data where possible, then reupload it "
+#| "using the form above."
+msgid ""
+"please correct these errors in your data where possible, then reupload it "
+"using the form above."
+msgstr ""
+"Please correct these errors in your data where possible, then reupload it "
+"using the form above."
+
+#: .\costStatements\templates\admin\import_export\import.html:93
+#, fuzzy
+#| msgid "Row"
+msgid "row"
+msgstr "Row"
+
+#: .\costStatements\templates\admin\import_export\import.html:120
+#, fuzzy
+#| msgid "Non field specific"
+msgid "non field specific"
+msgstr "Non field specific"
+
+#: .\costStatements\templates\admin\import_export\import.html:141
+#, fuzzy
+#| msgid "Preview"
+msgid "preview"
+msgstr "Preview"
+
+#: .\costStatements\templates\admin\import_export\import.html:156
+msgid "New"
+msgstr "New"
+
+#: .\costStatements\templates\admin\import_export\import.html:158
+#, fuzzy
+#| msgid "Skipped"
+msgid "skipped"
+msgstr "Skipped"
+
+#: .\costStatements\templates\admin\import_export\import.html:160
+#, fuzzy
+#| msgid "Delete"
+msgid "delete"
+msgstr "Delete"
+
+#: .\costStatements\templates\admin\import_export\import.html:162
+#, fuzzy
+#| msgid "Update"
+msgid "update"
+msgstr "Update"
+
+#: .\costStatements\views.py:53
+#, python-format
+msgid "<h1>Imported file has a wrong encoding: %s</h1>"
+msgstr ""
+
+#: .\costStatements\views.py:56
+#, python-format
+msgid "<h1>%s encountered while trying to read file: %s</h1>"
+msgstr ""
+
+#: .\costStatements\views.py:167
+msgid "Import"
+msgstr "Import"
+
+#~ msgid "item"
+#~ msgstr "item"
+
+#~ msgid "Home"
+#~ msgstr "Home"

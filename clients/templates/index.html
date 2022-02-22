@@ -1,0 +1,106 @@
+{% include 'material/includes/material_css.html' %}
+{% include 'material/includes/material_js.html' %}
+
+{% load material_form %}
+{% load i18n %}
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% translate "registration" %}</title>
+
+  <!-- Compiled and minified JavaScript -->
+  <script type="text/javascript" src="/static/admin/js/vendor/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="/static/admin/js/jquery.init.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="module" src="{% static 'admin/js/contact_type.js' %}"></script>
+
+
+  <!-- Temporary!!
+    Added registration static file here,
+    registration.js as it is not loaded in /litigation form from its index html page
+  -->
+<!--  <script src="{% static 'admin/js/litigation.js' %}"></script>-->
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('select').formSelect();
+    });
+  </script>
+
+  <!-- Compiled and minified CSS -->
+  <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel = "stylesheet"
+       href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel = "stylesheet" href = "{% static 'admin/css/clients.css' %}">
+
+</head>
+
+<div class="container"  style="width:80%;">
+    <div class="col-lg-6" style="float:none;margin:auto;">
+      {% get_current_language as LANGUAGE_CODE %}
+      {% get_available_languages as LANGUAGES %}
+      {% get_language_info_list for LANGUAGES as languages%}
+
+        <div class="custom-dropdown">
+          {% if var1 %}
+            {{ var1 }}
+          {% endif %}
+          <div class="custom-toggle-dropdown" onclick="toggleLanguageDropDown()">
+            {% for lang in languages %}
+              {% if lang.code == language %}
+                {{ lang.name }}
+              {% endif %}
+            {% endfor %}
+          </div>
+            <div class="custom-dropdown-content" id="languageDropdown">
+              {% for lang in languages %}
+                <div>
+                  <a href="/registration/{{lang.code}}" class="custom-dropdown-option" onclick="toggleLanguageDropDown()">
+                    {{lang.name}}
+                  </a>
+                </div>
+              {% endfor %}
+
+            </div>
+        </div>
+
+
+        <form method="POST">
+            {% csrf_token %}
+
+            {% form form=form %}
+            {% endform %}
+
+            <button type="submit" name="_submit" class="btn">{% translate "send" %}</button>
+        </form>
+
+        <!-- <script>
+          $( function()
+          { // TODO fix datepicket format
+            $( "#id_birthday" ).datepicker({ dateFormat: 'dd/mm/yyyy' }).val();
+            $("#datepicker").datepicker({ dateFormat: "dd/mm/yyyy" }).val();
+          } );
+        </script> -->
+    </div>
+</div>
+<script>
+
+  languageDropdownIsOpened = false;
+      function toggleLanguageDropDown() {
+        console.log("clicked!", languageDropdownIsOpened)
+        const languageDropdown = document.getElementById("languageDropdown");
+        if(languageDropdownIsOpened) {
+            // close dropdown
+            languageDropdown.style.display = "none";
+        } else {
+            languageDropdown.style.display = "block";
+        }
+        languageDropdownIsOpened = !languageDropdownIsOpened;
+    }
+
+</script>

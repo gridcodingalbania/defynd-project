@@ -1,0 +1,78 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-20 17:18+0100\n"
+"PO-Revision-Date: 2022-02-13 10:11+0000\n"
+"Last-Translator:   <admin@defynd.it>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.9.8\n"
+
+#: .\contracts\apps.py:7
+#, fuzzy
+#| msgid "contracts"
+msgid "contracts-app"
+msgstr "Contracts"
+
+#: .\contracts\models.py:23
+msgid "Code"
+msgstr ""
+
+#: .\contracts\models.py:25
+msgid "Name"
+msgstr ""
+
+#: .\contracts\models.py:26
+msgid "Date"
+msgstr ""
+
+#: .\contracts\models.py:27
+msgid "Sign Date"
+msgstr ""
+
+#: .\contracts\models.py:28
+#, fuzzy
+#| msgid "client"
+msgid "Client"
+msgstr "Client"
+
+#: .\contracts\models.py:29
+#, fuzzy
+#| msgid "cost-statement"
+msgid "Cost Statement"
+msgstr "Cost statement"
+
+#: .\contracts\models.py:33
+#, fuzzy
+#| msgid "contract"
+msgid "Contract"
+msgstr "Contract"
+
+#: .\contracts\models.py:34
+#, fuzzy
+#| msgid "contracts"
+msgid "Contracts"
+msgstr "Contracts"
+
+#~ msgid "code"
+#~ msgstr "Code"
+
+#~ msgid "name"
+#~ msgstr "Name"
+
+#~ msgid "date"
+#~ msgstr "Date"
+
+#~ msgid "sign-date"
+#~ msgstr "Sind date"

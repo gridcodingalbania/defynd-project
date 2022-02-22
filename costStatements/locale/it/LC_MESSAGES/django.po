@@ -1,0 +1,225 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-20 17:18+0100\n"
+"PO-Revision-Date: 2022-02-22 09:46+0000\n"
+"Last-Translator:   <admin@defynd.it>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.9.8\n"
+
+#: .\costStatements\apps.py:7
+msgid "Cost Statements App"
+msgstr ""
+
+#: .\costStatements\models.py:25
+msgid "Category Name"
+msgstr ""
+
+#: .\costStatements\models.py:26 .\costStatements\models.py:39
+msgid "Code"
+msgstr ""
+
+#: .\costStatements\models.py:27
+msgid "Code Change Message"
+msgstr ""
+
+#: .\costStatements\models.py:30
+msgid "Category"
+msgstr ""
+
+#: .\costStatements\models.py:31
+msgid "Categories"
+msgstr ""
+
+#: .\costStatements\models.py:38 .\costStatements\models.py:83
+msgid "Name"
+msgstr ""
+
+#: .\costStatements\models.py:40
+msgid "Priority"
+msgstr ""
+
+#: .\costStatements\models.py:41
+msgid "category"
+msgstr ""
+
+#: .\costStatements\models.py:50 .\costStatements\models.py:96
+msgid "Item"
+msgstr ""
+
+#: .\costStatements\models.py:51
+msgid "Items"
+msgstr ""
+
+#: .\costStatements\models.py:58
+msgid "name"
+msgstr ""
+
+#: .\costStatements\models.py:59
+msgid "code"
+msgstr ""
+
+#: .\costStatements\models.py:61
+msgid "Client"
+msgstr ""
+
+#: .\costStatements\models.py:64
+msgid "Litigation"
+msgstr "Contenzioso"
+
+#: .\costStatements\models.py:66 .\costStatements\models.py:104
+msgid "Created Date"
+msgstr "Data di Creazione"
+
+#: .\costStatements\models.py:68
+msgid "Init Amount"
+msgstr ""
+
+#: .\costStatements\models.py:69
+msgid "Total Cost"
+msgstr ""
+
+#: .\costStatements\models.py:70
+msgid "Init Negotiation"
+msgstr ""
+
+#: .\costStatements\models.py:71
+msgid "Expected dealing Term"
+msgstr ""
+
+#: .\costStatements\models.py:78
+msgid "cost Statement"
+msgstr ""
+
+#: .\costStatements\models.py:79
+msgid "Cost Statements"
+msgstr ""
+
+#: .\costStatements\models.py:84
+msgid "Description"
+msgstr ""
+
+#: .\costStatements\models.py:91 .\costStatements\models.py:101
+msgid "Hypothesis"
+msgstr ""
+
+#: .\costStatements\models.py:92
+msgid "hypothesis Plural"
+msgstr ""
+
+#: .\costStatements\models.py:98
+msgid "Cost Statement"
+msgstr ""
+
+#: .\costStatements\models.py:100
+msgid "Value"
+msgstr ""
+
+#: .\costStatements\models.py:112
+msgid "Cost Statement Item"
+msgstr ""
+
+#: .\costStatements\models.py:113
+msgid "Cost Statement Items"
+msgstr ""
+
+#: .\costStatements\templates\admin\costStatements\app_index.html:7
+msgid "home"
+msgstr ""
+
+#: .\costStatements\templates\admin\import_export\import.html:13
+msgid "import"
+msgstr ""
+
+#: .\costStatements\templates\admin\import_export\import.html:23
+msgid ""
+"below is a preview of data to be imported. If you are satisfied with the "
+"results, click 'Confirm import'"
+msgstr ""
+
+#: .\costStatements\templates\admin\import_export\import.html:26
+msgid "confirm import"
+msgstr ""
+
+#: .\costStatements\templates\admin\import_export\import.html:35
+msgid "This importer will import the following fields: "
+msgstr "Questo importatore importerà i seguenti campi:"
+
+#: .\costStatements\templates\admin\import_export\import.html:56
+msgid "submit"
+msgstr "invia"
+
+#: .\costStatements\templates\admin\import_export\import.html:65
+#: .\costStatements\templates\admin\import_export\import.html:94
+msgid "errors"
+msgstr ""
+
+#: .\costStatements\templates\admin\import_export\import.html:76
+msgid "line number"
+msgstr ""
+
+#: .\costStatements\templates\admin\import_export\import.html:86
+msgid "some rows failed to validate"
+msgstr ""
+
+#: .\costStatements\templates\admin\import_export\import.html:88
+msgid ""
+"please correct these errors in your data where possible, then reupload it "
+"using the form above."
+msgstr ""
+"correggi questi errori nei tuoi dati ove possibile, quindi ricaricali "
+"utilizzando il modulo sopra."
+
+#: .\costStatements\templates\admin\import_export\import.html:93
+msgid "row"
+msgstr ""
+
+#: .\costStatements\templates\admin\import_export\import.html:120
+msgid "non field specific"
+msgstr ""
+
+#: .\costStatements\templates\admin\import_export\import.html:141
+msgid "preview"
+msgstr ""
+
+#: .\costStatements\templates\admin\import_export\import.html:156
+msgid "New"
+msgstr ""
+
+#: .\costStatements\templates\admin\import_export\import.html:158
+msgid "skipped"
+msgstr ""
+
+#: .\costStatements\templates\admin\import_export\import.html:160
+msgid "delete"
+msgstr ""
+
+#: .\costStatements\templates\admin\import_export\import.html:162
+msgid "update"
+msgstr ""
+
+#: .\costStatements\views.py:53
+#, python-format
+msgid "<h1>Imported file has a wrong encoding: %s</h1>"
+msgstr ""
+
+#: .\costStatements\views.py:56
+#, python-format
+msgid "<h1>%s encountered while trying to read file: %s</h1>"
+msgstr ""
+
+#: .\costStatements\views.py:167
+msgid "Import"
+msgstr ""

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+{% load static %}
+
+{% include 'material/includes/material_css.html' %}
+{% include 'material/includes/material_js.html' %}
+
+{% load material_form %}
+
+<head>
+
+  <!-- Compiled and minified JavaScript -->
+  <script type="text/javascript" src="/static/admin/js/vendor/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="/static/admin/js/jquery.init.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="{% static 'admin/js/registration_type.js' %}"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('select').formSelect();
+    });
+  </script>
+
+  <!-- Compiled and minified CSS -->
+  <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel = "stylesheet" href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel = "stylesheet" href = "{% static 'admin/css/litigation.css' %}">
+</head>
+{% extends "test.html" %}
+<div class="container" style="width:90%;">
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown button
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+          </ul>
+        </div>
+
+    <div class="col-lg-6" style="float:none;margin:auto;">
+        <form method="POST">
+            {% csrf_token %}
+            {% form form=form %}
+            {% endform %}
+
+            <button type="submit" name="_submit" class="btn">Invia</button>
+        </form>
+    </div>
+
+
+</div>
+
+</html>
