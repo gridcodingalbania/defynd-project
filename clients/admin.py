@@ -18,6 +18,16 @@ class CustomerAdmin(admin.ModelAdmin):
         'origin',
         'is_active',
     )
+
+    list_display2 = (
+        'code',
+
+    )
+
+    list_display3 = (
+        'first_name',
+    )
+
     search_fields = ('code', 'first_name', 'last_name', 'company_name',
                      'email', 'phone', 'mobile', 'birthday', 'fiscal_code', 'vat_number')
     list_filter = ('customer_type', 'company_name', 'gender', 'birthplace', 'is_customer', 'is_active', 'vat_number')
@@ -51,7 +61,7 @@ class CustomerAdmin(admin.ModelAdmin):
         (
             _('contact-info'),
             {
-                'fields': ('email', 'phone', 'mobile')
+                'fields': ('email', ('phone_prefix', 'phone'), 'mobile')
             }
         ),
         (
@@ -68,7 +78,68 @@ class CustomerAdmin(admin.ModelAdmin):
         )
     ]
 
+    t1 = (
+        (
+            None,
+            {
+                'fields': ('code', 'customer_type')
+            }
+        ),
+        (
+            None,
+            {
+                'fields': ('role',)
+            }
+        ),
+        (
+            None,
+            {
+                'fields': ('first_name', 'last_name'),
+                'classes': ('wide', 'extrapretty', 'individual')
+            }
+        ),
+        (
+            _('personal-info'),
+            {
+                'fields': ('birthplace', 'birthday', 'gender'),
+                'classes': ('wide', 'extrapretty', 'individual')
+            }
+        ),
+        (
+            _('contact-info'),
+            {
+                'fields': ('email', ('phone_prefix', 'phone'), 'mobile')
+            }
+        ),
+        (
+            _('address'),
+            {
+                'fields': ('street', 'city', 'post_number',)
+            }
+        ),
+        (
+            None,
+            {
+                'fields': ('is_customer',)
+            }
+        )
+    )
+
     form = ContactForm
+
+
+    def get_fieldsets(self, request, obj=None):
+        array_url = request.build_absolute_uri().split("/")
+        fields = super(CustomerAdmin, self).get_fieldsets(request, obj)
+        if array_url[-3].isnumeric():
+            result = Customer.objects.filter(id=array_url[-3])
+            if len(result) > 0:
+                customer = result[0]
+                if customer.customer_type == 'individual':
+                    return self.t1  # hide fields
+                else:
+                    return fields
+        return fields
 
     class Media:
         js = (

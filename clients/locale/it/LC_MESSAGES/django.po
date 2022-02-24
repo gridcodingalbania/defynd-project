@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-20 17:18+0100\n"
-"PO-Revision-Date: 2022-02-22 15:12+0000\n"
+"PO-Revision-Date: 2022-02-23 20:20+0000\n"
 "Last-Translator:   <admin@defynd.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -52,44 +52,37 @@ msgid "company"
 msgstr "Azienda"
 
 #: .\clients\forms.py:21 .\clients\models.py:37
-#, fuzzy
 #| msgid "gender"
 msgid "Gender"
 msgstr "Genere"
 
 #: .\clients\forms.py:27 .\clients\models.py:41
-#, fuzzy
 #| msgid "birthday"
 msgid "Birthday"
 msgstr "Data di nascita"
 
 #: .\clients\forms.py:30 .\clients\models.py:49
-#, fuzzy
 #| msgid "customer-type"
 msgid "Customer Type"
 msgstr "Tipologia Cliente"
 
 #: .\clients\forms.py:32
-#, fuzzy
 #| msgid "origin"
 msgid "Origin"
 msgstr "Origine"
 
 #: .\clients\forms.py:37 .\clients\forms.py:40 .\clients\forms.py:42
 #: .\clients\forms.py:43
-#, fuzzy
 #| msgid "agree"
 msgid "Agree"
 msgstr "Conferma"
 
 #: .\clients\forms.py:38
-#, fuzzy
 #| msgid "agree-condition"
 msgid "Agree Condition"
 msgstr "Conferma"
 
 #: .\clients\forms.py:41
-#, fuzzy
 #| msgid "agree-contact"
 msgid "Agree Contact"
 msgstr "Conferma contatto"
@@ -108,19 +101,16 @@ msgstr ""
 #: .\clients\forms.py:77 .\clients\forms.py:87 .\clients\forms.py:89
 #: .\clients\forms.py:91 .\clients\forms.py:93 .\clients\forms.py:106
 #: .\clients\forms.py:108 .\clients\forms.py:110 .\clients\forms.py:112
-#, fuzzy
 #| msgid "required-field"
 msgid "Required Field"
 msgstr "Campo obligatorio"
 
 #: .\clients\forms.py:126
-#, fuzzy
 #| msgid "registration"
 msgid "Registration"
 msgstr "Registrazione"
 
 #: .\clients\forms.py:152
-#, fuzzy
 #| msgid "address"
 msgid "Address"
 msgstr "Indirizzo"
@@ -134,32 +124,28 @@ msgid "Name"
 msgstr "Nome"
 
 #: .\clients\models.py:23
-#, fuzzy
 #| msgid "fiscal-code"
 msgid "Fiscal Code"
 msgstr "Codice Fiscale"
 
 #: .\clients\models.py:24
-#, fuzzy
 #| msgid "vat-number"
 msgid "Vat Number"
 msgstr "Numero VAT"
 
 #: .\clients\models.py:26
-#, fuzzy
 #| msgid "company"
 msgid "Company Name"
 msgstr "Azienda"
 
 #: .\clients\models.py:28
-#, fuzzy
 #| msgid "contact-info"
 msgid "Contact Person"
 msgstr "Informazioni Contatto"
 
 #: .\clients\models.py:29
 msgid "Role"
-msgstr ""
+msgstr "Ruolo"
 
 #: .\clients\models.py:32
 msgid "Last Name"
@@ -170,25 +156,21 @@ msgid "e-mail"
 msgstr "E-mail"
 
 #: .\clients\models.py:35
-#, fuzzy
 #| msgid "phone"
 msgid "Phone"
 msgstr "Telefono"
 
 #: .\clients\models.py:36
-#, fuzzy
 #| msgid "mobile"
 msgid "Mobile"
 msgstr "Mobile"
 
 #: .\clients\models.py:42
-#, fuzzy
 #| msgid "birth-place"
 msgid "Birth-place"
 msgstr "Luogo di nascita"
 
 #: .\clients\models.py:44
-#, fuzzy
 #| msgid "street"
 msgid "Street"
 msgstr "Strada"
@@ -198,7 +180,6 @@ msgid "City"
 msgstr "Città"
 
 #: .\clients\models.py:47
-#, fuzzy
 #| msgid "post-number"
 msgid "Post Number"
 msgstr "Codice Postale"
@@ -208,13 +189,11 @@ msgid "contacts"
 msgstr "Informazioni Contatto"
 
 #: .\clients\models.py:53
-#, fuzzy
 #| msgid "customer"
 msgid "Is Customer"
 msgstr "Cliente"
 
 #: .\clients\models.py:54
-#, fuzzy
 #| msgid "is-active"
 msgid "Is Active"
 msgstr "E attivo"
@@ -224,13 +203,11 @@ msgid "origin"
 msgstr "Origine"
 
 #: .\clients\models.py:82
-#, fuzzy
 #| msgid "customer"
 msgid "Customer"
 msgstr "Cliente"
 
 #: .\clients\models.py:83
-#, fuzzy
 #| msgid "customers"
 msgid "Customers"
 msgstr "Clienti"
@@ -244,13 +221,11 @@ msgid "send"
 msgstr "Invia"
 
 #: .\clients\views.py:81
-#, fuzzy
 #| msgid "data-verification-thank-you"
 msgid "Data Verification Thank You"
 msgstr "Grazie"
 
 #: .\clients\views.py:83
-#, fuzzy
 #| msgid "invalid-link"
 msgid "Invalid Link"
 msgstr "Link invalido"

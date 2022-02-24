@@ -37,3 +37,15 @@
 .text-uppercase {
     text-transform: uppercase;
 }
+
+#id_phone_prefix_container {
+  padding-right: 0 !important;
+}
+
+#id_phone_prefix_container > .select-wrapper > input {
+  margin-top: -3px !important;
+}
+
+#id_phone_container {
+  padding-left: 0 !important;
+}
