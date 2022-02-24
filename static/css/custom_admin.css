@@ -28,3 +28,11 @@ label[for='id_phone'] {
     position: absolute;
     margin-left: 170px !important;
 }
+
+.field-email > .errorlist {
+    display: flex;
+}
+
+.field-email > .errorlist > li {
+    padding-left: 1px !important;
+}

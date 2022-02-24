@@ -23,10 +23,6 @@ phone_prefixes = (
 # Registration FORM
 class ContactForm(forms.ModelForm):
 
-    def __init__(self, *args, **kwargs):
-        super(ContactForm, self).__init__(*args, **kwargs)
-        print(self.fields['first_name'])
-
     vat_number = forms.CharField(widget=forms.TextInput(attrs={'class': 'text-uppercase'}), required=False)
     fiscal_code = forms.CharField(widget=forms.TextInput(attrs={'class': 'text-uppercase'}), required=False)
     gender = forms.ChoiceField(widget=forms.RadioSelect, label=_('Gender'), choices=CHOICES,
@@ -60,6 +56,7 @@ class ContactForm(forms.ModelForm):
             make fields required conditionally
         """
         data = self.cleaned_data
+        code = data.get('code', False)
         customer_type = data.get('customer_type', False)
         agree_toc = data.get('agree_toc', False)
         agree_toc_1 = data.get('agree_toc_1', False)
@@ -68,9 +65,19 @@ class ContactForm(forms.ModelForm):
         email = data.get('email', False)
         if email:
             try:
-                # if no error is caught then the customer is in the db --> warn user for duplicate email
-                Customer.objects.get(email=email)
-                self._errors['email'] = self.error_class(_('Email already exists.'))
+                if code:
+                    print("edit mode", code)
+                    saved_customer = Customer.objects.get(code=code)
+                    db_email = saved_customer.email
+                    if db_email != email:
+                        Customer.objects.get(email=email)
+                        self._errors['email'] = self.error_class(_('Email already exists.'))
+
+                else:
+                    # if no error is caught then the customer is in the db --> warn user for duplicate email
+                    Customer.objects.get(email=email)
+                    self._errors['email'] = self.error_class(_('Email already exists.'))
+
             except Customer.DoesNotExist:
                 print(_("No duplicate customer found for this email, proceeding to save in db."))
 

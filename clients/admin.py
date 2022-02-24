@@ -19,16 +19,7 @@ class CustomerAdmin(admin.ModelAdmin):
         'is_active',
     )
 
-    list_display2 = (
-        'code',
-
-    )
-
-    list_display3 = (
-        'first_name',
-    )
-
-    search_fields = ('code', 'first_name', 'last_name', 'company_name',
+    search_fields = ('code', 'p', 'last_name', 'company_name',
                      'email', 'phone', 'mobile', 'birthday', 'fiscal_code', 'vat_number')
     list_filter = ('customer_type', 'company_name', 'gender', 'birthplace', 'is_customer', 'is_active', 'vat_number')
     fieldsets = [
@@ -41,20 +32,13 @@ class CustomerAdmin(admin.ModelAdmin):
         (
             None,
             {
-                'fields': ('company_name', 'contact_person', 'role')
-            }
-        ),
-        (
-            None,
-            {
-                'fields': ('first_name', 'last_name'),
-                'classes': ('wide', 'extrapretty', 'individual')
+                'fields': ('company_name', 'role')
             }
         ),
         (
             _('personal-info'),
             {
-                'fields': ('fiscal_code', 'vat_number', 'birthplace', 'birthday', 'gender'),
+                'fields': ('fiscal_code', 'vat_number'),
                 'classes': ('wide', 'extrapretty', 'individual')
             }
         ),
