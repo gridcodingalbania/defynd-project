@@ -6,3 +6,25 @@
 .field-reopen>.field-reopen  {
     margin-left: 200px;
 }
+
+
+label[for='id_phone'] {
+    display: none;
+}
+
+.field-phone_prefix {
+    margin-right: 10px !important;
+}
+
+#id_phone {
+    height: 59%;
+}
+
+.field-phone {
+    height: 30px;
+}
+
+.field-phone > .errorlist {
+    position: absolute;
+    margin-left: 170px !important;
+}

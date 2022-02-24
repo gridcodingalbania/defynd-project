@@ -3,6 +3,7 @@ from material import Layout, Row, Fieldset, Span2, Span3
 from .models import Customer
 from django.utils.translation import gettext_lazy as _
 
+
 CHOICES = (
     ('F', _('female')),
     ('M', _('male'))
@@ -13,9 +14,19 @@ contact_choices = (
     ('company', _('company')),
 )
 
+phone_prefixes = (
+    ('+355', '+355'),
+    ('+44', '+44')
+)
+
 
 # Registration FORM
 class ContactForm(forms.ModelForm):
+
+    def __init__(self, *args, **kwargs):
+        super(ContactForm, self).__init__(*args, **kwargs)
+        print(self.fields['first_name'])
+
     vat_number = forms.CharField(widget=forms.TextInput(attrs={'class': 'text-uppercase'}), required=False)
     fiscal_code = forms.CharField(widget=forms.TextInput(attrs={'class': 'text-uppercase'}), required=False)
     gender = forms.ChoiceField(widget=forms.RadioSelect, label=_('Gender'), choices=CHOICES,
@@ -27,6 +38,8 @@ class ContactForm(forms.ModelForm):
         label=_('Birthday'),
         required=False
     )
+    phone_prefix = forms.ChoiceField(widget=forms.Select(), choices=phone_prefixes, label=_('Phone'))
+    phone = forms.IntegerField(label="")
     customer_type = forms.ChoiceField(widget=forms.Select(), label=_('Customer Type'),
                                       choices=contact_choices, required=True, )
     origin = forms.ChoiceField(widget=forms.Select(), label=_('Origin'),
@@ -144,7 +157,7 @@ class ContactForm(forms.ModelForm):
         Fieldset(
             None,
             Row('role'),  # 'contact_person',
-            Row(Span3('email'), 'phone', 'mobile', ),
+            Row(Span3('email'), 'phone_prefix', 'phone', 'mobile', ),
             Row('birthplace', 'birthday'),
             Row('gender', ),
         ),

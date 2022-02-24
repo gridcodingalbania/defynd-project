@@ -1,6 +1,10 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
+phone_prefixes = (
+    ('+355', '+355'),
+    ('+44', '+44')
+)
 
 def increment_customer_number():
     code = 'C' + '001'
@@ -32,8 +36,12 @@ class Customer(models.Model):
     last_name = models.CharField(_("Last Name"), max_length=100, blank=True, null=True)
 
     email = models.EmailField(_("e-mail"), null=True, unique=True, )
-    phone = models.CharField(_("Phone"), max_length=100, blank=True, null=True)
-    mobile = models.CharField(_("Mobile"), max_length=100, blank=True, null=True)
+    phone_prefix = models.CharField(max_length=100,
+                                    choices=phone_prefixes,
+                                    default=None,
+                                    null=True)
+    phone = models.IntegerField(_("Phone"), blank=True, null=True)
+    mobile = models.IntegerField(_("Mobile"), blank=True, null=True)
     gender = models.CharField(_("Gender"),
                               choices=((None, ''),
                                        ('F', 'Femmina'),
