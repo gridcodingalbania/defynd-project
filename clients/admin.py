@@ -88,12 +88,6 @@ class CustomerAdmin(admin.ModelAdmin):
         (
             None,
             {
-                'fields': ('role',)
-            }
-        ),
-        (
-            None,
-            {
                 'fields': ('first_name', 'last_name'),
                 'classes': ('wide', 'extrapretty', 'individual')
             }
@@ -140,6 +134,19 @@ class CustomerAdmin(admin.ModelAdmin):
                 else:
                     return fields
         return fields
+
+    # def get_company(self, request, obj=None):
+    #     array_url = request.build_absolute_uri().split("/")
+    #     fields = super(CustomerAdmin, self).get_fieldsets(request, obj)
+    #     if array_url[-3].isnumeric():
+    #         result = Customer.objects.filter(id=array_url[-3])
+    #         if len(result) > 0:
+    #             customer = result[0]
+    #             if customer.customer_type == 'company':
+    #                 return self.t2
+    #             else:
+    #                 return fields
+    #     return fields
 
     class Media:
         js = (

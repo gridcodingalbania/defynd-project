@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-20 17:18+0100\n"
-"PO-Revision-Date: 2022-02-13 10:06+0000\n"
+"PO-Revision-Date: 2022-02-24 19:36+0000\n"
 "Last-Translator:   <admin@defynd.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -180,10 +180,9 @@ msgid "Mobile"
 msgstr "Mobile"
 
 #: .\clients\models.py:42
-#, fuzzy
 #| msgid "birth-place"
 msgid "Birth-place"
-msgstr "Birthday"
+msgstr "Birth Place"
 
 #: .\clients\models.py:44
 #, fuzzy
