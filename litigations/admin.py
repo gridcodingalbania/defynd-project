@@ -25,14 +25,15 @@ class LitigationAdmin(admin.ModelAdmin):
     )
     # search box appearance 
     search_fields = (
-        'name', 'client__code', 'client__name'
+        'name', 'client__code', 'client__name',
     )
 
     fieldsets = [
         (
             None,
             {
-                'fields': ('name', 'client')
+                'fields': (('name', 'closed'),
+                        'client', 'hyperlink'),
             }
         ),
         (
@@ -46,7 +47,8 @@ class LitigationAdmin(admin.ModelAdmin):
         (
             _('Value'),
             {
-                'fields': ('initial_estimation_value', 'target_value', 'final_value'),
+                'fields': ('initial_estimation_value', 'target_value', 'final_value',
+                           'revenue', 'total_cost', 'turnover_margin'),
                 'classes': ('wide', 'extrapretty')
             }
         ),
@@ -60,7 +62,7 @@ class LitigationAdmin(admin.ModelAdmin):
         (
             _('Area'),
             {
-                'fields': (('surface_directly_concerned', 'residual_surface', 'area_address', 'occupied_area'),
+                'fields': (('surface_directly_concerned', 'occupied_area', 'residual_surface', 'area_address'),
                            'technical_reference',),
                 'classes': ('wide', 'extrapretty')
             }
@@ -72,7 +74,7 @@ class LitigationAdmin(admin.ModelAdmin):
             }
         ),
         (
-            _('Edificio'),
+            _('Information Culture'),
             {
                 'fields': (('culture_type',),  # 'area_type',
                            'aboveground_quantification',
@@ -111,7 +113,7 @@ class LitigationAdmin(admin.ModelAdmin):
                 'fields': (
                     ('reception_act', 'date_receipt_act',),
                     ('purchase_contract', 'contract_date',),
-                    'closed',
+
                 ),
                 'classes': ('wide',)
             }

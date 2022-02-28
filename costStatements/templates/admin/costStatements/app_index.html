@@ -80,14 +80,14 @@
       }
 
       function loadAllCharts(year) {
-        loadChart(costPerCategoryTable, `/costStatements/table/cost-per-category/${year}/`); 
+        loadChart(costPerCategoryTable, `/costStatements/table/cost-per-category/${year}/`);
         loadChart(costsChart, `/costStatements/chart/costs/${year}/`);
         loadChart(costPerCustomerChart, `/costStatements/chart/cost-per-customer/${year}/`);
         loadChart(litigationSuccessChart, `/costStatements/chart/litigation-success/${year}/`);
         loadChart(litigationRegistrationTypeChart, `/costStatements/chart/litigation-registration-type/${year}/`);
       }
     </script>
-    
+
     <div id="costPerCategoryTable"></div>
     <canvas id="costsChart"></canvas>
     <canvas id="costPerCustomerChart"></canvas>

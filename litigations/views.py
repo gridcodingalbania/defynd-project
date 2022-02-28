@@ -88,9 +88,26 @@ def calculateResidualSurface(post_form):
                 temp['residual_surface'] = surface_directly_concerned - occupied_area
     return temp
 
+# def calculateRevenue(post_form):
+#     subtraction = post_form.copy()
+#     if subtraction['revenue'] and subtraction['total_cost']:
+#         revenue = Decimal(subtraction['revenue'])
+#         total_cost = Decimal(subtraction['total_cost'])
+#         if revenue > 0 and total_cost > 0:
+#             if revenue > total_cost:
+#                 subtraction['turnover_margin'] = revenue - total_cost
+#     return subtraction
+
 
 def __removeCommas(form_variable):
     splited_values = form_variable.split(",")
     string_number = "".join(splited_values)
     number = Decimal(string_number)
     return number
+
+
+@property
+def revenueValue(self):
+    if(self.revenue != None):
+        turnover_margin = revenue - total_cost
+        return turnover_margin

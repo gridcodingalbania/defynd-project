@@ -1,175 +1,175 @@
-{% extends "admin/import_export/import.html" %}
+<!--{% extends "admin/import_export/import.html" %}-->
 
-{% extends "import_export:admin/import_export/import.html" %}
+<!--{% extends "import_export:admin/import_export/import.html" %}-->
 
-{% load i18n %}
-{% load admin_urls %}
-{% load import_export_tags %}
-{% load static %}
+<!--{% load i18n %}-->
+<!--{% load admin_urls %}-->
+<!--{% load import_export_tags %}-->
+<!--{% load static %}-->
 
-{% block extrastyle %}{{ block.super }}<link rel="stylesheet" type="text/css" href="{% static 'import_export/import.css' %}" />{% endblock %}
+<!--{% block extrastyle %}{{ block.super }}<link rel="stylesheet" type="text/css" href="{% static 'import_export/import.css' %}" />{% endblock %}-->
 
-{% block breadcrumbs_last %}
-{% trans "import" %}
-{% endblock %}
+<!--{% block breadcrumbs_last %}-->
+<!--{% trans "import" %}-->
+<!--{% endblock %}-->
 
-{% block content %}
+<!--{% block content %}-->
 
-  {% if confirm_form %}
-    <form action="{% url opts|admin_urlname:'process_import' %}" method="POST">
-      {% csrf_token %}
-      {{ confirm_form.as_p }}
-      <p>
-        {% trans "below is a preview of data to be imported. If you are satisfied with the results, click 'Confirm import'" %}
-      </p>
-      <div class="submit-row">
-        <input type="submit" class="default" name="confirm" value="{% trans 'confirm import' %}">
-      </div>
-    </form>
-  {% else %}
-    <form action="" method="post" enctype="multipart/form-data">
-      {% csrf_token %}
+<!--  {% if confirm_form %}-->
+<!--    <form action="{% url opts|admin_urlname:'process_import' %}" method="POST">-->
+<!--      {% csrf_token %}-->
+<!--      {{ confirm_form.as_p }}-->
+<!--      <p>-->
+<!--        {% trans "below is a preview of data to be imported. If you are satisfied with the results, click 'Confirm import'" %}-->
+<!--      </p>-->
+<!--      <div class="submit-row">-->
+<!--        <input type="submit" class="default" name="confirm" value="{% trans 'confirm import' %}">-->
+<!--      </div>-->
+<!--    </form>-->
+<!--  {% else %}-->
+<!--    <form action="" method="post" enctype="multipart/form-data">-->
+<!--      {% csrf_token %}-->
 
-      <p>
-<!--        {% "Questo importatore importerà la dichiarazione dei costi" %} -->
-        <!-- {% trans "This importer will import the following fields: " %} -->
-        <!-- <code>{{ fields|join:", " }}</code> -->
-      </p>
+<!--      <p>-->
+<!--&lt;!&ndash;        {% "Questo importatore importerà la dichiarazione dei costi" %} &ndash;&gt;-->
+<!--        &lt;!&ndash; {% trans "This importer will import the following fields: " %} &ndash;&gt;-->
+<!--        &lt;!&ndash; <code>{{ fields|join:", " }}</code> &ndash;&gt;-->
+<!--      </p>-->
 
-      <fieldset class="module aligned">
-        {% for field in form %}
-          <div class="form-row">
-            {{ field.errors }}
+<!--      <fieldset class="module aligned">-->
+<!--        {% for field in form %}-->
+<!--          <div class="form-row">-->
+<!--            {{ field.errors }}-->
 
-            {{ field.label_tag }}
+<!--            {{ field.label_tag }}-->
 
-            {{ field }}
+<!--            {{ field }}-->
 
-            {% if field.field.help_text %}
-            <p class="help">{{ field.field.help_text|safe }}</p>
-            {% endif %}
-          </div>
-        {% endfor %}
-      </fieldset>
+<!--            {% if field.field.help_text %}-->
+<!--            <p class="help">{{ field.field.help_text|safe }}</p>-->
+<!--            {% endif %}-->
+<!--          </div>-->
+<!--        {% endfor %}-->
+<!--      </fieldset>-->
 
-      <div class="submit-row">
-        <input type="submit" class="default" value="{% trans 'submit' %}">
-      </div>
-    </form>
-  {% endif %}
+<!--      <div class="submit-row">-->
+<!--        <input type="submit" class="default" value="{% trans 'submit' %}">-->
+<!--      </div>-->
+<!--    </form>-->
+<!--  {% endif %}-->
 
-  {% if result %}
+<!--  {% if result %}-->
 
-    {% if result.has_errors %}
+<!--    {% if result.has_errors %}-->
 
-      <h2>{% trans "errors" %}</h2>
-      <ul>
-        {% for error in result.base_errors  %}
-        <li>
-          {{ error.error }}
-          <div class="traceback">{{ error.traceback|linebreaks }}</div>
-        </li>
-        {% endfor %}
-        {% for line, errors in result.row_errors %}
-          {% for error in errors %}
-            <li>
-              {% trans "line number" %}: {{ line }} - {{ error.error }}
-              <div><code>{{ error.row.values|join:", " }}</code></div>
-              <div class="traceback">{{ error.traceback|linebreaks }}</div>
-            </li>
-          {% endfor %}
-        {% endfor %}
-      </ul>
+<!--      <h2>{% trans "errors" %}</h2>-->
+<!--      <ul>-->
+<!--        {% for error in result.base_errors  %}-->
+<!--        <li>-->
+<!--          {{ error.error }}-->
+<!--          <div class="traceback">{{ error.traceback|linebreaks }}</div>-->
+<!--        </li>-->
+<!--        {% endfor %}-->
+<!--        {% for line, errors in result.row_errors %}-->
+<!--          {% for error in errors %}-->
+<!--            <li>-->
+<!--              {% trans "line number" %}: {{ line }} - {{ error.error }}-->
+<!--              <div><code>{{ error.row.values|join:", " }}</code></div>-->
+<!--              <div class="traceback">{{ error.traceback|linebreaks }}</div>-->
+<!--            </li>-->
+<!--          {% endfor %}-->
+<!--        {% endfor %}-->
+<!--      </ul>-->
 
-    {% elif result.has_validation_errors %}
+<!--    {% elif result.has_validation_errors %}-->
 
-      <h2>{% trans "some rows failed to validate" %}</h2>
-        
-      <p>{% trans "please correct these errors in your data where possible, then reupload it using the form above." %}</p>
-      
-      <table class="import-preview">
-        <thead>
-          <tr>
-            <th>{% trans "row" %}</th>
-            <th>{% trans "errors" %}</th>
-            {% for field in result.diff_headers %}
-              <th>{{ field }}</th>
-            {% endfor %}
-          </tr>
-        </thead>
-        <tbody>
-        {% for row in result.invalid_rows %}
-          <tr>
-            <td>{{ row.number }} </td>
-            <td class="errors">
-              <span class="validation-error-count">{{ row.error_count }}</span> 
-              <div class="validation-error-container">
-                <ul class="validation-error-list">
-                  {% for field_name, error_list in row.field_specific_errors.items %}
-                    <li>
-                        <span class="validation-error-field-label">{{ field_name }}</span>
-                        <ul>
-                          {% for error in error_list %}
-                            <li>{{ error }}</li>
-                          {% endfor %}
-                        </ul>
-                    </li>
-                  {% endfor %}
-                  {% if row.non_field_specific_errors %}
-                    <li>
-                      <span class="validation-error-field-label">{% trans "non field specific" %}</span>
-                      <ul>
-                        {% for error in row.non_field_specific_errors %}
-                          <li>{{ error }}</li>
-                        {% endfor %}
-                      </ul>
-                    </li>
-                  {% endif %}
-                </ul>
-              </div>
-            </td>
-            {% for field in row.values %}
-              <td>{{ field }}</td>
-            {% endfor %}
-          </tr>
-        {% endfor %}
-        </tbody>
-      </table>
-  
-    {% else %}
+<!--      <h2>{% trans "some rows failed to validate" %}</h2>-->
+<!--        -->
+<!--      <p>{% trans "please correct these errors in your data where possible, then reupload it using the form above." %}</p>-->
+<!--      -->
+<!--      <table class="import-preview">-->
+<!--        <thead>-->
+<!--          <tr>-->
+<!--            <th>{% trans "row" %}</th>-->
+<!--            <th>{% trans "errors" %}</th>-->
+<!--            {% for field in result.diff_headers %}-->
+<!--              <th>{{ field }}</th>-->
+<!--            {% endfor %}-->
+<!--          </tr>-->
+<!--        </thead>-->
+<!--        <tbody>-->
+<!--        {% for row in result.invalid_rows %}-->
+<!--          <tr>-->
+<!--            <td>{{ row.number }} </td>-->
+<!--            <td class="errors">-->
+<!--              <span class="validation-error-count">{{ row.error_count }}</span> -->
+<!--              <div class="validation-error-container">-->
+<!--                <ul class="validation-error-list">-->
+<!--                  {% for field_name, error_list in row.field_specific_errors.items %}-->
+<!--                    <li>-->
+<!--                        <span class="validation-error-field-label">{{ field_name }}</span>-->
+<!--                        <ul>-->
+<!--                          {% for error in error_list %}-->
+<!--                            <li>{{ error }}</li>-->
+<!--                          {% endfor %}-->
+<!--                        </ul>-->
+<!--                    </li>-->
+<!--                  {% endfor %}-->
+<!--                  {% if row.non_field_specific_errors %}-->
+<!--                    <li>-->
+<!--                      <span class="validation-error-field-label">{% trans "non field specific" %}</span>-->
+<!--                      <ul>-->
+<!--                        {% for error in row.non_field_specific_errors %}-->
+<!--                          <li>{{ error }}</li>-->
+<!--                        {% endfor %}-->
+<!--                      </ul>-->
+<!--                    </li>-->
+<!--                  {% endif %}-->
+<!--                </ul>-->
+<!--              </div>-->
+<!--            </td>-->
+<!--            {% for field in row.values %}-->
+<!--              <td>{{ field }}</td>-->
+<!--            {% endfor %}-->
+<!--          </tr>-->
+<!--        {% endfor %}-->
+<!--        </tbody>-->
+<!--      </table>-->
+<!--  -->
+<!--    {% else %}-->
 
-      <h2>{% trans "preview" %}</h2>
+<!--      <h2>{% trans "preview" %}</h2>-->
 
-      <table class="import-preview">
-        <thead>
-          <tr>
-            <th></th>
-            {% for field in result.diff_headers %}
-              <th>{{ field }}</th>
-            {% endfor %}
-          </tr>
-        </thead>
-        {% for row in result.valid_rows %}
-          <tr class="{{ row.import_type }}">
-            <td class="import-type">
-              {% if row.import_type == 'new' %}
-                {% trans "New" %}
-              {% elif row.import_type == 'skip' %}
-                {% trans "skipped" %}
-              {% elif row.import_type == 'delete' %}
-                {% trans "delete" %}
-              {% elif row.import_type == 'update' %}
-                {% trans "update" %}
-              {% endif %}
-            </td>
-            {% for field in row.diff %}
-              <td>{{ field }}</td>
-            {% endfor %}
-          </tr>
-        {% endfor %}
-      </table>
+<!--      <table class="import-preview">-->
+<!--        <thead>-->
+<!--          <tr>-->
+<!--            <th></th>-->
+<!--            {% for field in result.diff_headers %}-->
+<!--              <th>{{ field }}</th>-->
+<!--            {% endfor %}-->
+<!--          </tr>-->
+<!--        </thead>-->
+<!--        {% for row in result.valid_rows %}-->
+<!--          <tr class="{{ row.import_type }}">-->
+<!--            <td class="import-type">-->
+<!--              {% if row.import_type == 'new' %}-->
+<!--                {% trans "New" %}-->
+<!--              {% elif row.import_type == 'skip' %}-->
+<!--                {% trans "skipped" %}-->
+<!--              {% elif row.import_type == 'delete' %}-->
+<!--                {% trans "delete" %}-->
+<!--              {% elif row.import_type == 'update' %}-->
+<!--                {% trans "update" %}-->
+<!--              {% endif %}-->
+<!--            </td>-->
+<!--            {% for field in row.diff %}-->
+<!--              <td>{{ field }}</td>-->
+<!--            {% endfor %}-->
+<!--          </tr>-->
+<!--        {% endfor %}-->
+<!--      </table>-->
 
-    {% endif %}
+<!--    {% endif %}-->
 
-  {% endif %}
-{% endblock %}
+<!--  {% endif %}-->
+<!--{% endblock %}-->

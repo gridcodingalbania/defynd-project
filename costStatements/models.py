@@ -111,3 +111,6 @@ class CostStatementItem(models.Model):
         db_table = "cost_statement_item"
         verbose_name = _('Cost Statement Item')
         verbose_name_plural = _('Cost Statement Items')
+
+
+

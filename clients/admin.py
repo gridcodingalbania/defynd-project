@@ -32,13 +32,13 @@ class CustomerAdmin(admin.ModelAdmin):
         (
             None,
             {
-                'fields': ('company_name', 'role')
+                'fields': ('company_name', 'role', 'first_name', 'last_name')
             }
         ),
         (
             _('personal-info'),
             {
-                'fields': ('fiscal_code', 'vat_number'),
+                'fields': ('fiscal_code', 'vat_number', 'birthplace', 'birthday', 'gender'),
                 'classes': ('wide', 'extrapretty', 'individual')
             }
         ),
@@ -66,7 +66,7 @@ class CustomerAdmin(admin.ModelAdmin):
         (
             None,
             {
-                'fields': ('code', 'customer_type')
+                'fields': ('code', 'customer_type',)
             }
         ),
         (
@@ -104,7 +104,6 @@ class CustomerAdmin(admin.ModelAdmin):
     )
 
     form = ContactForm
-
 
     def get_fieldsets(self, request, obj=None):
         array_url = request.build_absolute_uri().split("/")

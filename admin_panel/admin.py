@@ -7,11 +7,11 @@ from django.urls import path
 
 # TODO: every staff member could see the report?? Change with dedicated permissions
 
-@staff_member_required
-def admin_statistics_view(request):
-    return render(request, 'admin/statistics.html', {
-        'title': 'Statistics'
-    })
+# @staff_member_required
+# def admin_statistics_view(request):
+#     return render(request, 'admin/statistics.html', {
+#         'title': 'Statistics'
+#     })
 
 
 class CustomAdminSite(AdminSite):
@@ -27,21 +27,21 @@ class CustomAdminSite(AdminSite):
     site_header = _('DEFYND')
     index_title = _('Litigation Management System')
 
-    def get_app_list(self, request):
-        app_list = super().get_app_list(request)
-        app_list += [
-            {
-                'name': _('Dashboard'),
-                'app_label':'dashboard',
-                'models': [
-                    {
-                        'name':_('Statistics'),
-                        'object_name': 'statistics',
-                        'admin_url': '/admin/statistics',
-                        'view_only': True,
-                    }
-                ],
-            },
+    # def get_app_list(self, request):
+    #     app_list = super().get_app_list(request)
+    #     app_list += [
+    #         {
+    #             'name': _('Dashboard'),
+    #             'app_label':'dashboard',
+    #             'models': [
+    #                 {
+    #                     'name':_('Statistics'),
+    #                     'object_name': 'statistics',
+    #                     'admin_url': '/admin/statistics',
+    #                     'view_only': True,
+    #                 }
+    #             ],
+    #         },
             # {
             #     'name': _('Translate'),
             #     'app_label': 'translate',
@@ -54,15 +54,15 @@ class CustomAdminSite(AdminSite):
             #         }
             #     ],
             # }
-        ]
-        return app_list
-
-    def get_urls(self):
-        urls = super().get_urls()
-        urls += [
-            path('statistics/', admin_statistics_view, name='admin-statistics'),
-        ]
-        return urls
+        # ]
+        # return app_list
+    #
+    # def get_urls(self):
+    #     urls = super().get_urls()
+    #     urls += [
+    #         path('statistics/', admin_statistics_view, name='admin-statistics'),
+    #     ]
+    #     return urls
 
 admin_site = CustomAdminSite()
 

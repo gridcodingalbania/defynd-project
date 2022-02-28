@@ -43,6 +43,14 @@ class CostStatementItemAdmin(admin.ModelAdmin):
     search_fields = ('item__name', 'cost_statement__name', 'hypothesis__name')
     list_filter = ('item', 'cost_statement', 'hypothesis')
 
+    def changelist_view(self, request, extra_context=None):
+        # Add extra context data to pass to change list template
+        extra_context = extra_context or {}
+        # Execute default logic from parent class changelist_view()
+        return super(CostStatementItemAdmin, self).changelist_view(
+            request, extra_context=extra_context
+        )
+
 
 class CostStatementItemline(admin.TabularInline):
     model = CostStatementItem

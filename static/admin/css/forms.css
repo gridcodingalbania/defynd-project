@@ -525,3 +525,9 @@ form .related-widget-wrapper ul {
 .clearable-file-input input {
     margin-top: 0;
 }
+
+
+
+.field-closed > .field-closed  {
+    margin-left: 200px;
+}

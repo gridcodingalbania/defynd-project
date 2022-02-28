@@ -7,6 +7,8 @@ from django.utils.translation import gettext_lazy as _
 import datetime
 
 
+
+
 def increment_litigation_number():
     """ Increment litigation (case) code  
     """
@@ -42,6 +44,7 @@ class Litigation(models.Model):
         ('value_2', 'value-2'),
     ]
 
+
     name = models.CharField(_("litigation-code"), max_length=20, unique=True,
                             default=increment_litigation_number, )
 
@@ -50,6 +53,7 @@ class Litigation(models.Model):
     client = models.ForeignKey(customer.Customer,
                                verbose_name=_("client"),
                                on_delete=models.CASCADE, blank=True, null=True)
+    hyperlink = models.URLField(verbose_name=_("HyperLink to Economics Sheet"), blank=True, null=True, max_length=7000)
     # contract = models.
     dispute_matter = models.ForeignKey(config.DisputeMatter,
                                        verbose_name=_("Controversy Matter"), on_delete=models.CASCADE, null=True)
@@ -57,7 +61,7 @@ class Litigation(models.Model):
                                        verbose_name=_("Dispute Object"), on_delete=models.CASCADE, null=True)
     starting_date = models.DateField(_("Starting Date"), max_length=100, null=True)
     target_date = models.DateField(_("Target Data"), max_length=100, null=True)
-    closing_date = models.DateField(_("Closing Date"), max_length=100, null=True)
+    closing_date = models.DateField(_("Closing Date"), max_length=100, null=True, blank=True)
     initial_estimation_value = models.DecimalField(_("Initial Estimation Value"),
                                                    max_digits=32, decimal_places=2,
                                                    default=0, blank=True, null=True)  # currency
@@ -67,6 +71,13 @@ class Litigation(models.Model):
     final_value = models.DecimalField(_("Final Value"),
                                       max_digits=50, decimal_places=2,
                                       default=0, blank=True, null=True)
+
+
+    revenue = models.IntegerField(_("Revenue"), blank=True, null=True)
+    total_cost = models.IntegerField(_("Total Cost"), blank=True, null=True)
+    turnover_margin = models.IntegerField(_("Turnover Margin"), blank=True, null=True)
+
+
     reference = models.CharField(_("Reference"), max_length=100, blank=True, null=True)
     prejudicial_registrations = models.CharField(_("Prejudicial Registrations"),
                                                  max_length=100, blank=True, null=True)
@@ -236,6 +247,7 @@ class Litigation(models.Model):
 
     def __str__(self):
         return "%s" % (self.name)
+
 
     class Meta:
         db_table = "litigation"

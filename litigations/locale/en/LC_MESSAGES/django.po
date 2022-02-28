@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-20 17:18+0100\n"
-"PO-Revision-Date: 2022-02-20 14:48+0000\n"
+"PO-Revision-Date: 2022-02-26 16:18+0000\n"
 "Last-Translator:   <admin@defynd.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -49,7 +49,6 @@ msgid "Reference"
 msgstr "Reference"
 
 #: .\litigations\admin.py:75 .\litigations\forms.py:304
-#, fuzzy
 #| msgid "edificio"
 msgid "Edificio"
 msgstr "Building"
