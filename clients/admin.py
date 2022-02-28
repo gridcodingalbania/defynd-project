@@ -113,7 +113,7 @@ class CustomerAdmin(admin.ModelAdmin):
             if len(result) > 0:
                 customer = result[0]
                 if customer.customer_type == 'individual':
-                    return self.t1  # hide fields
+                    return fields  # hide fields
                 else:
                     return fields
         return fields
@@ -135,6 +135,7 @@ class CustomerAdmin(admin.ModelAdmin):
         js = (
             '//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js',  # jquery
             'admin/js/contact_type.js',  # project static folder
+            'js/customer.js'
         )
 
 

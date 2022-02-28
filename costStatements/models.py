@@ -67,6 +67,7 @@ class CostStatement(models.Model):
                                 blank=True, null=True)
     init_amount = models.FloatField(_("Init Amount"), blank=True, null=True)
     total = models.FloatField(_("Total Cost"), blank=True, null=True)
+    url = models.FloatField(_("Url"), blank=True, null=True)
     init_negotiation = models.IntegerField(_("Init Negotiation"), null=True, )
     expected_dealing_term = models.IntegerField(_("Expected dealing Term"), null=True, )
 

@@ -127,8 +127,6 @@ class LitigationAdmin(admin.ModelAdmin):
     # all required=True information in litigation form, will be requried also in the admin model
     form = LitigationForm
     def change_view(self, request, object_id, form_url='', extra_context=None):
-
-        print("requesttt", request)
         return super().change_view(
             request, object_id, form_url,
         )
@@ -136,6 +134,7 @@ class LitigationAdmin(admin.ModelAdmin):
         js = (
             '//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js',  # jquery
             'admin/js/litigation.js',  # project static folder
+            'js/litigation.js'
         )
 
 

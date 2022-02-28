@@ -1,5 +1,7 @@
 import { formatDate } from './tools.js';
 (function($) {
+
+
     'use strict';
     var interestedAreaValue = 0;
     var targetAreaValue = 0;

@@ -185,6 +185,6 @@ LOCALE_PATHS = (
 
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_PORT = '587'
-EMAIL_HOST_USER ="elionpisha2@gmail.com"
-EMAIL_HOST_PASSWORD ="elion639854"
+EMAIL_HOST_USER ="kosta.anxhela93@gmail.com"
+EMAIL_HOST_PASSWORD ="albertos1nan1"
 EMAIL_USE_TLS = True

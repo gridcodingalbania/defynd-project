@@ -91,9 +91,10 @@ form ul.inline li {
 }
 
 .aligned ul label {
-    display: inline;
+    /*display: inline;
     float: none;
     width: auto;
+    */
 }
 
 .aligned .form-row input {

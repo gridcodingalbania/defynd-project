@@ -36,3 +36,69 @@ label[for='id_phone'] {
 .field-email > .errorlist > li {
     padding-left: 1px !important;
 }
+
+.fieldBox > input {
+    width: calc(100% - 20px);
+}
+
+.form-row {
+    display: flex;
+}
+
+
+.fieldBox.field-initial_value:before,
+.fieldBox.field-objective_value:before,
+.fieldBox.field-final_value:before,
+.fieldBox.field-revue_value:before,
+.fieldBox.field-total_cost_value:before,
+.fieldBox.field-margin_value:before{
+    content: '€';
+    position: absolute;
+    transform: translateY(calc(50% + 7px));
+    right: 12px;
+}
+
+
+.form-row.field-initial_estimation_value > div:before {
+    content: '€';
+    position: absolute;
+    transform: translateY(calc(50% + 2px));
+    right: 12px;
+}
+
+.form-row.field-initial_estimation_value > div {
+    position: relative;
+}
+
+.fieldBox.field-initial_value,
+.fieldBox.field-objective_value,
+.fieldBox.field-final_value,
+.fieldBox.field-revue_value,
+.fieldBox.field-total_cost_value,
+.fieldBox.field-margin_value,
+.fieldBox.field-total_value{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: calc(100% / 8);
+    position: relative;
+}
+
+.fieldBox.field-total_value:before {
+    content: '%';
+    position: absolute;
+    transform: translateY(calc(50% + 7px));
+    right: 12px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

@@ -94,7 +94,7 @@ class CostStatementAdmin(ImportExportModelAdmin):
         (
             None,
             {
-                'fields': ('init_amount', 'total')
+                'fields': ('init_amount', 'total', 'url')
             }
         ),
     ]

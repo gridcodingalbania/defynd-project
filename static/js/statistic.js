@@ -7,13 +7,17 @@ function calculatePercentage(a, b) {
     const total_value_obj = document.getElementById("id_total_value");
 
     if(b!=0) {
-        total_value_obj.value = a/b * 100;
+        total_value_obj.value = (a/b * 100).toFixed(2);
     } else {
         total_value_obj.value = 0;
     }
 }
 
+
 document.addEventListener("DOMContentLoaded", function(event) {
+
+    console.log("test?")
+
     revue_value = 0;
     total_cost = 0;
 

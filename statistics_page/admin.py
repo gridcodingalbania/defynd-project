@@ -5,7 +5,7 @@ from .models import Statistics
 class StatisticAdmin(admin.ModelAdmin):
 
     class Media:
-        js = ('js/statistics.js', )
+        js = ('js/statistic.js', )
 
     list_display = (
         'name', 'initial_value', 'objective_value', 'final_value', 'total_value',
@@ -16,10 +16,10 @@ class StatisticAdmin(admin.ModelAdmin):
         (
             None,
             {
-                'fields': ('name', ('initial_value', 'objective_value',
-                                    'final_value', 'total_value', 'revue_value',
-                                    'total_cost_value', 'margin_value'),
-                           'description'),
+                'fields': (('name', ('initial_value', 'objective_value',
+                                    'final_value',
+                           'total_value', 'revue_value', 'total_cost_value', 'margin_value'),
+                           'description')),
             }
         ),
 
