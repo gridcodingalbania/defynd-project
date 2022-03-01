@@ -8,6 +8,11 @@ function updateField2(c, d) {
     residual_surface_obj.value = c-d;
 }
 
+function addMeterSymbol(className, number) {
+    const elem = document.getElementsByClassName(className)
+    elem[0].insertAdjacentHTML('beforeend', "<span>m<sup>"+number+"</sup></span>");
+}
+
 document.addEventListener("DOMContentLoaded", function(event) {
 
     revue_value = 0;
@@ -40,6 +45,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
         occupied_area = evt.target.value;
         updateField2(surface_directly_concerned, occupied_area);
     });
+
+    addMeterSymbol("fieldBox field-surface_directly_concerned", 2);
+    addMeterSymbol("fieldBox field-occupied_area", 2);
+    addMeterSymbol("fieldBox field-residual_surface", 2);
+    addMeterSymbol("fieldBox field-transformation_coefficient", 3);
+    addMeterSymbol("fieldBox field-extension_MQ", 2);
+    addMeterSymbol("fieldBox field-MC_residui", 3);
+
 });
 
 

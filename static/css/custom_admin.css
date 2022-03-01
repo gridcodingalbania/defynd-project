@@ -202,3 +202,14 @@ input[type=number] {
 .fieldBox.field-reclamation_cost {
     position: relative;
 }
+
+
+.fieldBox.field-extension_MQ > span:before {
+    position: absolute;
+    transform: translateY(calc(50% + 26px));
+    right: 12px;
+}
+
+.fieldBox.field-extension_MQ >  {
+    position: relative;
+}

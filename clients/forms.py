@@ -74,6 +74,7 @@ class ContactForm(forms.ModelForm):
         required=False
     )
     phone_prefix = forms.ChoiceField(widget=forms.Select(), choices=phone_prefixes, label=_('Phone'))
+    mobile_prefix = forms.ChoiceField(widget=forms.Select(), choices=phone_prefixes, label=_('Mobile'))
     phone = forms.IntegerField(label="")
     customer_type = forms.ChoiceField(widget=forms.Select(), label=_('Customer Type'),
                                       choices=contact_choices, required=True, )
@@ -203,7 +204,7 @@ class ContactForm(forms.ModelForm):
         Fieldset(
             None,
             Row('role'),  # 'contact_person',
-            Row(Span3('email'), 'phone_prefix', 'phone', 'mobile', ),
+            Row(Span2('email'), 'phone_prefix', 'phone', 'mobile_prefix','mobile', ),
             Row('birthplace', 'birthday'),
             Row('gender', ),
         ),
