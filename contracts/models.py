@@ -27,7 +27,7 @@ class Contract(models.Model):
     sign_date = models.DateField(_("Sign Date"), null=True, blank=True)
     client = models.ForeignKey(customer.Customer, verbose_name=_("Client"), on_delete=models.CASCADE, null=True)
     # statement = models.ForeignKey(statement.CostStatement, verbose_name=_("Cost Statement"), on_delete=models.CASCADE, null=True)
-    url = models.FloatField(_("Url"), blank=True, null=True)
+    url = models.URLField(_("Url"), max_length=400, blank=True, null=True)
 
     class Meta:
         db_table = "contract"
