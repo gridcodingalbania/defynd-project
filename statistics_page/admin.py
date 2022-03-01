@@ -26,6 +26,5 @@ class StatisticAdmin(admin.ModelAdmin):
     ]
 
 
-
 # Register your models here.
 admin.site.register(Statistics, StatisticAdmin)

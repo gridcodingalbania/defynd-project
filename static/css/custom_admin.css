@@ -70,6 +70,20 @@ label[for='id_phone'] {
     position: relative;
 }
 
+.form-row.field-target_value > div:before,
+.form-row.field-final_value> div:before {
+    content: '€';
+    position: absolute;
+    transform: translateY(calc(50% + 2px));
+    right: 12px;
+}
+
+.form-row.field-target_value > div,
+.form-row.field-final_value > div {
+    position: relative;
+}
+
+
 .fieldBox.field-initial_value,
 .fieldBox.field-objective_value,
 .fieldBox.field-final_value,
@@ -101,4 +115,90 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+
+
+
+
+.form-row.field-revenue > div:before {
+    content: '€';
+    position: absolute;
+    transform: translateY(calc(50% + 0px));
+    right: 12px;
+}
+
+.form-row.field-revenue > div {
+    position: relative;
+}
+
+
+.form-row.field-total_cost > div:before {
+    content: '€';
+    position: absolute;
+    transform: translateY(calc(50% + 2px));
+    right: 12px;
+}
+
+.form-row.field-total_cost > div {
+    position: relative;
+}
+
+.form-row.field-turnover_margin > div:before {
+    content: '€';
+    position: absolute;
+    transform: translateY(calc(50% + 0px));
+    right: 12px;
+}
+
+.form-row.field-turnover_margin > div {
+    position: relative;
+}
+
+.form-row.field-enrollment_amount > div:before {
+    content: '€';
+    position: absolute;
+    transform: translateY(calc(50% + 0px));
+    right: 12px;
+}
+
+.form-row.field-enrollment_amount > div {
+    position: relative;
+}
+
+
+
+.fieldBox.field-contract_fee > :before {
+    content: '€';
+    position: absolute;
+    transform: translateY(calc(50% + 26px));
+    right: 12px;
+}
+
+.fieldBox.field-contract_fee  {
+    position: relative;
+}
+
+
+.fieldBox.field-residual_rent > :before {
+    content: '€';
+    position: absolute;
+    transform: translateY(calc(50% + 26px));
+    right: 12px;
+}
+
+.fieldBox.field-residual_rent  {
+    position: relative;
+}
+
+
+.fieldBox.field-reclamation_cost > :before {
+    content: '€';
+    position: absolute;
+    transform: translateY(calc(50% + 26px));
+    right: 12px;
+}
+
+.fieldBox.field-reclamation_cost {
+    position: relative;
 }

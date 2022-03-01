@@ -56,8 +56,8 @@ import { formatDate } from './tools.js';
                 contact_person.hide();
                 birthday_container.hide();
                 birthplace.hide();
-                first_name.hide();
-                last_name.hide();
+                first_name.show();
+                last_name.show();
             }
         }
 

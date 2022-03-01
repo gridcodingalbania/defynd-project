@@ -13,7 +13,7 @@ class ContractResource(resources.ModelResource):
 
 class ContractAdmin(ImportExportModelAdmin):
     list_display = ( 
-        'name', 'code', 'date', 'sign_date', 'client', 'statement',
+        'name', 'code', 'date', 'sign_date', 'client', 'url',
     )
     search_fields = (
         'name', 'code', 'date', 'sign_date', 'client__code', 'client__name',
@@ -36,7 +36,7 @@ class ContractAdmin(ImportExportModelAdmin):
                     (
                         None,
                         {
-                            'fields': ('client', 'statement')
+                            'fields': ('client', 'url')
                         }
                     ),
 

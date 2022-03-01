@@ -2,8 +2,47 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 
 phone_prefixes = (
+    ('+39', '+39'),
     ('+355', '+355'),
-    ('+44', '+44')
+    ('+44', '+44'),
+    ('+43', '+43'),
+    ('+32', '+32'),
+    ('+359', '+359'),
+    ('+357', '+357'),
+    ('+420', '+420'),
+    ('+45', '+45'),
+    ('+372', '+372'),
+    ('+358', '+358'),
+    ('+33', '+33'),
+    ('+49', '+49'),
+    ('+49', '+49'),
+    ('+30', '+30'),
+    ('+36', '+36'),
+    ('+354', '+354'),
+    ('+353', '+353'),
+    ('+371', '+371'),
+    ('+423', '+423'),
+    ('+370', '+370'),
+    ('+352', '+352'),
+    ('+356', '+356'),
+    ('+31', '+31'),
+    ('+47', '+47'),
+    ('+48', '+48'),
+    ('+351', '+351'),
+    ('+40', '+40'),
+    ('+421', '+421'),
+    ('+421', '+421'),
+    ('+386', '+386'),
+    ('+34', '+34'),
+    ('+46', '+46'),
+    ('+383', '+383'),
+    ('+389', '+389'),
+    ('+382', '+382'),
+    ('+381', '+381'),
+    ('+381', '+381'),
+    ('+41', '+41'),
+    ('+90', '+90'),
+    ('+380', '+380'),
 )
 
 def increment_customer_number():
@@ -41,6 +80,10 @@ class Customer(models.Model):
                                     default=None,
                                     null=True)
     phone = models.IntegerField(_("Phone"), blank=True, null=True)
+    mobile_prefix = models.CharField(max_length=100,
+                                    choices=phone_prefixes,
+                                    default=None,
+                                    null=True)
     mobile = models.IntegerField(_("Mobile"), blank=True, null=True)
     gender = models.CharField(_("Gender"),
                               choices=((None, ''),

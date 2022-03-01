@@ -23,7 +23,7 @@ class LitigationAdmin(admin.ModelAdmin):
         'storage_state', 'lease_agreement', 'contract_duration',
         'residual_rent', 'reclamation_intervention_type', 'closed'
     )
-    # search box appearance 
+    # search box appearance
     search_fields = (
         'name', 'client__code', 'client__name',
     )
@@ -33,7 +33,7 @@ class LitigationAdmin(admin.ModelAdmin):
             None,
             {
                 'fields': (('name', 'closed'),
-                        'client', 'hyperlink'),
+                        'client', 'hyperlink', 'upload_pdf'),
             }
         ),
         (
@@ -62,8 +62,8 @@ class LitigationAdmin(admin.ModelAdmin):
         (
             _('Area'),
             {
-                'fields': (('surface_directly_concerned', 'occupied_area', 'residual_surface', 'area_address'),
-                           'technical_reference',),
+                'fields': (('surface_directly_concerned', 'occupied_area', 'residual_surface',),
+                            'area_address','technical_reference',),
                 'classes': ('wide', 'extrapretty')
             }
         ),
@@ -134,7 +134,8 @@ class LitigationAdmin(admin.ModelAdmin):
         js = (
             '//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js',  # jquery
             'admin/js/litigation.js',  # project static folder
-            'js/litigation.js'
+            'js/litigation.js',
+            'js/lit.js'
         )
 
 

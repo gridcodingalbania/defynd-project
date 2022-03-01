@@ -7,8 +7,6 @@ from django.utils.translation import gettext_lazy as _
 import datetime
 
 
-
-
 def increment_litigation_number():
     """ Increment litigation (case) code  
     """
@@ -54,6 +52,7 @@ class Litigation(models.Model):
                                verbose_name=_("client"),
                                on_delete=models.CASCADE, blank=True, null=True)
     hyperlink = models.URLField(verbose_name=_("HyperLink to Economics Sheet"), blank=True, null=True, max_length=7000)
+    upload_pdf = models.FileField(_("Upload File"), upload_to='documents/')
     # contract = models.
     dispute_matter = models.ForeignKey(config.DisputeMatter,
                                        verbose_name=_("Controversy Matter"), on_delete=models.CASCADE, null=True)

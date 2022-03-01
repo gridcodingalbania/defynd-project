@@ -45,7 +45,7 @@ class CustomerAdmin(admin.ModelAdmin):
         (
             _('contact-info'),
             {
-                'fields': ('email', ('phone_prefix', 'phone'), 'mobile')
+                'fields': ('email', ('phone_prefix', 'phone'), ('mobile_prefix','mobile'))
             }
         ),
         (
@@ -86,7 +86,7 @@ class CustomerAdmin(admin.ModelAdmin):
         (
             _('contact-info'),
             {
-                'fields': ('email', ('phone_prefix', 'phone'), 'mobile')
+                'fields': ('email', ('phone_prefix', 'phone'), ('mobile_prefix','mobile'))
             }
         ),
         (

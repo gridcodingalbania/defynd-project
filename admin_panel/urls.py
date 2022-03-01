@@ -29,6 +29,7 @@ urlpatterns = [
     url(r'^attachments/', include('attachments.urls', namespace='attachments')),
     url(r'^activate/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,32})/$',
         client.activate, name='activate'),
+    # path('media/documents/<slug:title>')
 ]
 
 urlpatterns += i18n_patterns(
