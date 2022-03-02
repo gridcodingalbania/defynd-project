@@ -8,11 +8,11 @@
 }
 
 
-label[for='id_phone'] {
+label[for='id_phone'], label[for='id_mobile'] {
     display: none;
 }
 
-.field-phone_prefix {
+.field-phone_prefix, .field-mobile_prefix {
     margin-right: 10px !important;
 }
 

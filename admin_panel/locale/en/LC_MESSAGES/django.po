@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-20 17:18+0100\n"
+"POT-Creation-Date: 2022-03-02 08:37+0100\n"
 "PO-Revision-Date: 2022-02-22 11:29+0000\n"
 "Last-Translator:   <admin@defynd.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,21 +19,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Translated-Using: django-rosetta 0.9.8\n"
 
-#: .\admin_panel\admin.py:26 .\admin_panel\admin.py:28
+#: .\admin_panel\admin.py:20 .\admin_panel\admin.py:22
 msgid "Litigation Management System"
 msgstr "Litigation Management System"
 
-#: .\admin_panel\admin.py:27
+#: .\admin_panel\admin.py:21
 msgid "DEFYND"
 msgstr "Defynd"
-
-#: .\admin_panel\admin.py:34
-msgid "Dashboard"
-msgstr "Dashboard"
-
-#: .\admin_panel\admin.py:38
-msgid "Statistics"
-msgstr "Statistics"
 
 #: .\admin_panel\settings.py:24
 msgid "English"
@@ -42,3 +34,9 @@ msgstr "English"
 #: .\admin_panel\settings.py:25
 msgid "Italian"
 msgstr "Italian"
+
+#~ msgid "Dashboard"
+#~ msgstr "Dashboard"
+
+#~ msgid "Statistics"
+#~ msgstr "Statistics"

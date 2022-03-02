@@ -38,14 +38,16 @@
     text-transform: uppercase;
 }
 
-#id_phone_prefix_container {
+#id_phone_prefix_container, #id_mobile_prefix_container {
   padding-right: 0 !important;
 }
 
-#id_phone_prefix_container > .select-wrapper > input {
+#id_phone_prefix_container > .select-wrapper > input,
+#id_mobile_prefix_container > .select-wrapper > input {
   margin-top: -3px !important;
 }
 
-#id_phone_container {
+#id_phone_container, #id_mobile_container {
   padding-left: 0 !important;
 }
+

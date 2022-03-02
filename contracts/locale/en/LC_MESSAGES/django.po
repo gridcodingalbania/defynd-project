@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-20 17:18+0100\n"
+"POT-Creation-Date: 2022-03-02 08:37+0100\n"
 "PO-Revision-Date: 2022-02-13 10:11+0000\n"
 "Last-Translator:   <admin@defynd.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -47,23 +47,26 @@ msgstr ""
 msgid "Client"
 msgstr "Client"
 
-#: .\contracts\models.py:29
-#, fuzzy
-#| msgid "cost-statement"
-msgid "Cost Statement"
-msgstr "Cost statement"
+#: .\contracts\models.py:30
+msgid "Url"
+msgstr ""
 
-#: .\contracts\models.py:33
+#: .\contracts\models.py:34
 #, fuzzy
 #| msgid "contract"
 msgid "Contract"
 msgstr "Contract"
 
-#: .\contracts\models.py:34
+#: .\contracts\models.py:35
 #, fuzzy
 #| msgid "contracts"
 msgid "Contracts"
 msgstr "Contracts"
+
+#, fuzzy
+#~| msgid "cost-statement"
+#~ msgid "Cost Statement"
+#~ msgstr "Cost statement"
 
 #~ msgid "code"
 #~ msgstr "Code"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-20 17:18+0100\n"
+"POT-Creation-Date: 2022-03-02 08:37+0100\n"
 "PO-Revision-Date: 2022-02-23 20:20+0000\n"
 "Last-Translator:   <admin@defynd.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,15 +19,15 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Translated-Using: django-rosetta 0.9.8\n"
 
-#: .\clients\admin.py:45
+#: .\clients\admin.py:39 .\clients\admin.py:80
 msgid "personal-info"
 msgstr "Informazioni Personali"
 
-#: .\clients\admin.py:52
+#: .\clients\admin.py:46 .\clients\admin.py:87
 msgid "contact-info"
 msgstr "Informazioni Contatto"
 
-#: .\clients\admin.py:58
+#: .\clients\admin.py:52 .\clients\admin.py:93
 msgid "address"
 msgstr "Indirizzo"
 
@@ -35,180 +35,157 @@ msgstr "Indirizzo"
 msgid "clients"
 msgstr "clienti"
 
-#: .\clients\forms.py:7
+#: .\clients\forms.py:8
 msgid "female"
 msgstr "Femmina"
 
-#: .\clients\forms.py:8
+#: .\clients\forms.py:9
 msgid "male"
 msgstr "Maschio"
 
-#: .\clients\forms.py:12
+#: .\clients\forms.py:13
 msgid "individual"
 msgstr " Individuo"
 
-#: .\clients\forms.py:13
+#: .\clients\forms.py:14
 msgid "company"
 msgstr "Azienda"
 
-#: .\clients\forms.py:21 .\clients\models.py:37
-#| msgid "gender"
+#: .\clients\forms.py:67 .\clients\models.py:88
 msgid "Gender"
 msgstr "Genere"
 
-#: .\clients\forms.py:27 .\clients\models.py:41
-#| msgid "birthday"
+#: .\clients\forms.py:73 .\clients\models.py:92
 msgid "Birthday"
 msgstr "Data di nascita"
 
-#: .\clients\forms.py:30 .\clients\models.py:49
-#| msgid "customer-type"
-msgid "Customer Type"
-msgstr "Tipologia Cliente"
-
-#: .\clients\forms.py:32
-#| msgid "origin"
-msgid "Origin"
-msgstr "Origine"
-
-#: .\clients\forms.py:37 .\clients\forms.py:40 .\clients\forms.py:42
-#: .\clients\forms.py:43
-#| msgid "agree"
-msgid "Agree"
-msgstr "Conferma"
-
-#: .\clients\forms.py:38
-#| msgid "agree-condition"
-msgid "Agree Condition"
-msgstr "Conferma"
-
-#: .\clients\forms.py:41
-#| msgid "agree-contact"
-msgid "Agree Contact"
-msgstr "Conferma contatto"
-
-#: .\clients\forms.py:60
-msgid "Email already exists."
-msgstr "Email già esistente."
-
-#: .\clients\forms.py:62
-msgid "No duplicate customer found for this email, proceeding to save in db."
-msgstr ""
-"Nessun cliente duplicato trovato per questa email, procedendo al salvataggio"
-" in db"
-
-#: .\clients\forms.py:71 .\clients\forms.py:73 .\clients\forms.py:75
-#: .\clients\forms.py:77 .\clients\forms.py:87 .\clients\forms.py:89
-#: .\clients\forms.py:91 .\clients\forms.py:93 .\clients\forms.py:106
-#: .\clients\forms.py:108 .\clients\forms.py:110 .\clients\forms.py:112
-#| msgid "required-field"
-msgid "Required Field"
-msgstr "Campo obligatorio"
-
-#: .\clients\forms.py:126
-#| msgid "registration"
-msgid "Registration"
-msgstr "Registrazione"
-
-#: .\clients\forms.py:152
-#| msgid "address"
-msgid "Address"
-msgstr "Indirizzo"
-
-#: .\clients\models.py:17
-msgid "Code"
-msgstr "codice_cliente"
-
-#: .\clients\models.py:21 .\clients\models.py:31
-msgid "Name"
-msgstr "Nome"
-
-#: .\clients\models.py:23
-#| msgid "fiscal-code"
-msgid "Fiscal Code"
-msgstr "Codice Fiscale"
-
-#: .\clients\models.py:24
-#| msgid "vat-number"
-msgid "Vat Number"
-msgstr "Numero VAT"
-
-#: .\clients\models.py:26
-#| msgid "company"
-msgid "Company Name"
-msgstr "Azienda"
-
-#: .\clients\models.py:28
-#| msgid "contact-info"
-msgid "Contact Person"
-msgstr "Informazioni Contatto"
-
-#: .\clients\models.py:29
-msgid "Role"
-msgstr "Ruolo"
-
-#: .\clients\models.py:32
-msgid "Last Name"
-msgstr "Cognome"
-
-#: .\clients\models.py:34
-msgid "e-mail"
-msgstr "E-mail"
-
-#: .\clients\models.py:35
-#| msgid "phone"
+#: .\clients\forms.py:76 .\clients\models.py:82
 msgid "Phone"
 msgstr "Telefono"
 
-#: .\clients\models.py:36
-#| msgid "mobile"
+#: .\clients\forms.py:77 .\clients\models.py:87
 msgid "Mobile"
 msgstr "Mobile"
 
-#: .\clients\models.py:42
-#| msgid "birth-place"
+#: .\clients\forms.py:80 .\clients\models.py:100
+msgid "Customer Type"
+msgstr "Tipologia Cliente"
+
+#: .\clients\forms.py:82
+msgid "Origin"
+msgstr "Origine"
+
+#: .\clients\forms.py:87 .\clients\forms.py:90 .\clients\forms.py:92
+#: .\clients\forms.py:93
+msgid "Agree"
+msgstr "Conferma"
+
+#: .\clients\forms.py:88
+msgid "Agree Condition"
+msgstr "Conferma"
+
+#: .\clients\forms.py:91
+msgid "Agree Contact"
+msgstr "Conferma contatto"
+
+#: .\clients\forms.py:115 .\clients\forms.py:120
+msgid "Email already exists."
+msgstr "Email già esistente."
+
+#: .\clients\forms.py:123
+msgid "No duplicate customer found for this email, proceeding to save in db."
+msgstr ""
+"Nessun cliente duplicato trovato per questa email, procedendo al salvataggio "
+"in db"
+
+#: .\clients\forms.py:132 .\clients\forms.py:134 .\clients\forms.py:136
+#: .\clients\forms.py:138 .\clients\forms.py:148 .\clients\forms.py:150
+#: .\clients\forms.py:152 .\clients\forms.py:154 .\clients\forms.py:167
+#: .\clients\forms.py:169 .\clients\forms.py:171 .\clients\forms.py:173
+msgid "Required Field"
+msgstr "Campo obligatorio"
+
+#: .\clients\forms.py:187
+msgid "Registration"
+msgstr "Registrazione"
+
+#: .\clients\forms.py:213
+msgid "Address"
+msgstr "Indirizzo"
+
+#: .\clients\models.py:60
+msgid "Code"
+msgstr "codice_cliente"
+
+#: .\clients\models.py:64 .\clients\models.py:74
+msgid "Name"
+msgstr "Nome"
+
+#: .\clients\models.py:66
+msgid "Fiscal Code"
+msgstr "Codice Fiscale"
+
+#: .\clients\models.py:67
+msgid "Vat Number"
+msgstr "Numero VAT"
+
+#: .\clients\models.py:69
+msgid "Company Name"
+msgstr "Azienda"
+
+#: .\clients\models.py:71
+msgid "Contact Person"
+msgstr "Informazioni Contatto"
+
+#: .\clients\models.py:72
+msgid "Role"
+msgstr "Ruolo"
+
+#: .\clients\models.py:75
+msgid "Last Name"
+msgstr "Cognome"
+
+#: .\clients\models.py:77
+msgid "e-mail"
+msgstr "E-mail"
+
+#: .\clients\models.py:93
 msgid "Birth-place"
 msgstr "Luogo di nascita"
 
-#: .\clients\models.py:44
-#| msgid "street"
+#: .\clients\models.py:95
 msgid "Street"
 msgstr "Strada"
 
-#: .\clients\models.py:46
+#: .\clients\models.py:97
 msgid "City"
 msgstr "Città"
 
-#: .\clients\models.py:47
-#| msgid "post-number"
+#: .\clients\models.py:98
 msgid "Post Number"
 msgstr "Codice Postale"
 
-#: .\clients\models.py:52
+#: .\clients\models.py:103
 msgid "contacts"
 msgstr "Informazioni Contatto"
 
-#: .\clients\models.py:53
-#| msgid "customer"
+#: .\clients\models.py:104
 msgid "Is Customer"
 msgstr "Cliente"
 
-#: .\clients\models.py:54
-#| msgid "is-active"
+#: .\clients\models.py:105
 msgid "Is Active"
 msgstr "E attivo"
 
-#: .\clients\models.py:55
+#: .\clients\models.py:106
 msgid "origin"
 msgstr "Origine"
 
-#: .\clients\models.py:82
-#| msgid "customer"
+#: .\clients\models.py:133
 msgid "Customer"
 msgstr "Cliente"
 
-#: .\clients\models.py:83
-#| msgid "customers"
+#: .\clients\models.py:134
 msgid "Customers"
 msgstr "Clienti"
 
@@ -221,12 +198,10 @@ msgid "send"
 msgstr "Invia"
 
 #: .\clients\views.py:81
-#| msgid "data-verification-thank-you"
 msgid "Data Verification Thank You"
 msgstr "Grazie"
 
 #: .\clients\views.py:83
-#| msgid "invalid-link"
 msgid "Invalid Link"
 msgstr "Link invalido"
 

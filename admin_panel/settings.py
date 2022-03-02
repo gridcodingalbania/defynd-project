@@ -62,7 +62,7 @@ INSTALLED_APPS = [
     'contracts',
     'configurations',
     'notifications',
-    'statistics_page',
+    'statistics_page.apps.StatisticsPageConfig',
     'rosetta',
 
 ]

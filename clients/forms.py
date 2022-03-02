@@ -76,6 +76,7 @@ class ContactForm(forms.ModelForm):
     phone_prefix = forms.ChoiceField(widget=forms.Select(), choices=phone_prefixes, label=_('Phone'))
     mobile_prefix = forms.ChoiceField(widget=forms.Select(), choices=phone_prefixes, label=_('Mobile'))
     phone = forms.IntegerField(label="")
+    mobile = forms.IntegerField(label="")
     customer_type = forms.ChoiceField(widget=forms.Select(), label=_('Customer Type'),
                                       choices=contact_choices, required=True, )
     origin = forms.ChoiceField(widget=forms.Select(), label=_('Origin'),

@@ -15,3 +15,8 @@ class Statistics(models.Model):
     total_cost_value = models.FloatField(_("Total Cost"), null=True, blank=True)
     margin_value = models.FloatField(_("Margin Value"), null=True, blank=True)
     description = models.CharField(_("Description"), max_length=100, null=True, blank=True)
+
+
+    class Meta:
+        verbose_name = _('statistic')
+        verbose_name_plural = _('statistics')

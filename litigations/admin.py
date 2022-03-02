@@ -6,7 +6,6 @@ from django import forms
 
 
 class LitigationAdmin(admin.ModelAdmin):
-
     list_display = (
         'name', 'time', 'client', 'dispute_matter',
         'dispute_object', 'initial_estimation_value', 'target_value',
@@ -33,7 +32,7 @@ class LitigationAdmin(admin.ModelAdmin):
             None,
             {
                 'fields': (('name', 'closed'),
-                        'client', 'hyperlink', 'upload_pdf'),
+                           'client', 'hyperlink', 'upload_pdf'),
             }
         ),
         (
@@ -63,7 +62,7 @@ class LitigationAdmin(admin.ModelAdmin):
             _('Area'),
             {
                 'fields': (('surface_directly_concerned', 'occupied_area', 'residual_surface',),
-                            'area_address','technical_reference',),
+                           'area_address', 'technical_reference',),
                 'classes': ('wide', 'extrapretty')
             }
         ),
@@ -126,16 +125,17 @@ class LitigationAdmin(admin.ModelAdmin):
 
     # all required=True information in litigation form, will be requried also in the admin model
     form = LitigationForm
+
     def change_view(self, request, object_id, form_url='', extra_context=None):
         return super().change_view(
             request, object_id, form_url,
         )
+
     class Media:
         js = (
             '//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js',  # jquery
             'admin/js/litigation.js',  # project static folder
-            'js/litigation.js',
-            'js/lit.js'
+            'js/litigation.js'
         )
 
 

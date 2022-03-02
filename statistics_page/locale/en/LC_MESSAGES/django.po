@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-28 23:59+0100\n"
-"PO-Revision-Date: 2022-03-01 00:21+0000\n"
+"POT-Creation-Date: 2022-03-02 08:37+0100\n"
+"PO-Revision-Date: 2022-03-02 08:37+0000\n"
 "Last-Translator:   <admin@defynd.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -20,41 +20,49 @@ msgstr ""
 "X-Translated-Using: django-rosetta 0.9.8\n"
 
 #: .\statistics_page\apps.py:7
-msgid "Dashboard Page"
+msgid "dashboard_page"
 msgstr "Dashboard Page"
 
-#: .\statistics_page\models.py:7
-msgid "Name"
-msgstr "Name"
-
 #: .\statistics_page\models.py:8
-msgid "Initial Value"
-msgstr "Initial Value"
+msgid "Name"
+msgstr ""
 
 #: .\statistics_page\models.py:9
-msgid "Objective Value"
+msgid "Initial Value"
 msgstr ""
 
 #: .\statistics_page\models.py:10
-msgid "Final Value"
+msgid "Objective Value"
 msgstr ""
 
 #: .\statistics_page\models.py:11
+msgid "Final Value"
+msgstr ""
+
+#: .\statistics_page\models.py:12
 msgid "Total Value"
 msgstr ""
 
-#: .\statistics_page\models.py:13
+#: .\statistics_page\models.py:14
 msgid "Revue Value"
 msgstr ""
 
-#: .\statistics_page\models.py:14
+#: .\statistics_page\models.py:15
 msgid "Total Cost"
 msgstr ""
 
-#: .\statistics_page\models.py:15
+#: .\statistics_page\models.py:16
 msgid "Margin Value"
 msgstr ""
 
-#: .\statistics_page\models.py:16
+#: .\statistics_page\models.py:17
 msgid "Description"
+msgstr ""
+
+#: .\statistics_page\models.py:21
+msgid "statistic"
+msgstr ""
+
+#: .\statistics_page\models.py:22
+msgid "statistics"
 msgstr ""

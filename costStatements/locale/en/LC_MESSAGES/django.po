@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-20 17:18+0100\n"
+"POT-Creation-Date: 2022-03-02 08:37+0100\n"
 "PO-Revision-Date: 2022-02-13 10:54+0000\n"
 "Last-Translator:   <admin@defynd.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,7 +53,7 @@ msgstr "Category"
 msgid "Categories"
 msgstr "Categories"
 
-#: .\costStatements\models.py:38 .\costStatements\models.py:83
+#: .\costStatements\models.py:38 .\costStatements\models.py:84
 msgid "Name"
 msgstr ""
 
@@ -67,7 +67,7 @@ msgstr "Priority"
 msgid "category"
 msgstr "Category"
 
-#: .\costStatements\models.py:50 .\costStatements\models.py:96
+#: .\costStatements\models.py:50 .\costStatements\models.py:97
 msgid "Item"
 msgstr ""
 
@@ -97,7 +97,7 @@ msgstr "Client"
 msgid "Litigation"
 msgstr "Litigation"
 
-#: .\costStatements\models.py:66 .\costStatements\models.py:104
+#: .\costStatements\models.py:66 .\costStatements\models.py:105
 #, fuzzy
 #| msgid "created-date"
 msgid "Created Date"
@@ -116,66 +116,70 @@ msgid "Total Cost"
 msgstr "Total cost"
 
 #: .\costStatements\models.py:70
+msgid "Url"
+msgstr ""
+
+#: .\costStatements\models.py:71
 #, fuzzy
 #| msgid "init-negotiation"
 msgid "Init Negotiation"
 msgstr "Init negotiation"
 
-#: .\costStatements\models.py:71
+#: .\costStatements\models.py:72
 #, fuzzy
 #| msgid "expected-dealing-term"
 msgid "Expected dealing Term"
 msgstr "Expected dealing term"
 
-#: .\costStatements\models.py:78
+#: .\costStatements\models.py:79
 #, fuzzy
 #| msgid "cost-statement"
 msgid "cost Statement"
 msgstr "Cost Statement"
 
-#: .\costStatements\models.py:79
+#: .\costStatements\models.py:80
 #, fuzzy
 #| msgid "cost-statements"
 msgid "Cost Statements"
 msgstr "Cost Statements"
 
-#: .\costStatements\models.py:84
+#: .\costStatements\models.py:85
 #, fuzzy
 #| msgid "description"
 msgid "Description"
 msgstr "Description"
 
-#: .\costStatements\models.py:91 .\costStatements\models.py:101
+#: .\costStatements\models.py:92 .\costStatements\models.py:102
 #, fuzzy
 #| msgid "hypothesis"
 msgid "Hypothesis"
 msgstr "Hypothesis"
 
-#: .\costStatements\models.py:92
+#: .\costStatements\models.py:93
 #, fuzzy
 #| msgid "hypothesis-plural"
 msgid "hypothesis Plural"
 msgstr "Hypothesis  Plural"
 
-#: .\costStatements\models.py:98
+#: .\costStatements\models.py:99
 #, fuzzy
 #| msgid "cost-statement"
 msgid "Cost Statement"
 msgstr "Cost Statement"
 
-#: .\costStatements\models.py:100
+#: .\costStatements\models.py:101
 #, fuzzy
 #| msgid "value"
 msgid "Value"
 msgstr "Value"
 
-#: .\costStatements\models.py:112
+#: .\costStatements\models.py:113
 #, fuzzy
 #| msgid "cost-statement-item"
 msgid "Cost Statement Item"
 msgstr "Cost statement item"
 
-#: .\costStatements\models.py:113
+#: .\costStatements\models.py:114
 #, fuzzy
 #| msgid "cost-statement-items"
 msgid "Cost Statement Items"
@@ -290,19 +294,8 @@ msgstr "Delete"
 msgid "update"
 msgstr "Update"
 
-#: .\costStatements\views.py:53
-#, python-format
-msgid "<h1>Imported file has a wrong encoding: %s</h1>"
-msgstr ""
-
-#: .\costStatements\views.py:56
-#, python-format
-msgid "<h1>%s encountered while trying to read file: %s</h1>"
-msgstr ""
-
-#: .\costStatements\views.py:167
-msgid "Import"
-msgstr "Import"
+#~ msgid "Import"
+#~ msgstr "Import"
 
 #~ msgid "item"
 #~ msgstr "item"

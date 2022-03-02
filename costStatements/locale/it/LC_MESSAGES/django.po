@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-20 17:18+0100\n"
+"POT-Creation-Date: 2022-03-02 08:37+0100\n"
 "PO-Revision-Date: 2022-02-22 09:46+0000\n"
 "Last-Translator:   <admin@defynd.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -43,7 +43,7 @@ msgstr ""
 msgid "Categories"
 msgstr ""
 
-#: .\costStatements\models.py:38 .\costStatements\models.py:83
+#: .\costStatements\models.py:38 .\costStatements\models.py:84
 msgid "Name"
 msgstr ""
 
@@ -55,7 +55,7 @@ msgstr ""
 msgid "category"
 msgstr ""
 
-#: .\costStatements\models.py:50 .\costStatements\models.py:96
+#: .\costStatements\models.py:50 .\costStatements\models.py:97
 msgid "Item"
 msgstr ""
 
@@ -79,7 +79,7 @@ msgstr ""
 msgid "Litigation"
 msgstr "Contenzioso"
 
-#: .\costStatements\models.py:66 .\costStatements\models.py:104
+#: .\costStatements\models.py:66 .\costStatements\models.py:105
 msgid "Created Date"
 msgstr "Data di Creazione"
 
@@ -92,46 +92,50 @@ msgid "Total Cost"
 msgstr ""
 
 #: .\costStatements\models.py:70
-msgid "Init Negotiation"
+msgid "Url"
 msgstr ""
 
 #: .\costStatements\models.py:71
+msgid "Init Negotiation"
+msgstr ""
+
+#: .\costStatements\models.py:72
 msgid "Expected dealing Term"
 msgstr ""
 
-#: .\costStatements\models.py:78
+#: .\costStatements\models.py:79
 msgid "cost Statement"
 msgstr ""
 
-#: .\costStatements\models.py:79
+#: .\costStatements\models.py:80
 msgid "Cost Statements"
 msgstr ""
 
-#: .\costStatements\models.py:84
+#: .\costStatements\models.py:85
 msgid "Description"
 msgstr ""
 
-#: .\costStatements\models.py:91 .\costStatements\models.py:101
+#: .\costStatements\models.py:92 .\costStatements\models.py:102
 msgid "Hypothesis"
 msgstr ""
 
-#: .\costStatements\models.py:92
+#: .\costStatements\models.py:93
 msgid "hypothesis Plural"
 msgstr ""
 
-#: .\costStatements\models.py:98
+#: .\costStatements\models.py:99
 msgid "Cost Statement"
 msgstr ""
 
-#: .\costStatements\models.py:100
+#: .\costStatements\models.py:101
 msgid "Value"
 msgstr ""
 
-#: .\costStatements\models.py:112
+#: .\costStatements\models.py:113
 msgid "Cost Statement Item"
 msgstr ""
 
-#: .\costStatements\models.py:113
+#: .\costStatements\models.py:114
 msgid "Cost Statement Items"
 msgstr ""
 
@@ -208,18 +212,4 @@ msgstr ""
 
 #: .\costStatements\templates\admin\import_export\import.html:162
 msgid "update"
-msgstr ""
-
-#: .\costStatements\views.py:53
-#, python-format
-msgid "<h1>Imported file has a wrong encoding: %s</h1>"
-msgstr ""
-
-#: .\costStatements\views.py:56
-#, python-format
-msgid "<h1>%s encountered while trying to read file: %s</h1>"
-msgstr ""
-
-#: .\costStatements\views.py:167
-msgid "Import"
 msgstr ""
