@@ -119,6 +119,7 @@ class LitigationAdmin(admin.ModelAdmin):
         )
     ]
 
+
     def clean(self):
         print("sss", self.cleaned_data)
         return self.cleaned_data

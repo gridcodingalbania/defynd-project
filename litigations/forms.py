@@ -36,15 +36,20 @@ registration_choices = (
 class LitigationForm(forms.ModelForm):
     # The form is used inside admin interface and will block record registration if left required here
     email = forms.EmailField(label=_('e-mail'), required=False)
-    # closed = forms.BooleanField(required=False)
+    closed = forms.BooleanField(required=False)
 
     # litigation
     dispute_matter = forms.ModelChoiceField(queryset=DisputeMatter.objects.all(),
                                             label=_('Dispute Matter'))
     dispute_object = forms.ModelChoiceField(queryset=DisputeObject.objects.all(),
                                             label=_('Dispute Object'))
-    initial_estimation_value = forms.CharField(label=_('Initial Estimation Value'), required=False)
-    target_value = forms.CharField(label=_('target-value'), required=False)
+    initial_estimation_value = forms.FloatField(label=_('Initial Estimation Value'), required=False)
+    final_value = forms.FloatField(label=_('Final Value'), required=False)
+    revenue = forms.FloatField(label=_('Revenue'), required=False)
+    total_cost = forms.FloatField(label=_('Total Cost'), required=False)
+    target_value = forms.FloatField(label=_('Target Value'), required=False)
+    turnover_margin = forms.FloatField(label=_('Turnover Margin'), required=False)
+    closing_date = forms.DateField(label=_('Closing Date'), required=False)
     reference = forms.CharField(label=_('reference'), required=False)
     prejudicial_registrations = forms.CharField(label=_('Prejudicial Registrations'), required=False, )
     registration_type = forms.ChoiceField(label=_('Registration Type'), choices=registration_choices,
@@ -146,8 +151,16 @@ class LitigationForm(forms.ModelForm):
         oa = data.get("occupied_area", False)
         origin = data.get('origin', False)
         email = data.get('email', False)
-        # cls = data.get('closed', False)
-        # print(cls, "ttttt")
+        cls = data.get('closed', False)
+        initial_value = data.get('initial_estimation_value', False)
+        target_val = data.get('target_value', False)
+        final_val = data.get('final_value', False)
+        reven = data.get('revenue', False)
+        total_cos = data.get('total_cost', False)
+        turnover_marg = data.get('turnover_margin', False)
+        closing_dat = data.get('closing_date', False)
+
+
         if sdc and oa:
             if sdc < oa:
                 self._errors['residual_surface'] = self.error_class([""])
@@ -162,6 +175,31 @@ class LitigationForm(forms.ModelForm):
                 if not customer:
                     self._errors['email'] = self.error_class([
                         _('Please register on the site to continue with the dispute form!')])
+        else:
+            if cls:
+                # make required
+                if not initial_value:
+                    self._errors['initial_estimation_value'] = self.error_class([
+                        _('This file is required.')])
+                if not target_val:
+                    self._errors['target_value'] = self.error_class([
+                        _('This file is required.')])
+                if not final_val:
+                    self._errors['final_value'] = self.error_class([
+                        _('This file is required.')])
+                if not reven:
+                    self._errors['revenue'] = self.error_class([
+                        _('This file is required.')])
+                if not total_cos:
+                    self._errors['revenue'] = self.error_class([
+                        _('This file is required.')])
+                if not turnover_marg:
+                    self._errors['turnover_margin'] = self.error_class([
+                        _('This file is required.')])
+                    if not closing_dat:
+                        self._errors['closing_date'] = self.error_class([
+                            _('This file is required.')])
+
 
         if registration_type == 'Esproprio Agricolo':
             # validate fields for esproprio agricolo type of reg.
@@ -257,7 +295,6 @@ class LitigationForm(forms.ModelForm):
             if not reclamation_intervention_type:
                 self._errors['reclamation_intervention_type'] = self.error_class([
                     _('This file is required.')])
-        print("ccccc", self.cleaned_data)
         return self.cleaned_data
 
 
