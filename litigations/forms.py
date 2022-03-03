@@ -212,21 +212,21 @@ class LitigationForm(forms.ModelForm):
             # if not area_type:
             #     self._errors['area_type'] = self.error_class([
             #         'This file is required.'])
-            if not culture_type:
-                self._errors['culture_type'] = self.error_class([
-                    _('This field is required.')])
-            if not fruit_pendants:
-                self._errors['fruit_pendants'] = self.error_class([
-                    _('This file is required.')])
+            # if not culture_type:
+            #     self._errors['culture_type'] = self.error_class([
+            #         _('This field is required.')])
+            # if not fruit_pendants:
+            #     self._errors['fruit_pendants'] = self.error_class([
+            #         _('This file is required.')])
             if not cultivator_type:
                 self._errors['cultivator_type'] = self.error_class([
                     _('This file is required.')])
-            if not batch_disfiguration:
-                self._errors['batch_disfiguration'] = self.error_class([
-                    _('This file is required.')])
-            if not description:
-                self._errors['description'] = self.error_class([
-                    _('This file is required.')])
+            # if not batch_disfiguration:
+            #     self._errors['batch_disfiguration'] = self.error_class([
+            #         _('This file is required.')])
+            # if not description:
+            #     self._errors['description'] = self.error_class([
+            #         _('This file is required.')])
 
         if registration_type in ['Esproprio Residenziale Libera', 'Esproprio Industriale Libera']:
             # validate fields for esproprio res./ind. libera type of reg.
