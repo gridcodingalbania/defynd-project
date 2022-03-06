@@ -1,6 +1,7 @@
 from django.contrib.sites.shortcuts import get_current_site
 from django.shortcuts import render, redirect
 from .forms import LitigationForm
+from .models import Litigation
 from decimal import Decimal
 from notifications.mail import *
 from django.utils import translation
@@ -12,55 +13,51 @@ __currency_variables = ["initial_estimation_value", "target_value", "aboveground
 
 
 def litigation_view(request, lang):
-    # reload_data()
     translation.activate(lang)
     context = {"language": lang}
+    if request.session["message"]:
+        context["message"] = request.session["message"]
+        request.session["message"]=""
     form = LitigationForm()
     context["form"] = form
-
     if request.method == "POST":
-        print("testing")
         request.POST = __updateCurrencyValues(request.POST)
         request.POST = calculateResidualSurface(request.POST)
-        if True:
-            context["form"] = LitigationForm(request.POST)
-            form = context["form"]
-            print(form.is_valid())
-            print(form.errors)
-            if form.is_valid():
-                # save the form data to model & update origin
-                record = form.save()
-                record.origin = 'web'
+        context["form"] = LitigationForm(request.POST)
+        form = context["form"]
+        if form.is_valid():
+            # save the form data to model & update origin
+            record = form.save()
+            record.origin = 'web'
 
-                # get client
-                email = form.cleaned_data['email']
-                customer = Customer.objects.filter(email=email)
-                # record.client = customer and customer[0] or False
-                if customer:
-                    record.client = customer[0]
-                record.save()
-                try:
-                    context = form.cleaned_data
-                    context['id'] = record.id
-                    context['name'] = record.name
-                    current_site = get_current_site(request)
-                    context['domain'] = current_site.domain
-                    # send email from notification module
-                    send_email_template(
-                        email=None, context=context,
-                        notification_type='litigation_form',
-                        notify_on="form_submit",
-                        request=request)
+            # get client
+            email = form.cleaned_data['email']
+            customer = Customer.objects.filter(email=email)
+            if customer:
+                record.client = customer[0]
+            record.save()
 
-                except Exception as error:
-                    print("Print error: ", error)
-                    return f'    {error}'
-                return redirect('/'+'litigation/'+lang+'?success=true', {"language": lang, "message": _("Thank you for your litigation, we will contact you soon!") ,"form": form})
-            # TODO: redirect to completion thank you form 
-            # return redirect("/thanks")
-            # else:
-            #     # return form with entered data, display messages at the top
-            #     messages.error(request, form.errors)
+            try:
+                context = form.cleaned_data
+                context['id'] = record.id
+                context['name'] = record.name
+                current_site = get_current_site(request)
+                context['domain'] = current_site.domain
+                # send email from notification module
+                send_email_template(
+                    email=None, context=context,
+                    notification_type='litigation_form',
+                    notify_on="form_submit",
+                    request=request)
+
+            except Exception as error:
+                print("Print error: ", error)
+                return f'    {error}'
+            form = LitigationForm()
+            return render(request, "litigation_page.html", {
+                "language": lang,
+                "message": "thank-you-for-litigation",
+                "form": form})
     return render(request, "litigation_page.html", context)
 
 # TODO
@@ -111,3 +108,5 @@ def revenueValue(self):
     if(self.revenue != None):
         turnover_margin = revenue - total_cost
         return turnover_margin
+
+

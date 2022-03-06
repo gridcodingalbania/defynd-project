@@ -42,7 +42,8 @@ def register(request, lang):
                     email=to_email, context=email_context,
                     notification_type='customer_registration',
                     notify_on="form_submit", request=request)
-                return redirect('/litigation/' + lang + '?success=true')
+                request.session['message'] = "thank-you-registering"
+                return redirect('/litigation/' + lang)
             except Exception as error:
                 print("Print error: ", error)
                 return HttpResponse(error)

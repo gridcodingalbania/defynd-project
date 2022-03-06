@@ -68,8 +68,8 @@ class ContactForm(forms.ModelForm):
                                required=False)
     birthday = forms.DateField(
         widget=forms.DateInput(),
-        # input_formats=('%dd-%mm-%YYYY', '%Y-%m-%d'),
-        help_text="mm/dd/yyyy",
+        input_formats=('%d/%m/%Y',),  # '%dd-%mm-%YYYY', '%Y-%m-%d'
+        help_text="d/mm/yyyy",
         label=_('Birthday'),
         required=False
     )

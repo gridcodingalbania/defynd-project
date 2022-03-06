@@ -3,9 +3,12 @@ from .models import Litigation
 from django.utils.translation import gettext_lazy as _
 from .forms import LitigationForm
 from django import forms
+from statistics_page.models import Statistics
+from decimal import Decimal
 
 
 class LitigationAdmin(admin.ModelAdmin):
+    __currency_variables = ["initial_estimation_value"]
     list_display = (
         'name', 'time', 'client', 'dispute_matter',
         'dispute_object', 'initial_estimation_value', 'target_value',
@@ -33,6 +36,23 @@ class LitigationAdmin(admin.ModelAdmin):
             {
                 'fields': (('name', 'closed'),
                            'client', 'hyperlink', 'upload_pdf'),
+            }
+        ),
+        (
+            _('Reference'),
+            {
+                'fields': ('lawyer_reference', 'reference',)
+            }
+        ),
+        (
+            _('Other Information'),
+            {
+                'fields': (
+                    'reception_act', 'date_receipt_act',
+                    'purchase_contract', 'contract_date',
+
+                ),
+                'classes': ('wide',)
             }
         ),
         (
@@ -67,17 +87,11 @@ class LitigationAdmin(admin.ModelAdmin):
             }
         ),
         (
-            _('Reference'),
-            {
-                'fields': ('lawyer_reference', 'reference',)
-            }
-        ),
-        (
             _('Information Culture'),
             {
                 'fields': (('culture_type',),  # 'area_type',
                            'aboveground_quantification',
-                           ('fruit_pendants', 'cultivator_type', 'batch_disfiguration',),
+                           'fruit_pendants', 'cultivator_type', 'batch_disfiguration',
                            'description',),
                 'classes': ('wide', 'esproprio_agricolo',),
             }
@@ -106,22 +120,34 @@ class LitigationAdmin(admin.ModelAdmin):
                 'classes': ('wide', 'esproprio_fabbricato',),
             }
         ),
-        (
-            _('Other Information'),
-            {
-                'fields': (
-                    ('reception_act', 'date_receipt_act',),
-                    ('purchase_contract', 'contract_date',),
 
-                ),
-                'classes': ('wide',)
-            }
-        )
     ]
 
+    def __updateCurrencyValues(self, post_form):
+        temp = post_form.copy()
+        for currency_variable in self.__currency_variables:
+            if currency_variable in temp:
+                if temp[currency_variable] == "":
+                    temp[currency_variable] = 0
+                else:
+                    temp[currency_variable] = self.__removeCommas(temp[currency_variable])
+        return temp
+
+    def __removeCommas(self, form_variable):
+        splited_values = form_variable.split(",")
+        string_number = "".join(splited_values)
+        number = Decimal(string_number)
+        return number
+
+    # def save_model(self, request, obj, form, change):
+    #     # update_statistics_data(form.cleaned_data)
+    #     request.POST = self.__updateCurrencyValues(request.POST)
+    #     form = LitigationForm(request.POST)
+    #     if form.is_valid():
+    #         record = form.save()
+    #         record.save()
 
     def clean(self):
-        print("sss", self.cleaned_data)
         return self.cleaned_data
 
     # all required=True information in litigation form, will be requried also in the admin model
@@ -138,6 +164,56 @@ class LitigationAdmin(admin.ModelAdmin):
             'admin/js/litigation.js',  # project static folder
             'js/litigation.js'
         )
+
+
+# def update_gestione_statistic(litigation_data, id):
+#     try:
+#         statistic = Statistics.objects.get(id=id)
+#         if litigation_data["initial_estimation_value"]:
+#             statistic.initial_value += float(litigation_data["initial_estimation_value"])
+#
+#         if litigation_data["target_value"]:
+#             statistic.objective_value += float(litigation_data["target_value"])
+#
+#         if litigation_data["final_value"]:
+#             statistic.final_value += float(litigation_data["final_value"])
+#
+#         if litigation_data["revenue"]:
+#             statistic.revue_value += float(litigation_data["revenue"])
+#
+#         if litigation_data["total_cost"]:
+#             statistic.total_cost_value += float(litigation_data["total_cost"])
+#
+#         if litigation_data["turnover_margin"]:
+#             statistic.margin_value += float(litigation_data["turnover_margin"])
+#
+#         if statistic.initial_value != 0:
+#             statistic.total_value = round(statistic.final_value / statistic.initial_value, 2)
+#         else:
+#             statistic.initial_value = 0
+#         statistic.save()
+#     except Statistics.DoesNotExist:
+#         pass
+#
+#
+# def update_statistics_data(litigation_data):
+#     litigation_is_closed = litigation_data["closed"]
+#     litigation_is_opened = not litigation_is_closed
+#     contract_uploaded = litigation_data["upload_pdf"] is not None
+#     contract_not_uploaded = not contract_uploaded
+#
+#     # Update Gestione Statistic
+#     update_gestione_statistic(litigation_data, 1)
+#
+#     if litigation_is_closed and contract_uploaded:
+#         update_gestione_statistic(litigation_data, 2)
+#     elif litigation_is_opened and contract_uploaded:
+#         update_gestione_statistic(litigation_data, 3)
+#     elif litigation_is_opened and contract_not_uploaded:
+#         update_gestione_statistic(litigation_data, 4)
+
+
+
 
 
 admin.site.register(Litigation, LitigationAdmin)

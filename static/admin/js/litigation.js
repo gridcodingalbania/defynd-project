@@ -16,10 +16,8 @@ import { formatDate } from './tools.js';
         const targetAreaInput = document.getElementById("id_occupied_area");
         if(surfaceDirectlyConcernedInput && targetAreaInput) {
             if(surfaceDirectlyConcernedInput.value && targetAreaInput.value) {
-                console.log("test", surfaceDirectlyConcernedInput.value, targetAreaInput.value)
                 interestedAreaValue = +surfaceDirectlyConcernedInput.value;
                 targetAreaValue = +targetAreaInput.value;
-                console.log("aa", interestedAreaValue, targetAreaValue);
                 setTimeout(() => {
                     updateResidualSurface();
                 }, 100);

@@ -104,6 +104,14 @@ label[for='id_phone'], label[for='id_mobile'] {
     transform: translateY(calc(50% + 7px));
     right: 12px;
 }
+.fieldBox.field-residual_surface,
+.fieldBox.field-occupied_area,
+.fieldBox.field-surface_directly_concerned,
+.fieldBox.field-transformation_coefficient,
+.fieldBox.field-extension_MQ,
+.fieldBox.field-MC_residui{
+    position: relative;
+}
 
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,

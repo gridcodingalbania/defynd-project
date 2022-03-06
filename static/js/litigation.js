@@ -11,7 +11,7 @@ function updateField2(c, d) {
 function addMeterSymbol(className, number) {
     const elem = document.getElementsByClassName(className)
     if(elem.length > 0)
-        elem[0].insertAdjacentHTML('beforeend', "<span>m<sup>"+number+"</sup></span>");
+        elem[0].insertAdjacentHTML('beforeend', "<span style='position: absolute;top: 34px;right: 13px;'>m<sup>"+number+"</sup></span>");
 }
 
 
@@ -27,26 +27,116 @@ function hideDiv() {
     }
 }
 
-function listenForRadioChange() {
-    const yes_option = document.querySelectorAll('[for="id_total_demolition_0"]')[1];
-    const no_option = document.querySelectorAll('[for="id_total_demolition_1"]')[0];
-    const partial_demolition = document.getElementsByClassName("fieldBox field-partial_demolition");
+function hideDiv3() {
+    const batch = document.getElementById("id_batch_disfiguration_0");
+    const batch_disfiguration = document.getElementsByClassName("form-row field-description");
+    if (batch && batch.checked) {
+        console.log("Yes")
+        batch_disfiguration[0].style.display = 'none';
+    } else if(batch){
+        console.log("No")
+        batch_disfiguration[0].style.display = 'block';
+    }
+}
+
+// TODO in feature........................................
+function hideDiv2() {
+    const lease = document.getElementById("id_lease_agreement_1");
+    const contract_duration = document.getElementsByClassName("fieldBox field-contract_duration");
+    const contract_duration_1 = document.getElementsByClassName("fieldBox field-residual_rent");
+    const contract_duration_2 = document.getElementsByClassName("fieldBox field-contract_fee");
+    if (lease && lease.checked) {
+        contract_duration[0].style.display = 'none';
+        contract_duration_1[0].style.display = 'none';
+        contract_duration_2[0].style.display = 'none';
+    } else if (lease) {
+        contract_duration[0].style.display = 'block';
+        contract_duration_1[0].style.display = 'block';
+        contract_duration_2[0].style.display = 'block';
+    }
+}
+
+
+
+function listenForRadioChange(yesId, noId, classNames, reversed) {
+    const yes_option = document.querySelectorAll("[for=" + yesId + "]")[1];
+    const no_option = document.querySelectorAll("[for=" + noId + "]")[0];
+
     if(yes_option) {
         yes_option.addEventListener('click', function() {
-            partial_demolition[0].style.display = 'none';
+            for(let i = 0;i<classNames.length;i++) {
+                const partial_demolition = document.getElementsByClassName(classNames[i]);
+                const batch_disfiguration = document.getElementsByClassName(classNames[i]);
+                partial_demolition[0].style.display = reversed ? 'block' : 'none';
+                batch_disfiguration[0].style.display = reversed ? 'none' : 'block';
+            }
         });
     }
 
     if(no_option) {
         no_option.addEventListener('click', function() {
-            partial_demolition[0].style.display = 'block';
+            for(let i = 0;i<classNames.length;i++) {
+                const partial_demolition = document.getElementsByClassName(classNames[i]);
+                const batch_disfiguration = document.getElementsByClassName(classNames[i]);
+                partial_demolition[0].style.display = reversed ? 'none' : 'block';
+                batch_disfiguration[0].style.display = reversed ? 'block' : 'none';
+            }
+
         });
     }
 }
 
+function targetBlank(className) {
+    const class_divs = document.getElementsByClassName(className);
+    if (class_divs.length > 0) {
+        const a_div = class_divs[0];
+        const a_links = a_div.getElementsByTagName("a");
+        if (a_links.length > 0) {
+            a_links[0].target = "_blank";
+        }
+    }
+
+}
+
+function formatInputToTakeCommas(inputId) {
+        $(function() {
+            $(`input[id=${inputId}]`).on('input', function(e) {
+                $(this).val($(this).val().replace(/[^0-9]/g, ''));
+            });
+        });
+
+        $(document).ready(function(){
+            $(`input[id=${inputId}]`).keyup(function(event){
+                // skip for arrow keys
+                if(event.which >= 37 && event.which <= 40){
+                    event.preventDefault();
+                }
+                var $this = $(this);
+                var num = $this.val().replace(/,/gi, "").split("").reverse().join("");
+                var num2 = RemoveRougeChar(num.replace(/(.{3})/g,"$1,").split("").reverse().join(""));
+                // the following line has been simplified. Revision history contains original.
+                $this.val(num2);
+            });
+            $(`input[id=${inputId}]`).keyup();
+        });
+    }
+
+//    function RemoveRougeChar(convertString){
+//        if(convertString.substring(0,1) == ","){
+//            return convertString.substring(1, convertString.length)
+//        }
+//        return convertString;
+//    }
+
 document.addEventListener("DOMContentLoaded", function(event) {
+    targetBlank("form-row field-upload_pdf");
+    targetBlank("form-row field-hyperlink");
     hideDiv();
-    listenForRadioChange();
+    hideDiv2();
+    hideDiv3();
+    listenForRadioChange("id_total_demolition_0", "id_total_demolition_1", ["fieldBox field-partial_demolition"], false);
+    listenForRadioChange("id_batch_disfiguration_0", "id_batch_disfiguration_1", ["form-row field-description"], false);
+    listenForRadioChange("id_lease_agreement_0", "id_lease_agreement_1", ["fieldBox field-contract_duration", "fieldBox field-contract_fee", "fieldBox field-residual_rent"], true);
     revue_value = 0;
     total_cost = 0;
     surface_directly_concerned = 0;
@@ -67,11 +157,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
             updateField(revue_value, total_cost);
         });
     }
-
-
-
-
-
 
     const surface_directly_concerned_obj = document.getElementById("id_surface_directly_concerned");
     const occupied_area_obj = document.getElementById("id_occupied_area");
@@ -98,6 +183,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     addMeterSymbol("fieldBox field-transformation_coefficient", 3);
     addMeterSymbol("fieldBox field-extension_MQ", 2);
     addMeterSymbol("fieldBox field-MC_residui", 3);
+
+//    formatInputToTakeCommas("id_initial_estimation_value");
 
 });
 

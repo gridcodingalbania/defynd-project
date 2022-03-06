@@ -58,13 +58,21 @@
         </div>
 
 
-        <div id="popup-container" style="display: none;width: 100%;height:100%;position:fixed;top:0;left:0;background:rgba(0, 0, 0, 0.4);z-index:2;">
+        {% if message %}
+            <div id="popup-container" style="width: 100%;height:100%;position:fixed;top:0;left:0;background:rgba(0, 0, 0, 0.4);z-index:2;">
             <div style="border-radius:4px;box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;background:white;padding:10px 10px;position:absolute;top:50%;left:50%;transform: translate(-50%, -50%)">
                 <div style="width: 100%; font-size: 28px; margin-left: -3px; margin-top: -5px;">
                     {% blocktranslate %} Thank You! {% endblocktranslate %}
                 </div>
                 <div style="font-size:16px;">
-                {% blocktranslate %} Thank you for your litigation, we will contact you soon! {% endblocktranslate %}
+                    {% if message == 'thank-you-for-litigation'%}
+                        {% translate "thank-you-for-litigation" %}
+                    {% endif %}
+
+                    {% if message == 'thank-you-registering'%}
+                        {% translate "thank-you-registering" %}
+                    {% endif %}
+
                 </div>
                 <div style="margin-top:16px;width:100%;display:flex;justify-content:space-between;align-items:center">
                     <span></span>
@@ -72,6 +80,8 @@
                 </div>
             </div>
         </div>
+        {% endif %}
+
         <form method="POST">
             {% csrf_token %}
             {% form form=form %}
@@ -91,10 +101,16 @@
 
     const url = window.location.href;
     const splitted = url.split("?");
+    console.log("testing")
     if(splitted.length >1) {
-        if(splitted[1] == "success=true") {
-            openPopup();
-        }
+        setTimeout(()=>{
+            if(splitted[1] == "success=true") {
+                openPopup();
+            } else if(splitted[1] == "registration-success=true") {
+                openPopup();
+            }
+        }, 1000);
+
     }
 
   

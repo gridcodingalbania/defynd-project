@@ -14,10 +14,12 @@ from pathlib import Path
 import os
 from django.utils.translation import gettext_lazy as _
 
+from django.conf.locale.es import formats as es_formats
+
 LANGUAGE_CODE = 'en'
 TIME_ZONE = 'UTC'
 USE_I18N = True
-USE_L10N = True
+USE_L10N = False
 USE_TZ = True
 
 LANGUAGES = (
@@ -183,8 +185,10 @@ LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'admin_panel', 'locale'),
 )
 
+es_formats.DATETIME_FORMAT = "d/m/y"
+
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_PORT = '587'
-EMAIL_HOST_USER ="kosta.anxhela93@gmail.com"
-EMAIL_HOST_PASSWORD ="albertos1nan1"
+EMAIL_HOST_USER = "kosta.anxhela93@gmail.com"
+EMAIL_HOST_PASSWORD = "albertos1nan1"
 EMAIL_USE_TLS = True

@@ -41,13 +41,14 @@ class LitigationForm(forms.ModelForm):
     # litigation
     dispute_matter = forms.ModelChoiceField(queryset=DisputeMatter.objects.all(),
                                             label=_('Dispute Matter'))
+    upload_pdf = forms.FileField(label=_("Upload Contract"), required=False)
     dispute_object = forms.ModelChoiceField(queryset=DisputeObject.objects.all(),
                                             label=_('Dispute Object'))
-    initial_estimation_value = forms.FloatField(label=_('Initial Estimation Value'), required=False)
+    initial_estimation_value = forms.CharField(label=_('Initial Estimation Value'), required=False)
     final_value = forms.FloatField(label=_('Final Value'), required=False)
     revenue = forms.FloatField(label=_('Revenue'), required=False)
     total_cost = forms.FloatField(label=_('Total Cost'), required=False)
-    target_value = forms.FloatField(label=_('Target Value'), required=False)
+    target_value = forms.CharField(label=_('Target Value'), required=False)
     turnover_margin = forms.FloatField(label=_('Turnover Margin'), required=False)
     closing_date = forms.DateField(label=_('Closing Date'), required=False)
     reference = forms.CharField(label=_('reference'), required=False)
@@ -64,9 +65,9 @@ class LitigationForm(forms.ModelForm):
     occupied_area = forms.FloatField(label=_('Occupied Area'), required=False, )
     reception_act = forms.ChoiceField(widget=forms.RadioSelect, label=_('Reception Act'),
                                       choices=CHOICES, required=False, )
-    date_receipt_act = forms.DateField(label=_('Date Receipt Act'), required=False, help_text="mm/dd/yyyy")
+    date_receipt_act = forms.DateField(label=_('Date Receipt Act'), required=False, help_text="d/mm/yyyy")
     purchase_contract = forms.CharField(label=_('Purchase Contract'), required=False, )
-    contract_date = forms.DateField(label=_('Contract Date'), required=False, help_text="mm/dd/yyyy")
+    contract_date = forms.DateField(label=_('Contract Date'),  required=False, help_text="d/mm/yyyy")
     last_notary_fees = forms.FloatField(label=_('Last Notary Fees'), required=False, )
     other_constraints_type = forms.ModelChoiceField(queryset=ConstraintType.objects.all(),
                                                     label=_('Other Constraints Type'), required=False, )
@@ -160,6 +161,7 @@ class LitigationForm(forms.ModelForm):
         turnover_marg = data.get('turnover_margin', False)
         closing_dat = data.get('closing_date', False)
 
+        temporary_data = data.copy()
 
         if sdc and oa:
             if sdc < oa:
@@ -196,9 +198,9 @@ class LitigationForm(forms.ModelForm):
                 if not turnover_marg:
                     self._errors['turnover_margin'] = self.error_class([
                         _('This file is required.')])
-                    if not closing_dat:
-                        self._errors['closing_date'] = self.error_class([
-                            _('This file is required.')])
+                if not closing_dat:
+                    self._errors['closing_date'] = self.error_class([
+                        _('This file is required.')])
 
 
         if registration_type == 'Esproprio Agricolo':
@@ -295,6 +297,7 @@ class LitigationForm(forms.ModelForm):
             if not reclamation_intervention_type:
                 self._errors['reclamation_intervention_type'] = self.error_class([
                     _('This file is required.')])
+
         return self.cleaned_data
 
 
@@ -367,3 +370,4 @@ class LitigationForm(forms.ModelForm):
                  Row('email', ),
                  ),
     )
+
