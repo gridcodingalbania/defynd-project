@@ -21,7 +21,7 @@ def litigation_view(request, lang):
     form = LitigationForm()
     context["form"] = form
     if request.method == "POST":
-        request.POST = __updateCurrencyValues(request.POST)
+        # request.POST = __updateCurrencyValues(request.POST)
         request.POST = calculateResidualSurface(request.POST)
         context["form"] = LitigationForm(request.POST)
         form = context["form"]
@@ -63,15 +63,15 @@ def litigation_view(request, lang):
 # TODO
 
 
-def __updateCurrencyValues(post_form):
-    temp = post_form.copy()
-    for currency_variable in __currency_variables:
-        if currency_variable in temp:
-            if temp[currency_variable] == "":
-                temp[currency_variable] = 0
-            else:
-                temp[currency_variable] = __removeCommas(temp[currency_variable])
-    return temp
+# def __updateCurrencyValues(post_form):
+#     temp = post_form.copy()
+#     for currency_variable in __currency_variables:
+#         if currency_variable in temp:
+#             if temp[currency_variable] == "":
+#                 temp[currency_variable] = 0
+#             else:
+#                 temp[currency_variable] = __removeCommas(temp[currency_variable])
+#     return temp
 
 
 def calculateResidualSurface(post_form):

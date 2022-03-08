@@ -185,8 +185,7 @@ LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'admin_panel', 'locale'),
 )
 
-es_formats.DATETIME_FORMAT = "d/m/y"
-
+DATE_INPUT_FORMATS = ['%m/%d/%Y']
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_PORT = '587'
 EMAIL_HOST_USER = "kosta.anxhela93@gmail.com"

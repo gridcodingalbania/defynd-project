@@ -1,6 +1,18 @@
 function updateField(a, b) {
     const turnover_margin_obj = document.getElementById("id_turnover_margin");
-    turnover_margin_obj.value = a-b;
+    let valA = 0;
+    let valB = 0;
+    if(a!=0 && a.includes(",")) {
+        valA = +a.split(",").join("")
+    } else {
+        valA = +a;
+    }
+    if(b!=0 && b.includes(",")) {
+        valB = +b.split(",").join("")
+    } else {
+        valB = +b;
+    }
+    turnover_margin_obj.value = valA-valB;
 }
 
 function updateField2(c, d) {
@@ -121,12 +133,12 @@ function formatInputToTakeCommas(inputId) {
         });
     }
 
-//    function RemoveRougeChar(convertString){
-//        if(convertString.substring(0,1) == ","){
-//            return convertString.substring(1, convertString.length)
-//        }
-//        return convertString;
-//    }
+    function RemoveRougeChar(convertString){
+        if(convertString.substring(0,1) == ","){
+            return convertString.substring(1, convertString.length)
+        }
+        return convertString;
+    }
 
 document.addEventListener("DOMContentLoaded", function(event) {
     targetBlank("form-row field-upload_pdf");
@@ -184,7 +196,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
     addMeterSymbol("fieldBox field-extension_MQ", 2);
     addMeterSymbol("fieldBox field-MC_residui", 3);
 
-//    formatInputToTakeCommas("id_initial_estimation_value");
+    formatInputToTakeCommas("id_initial_estimation_value");
+    formatInputToTakeCommas("id_target_value");
+    formatInputToTakeCommas("id_final_value");
+    formatInputToTakeCommas("id_revenue");
+    formatInputToTakeCommas("id_total_cost");
+    formatInputToTakeCommas("id_enrollment_amount");
+    formatInputToTakeCommas("id_turnover_margin");
+    formatInputToTakeCommas("id_reclamation_cost");
+
 
 });
 

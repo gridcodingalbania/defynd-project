@@ -2,6 +2,7 @@ from material import Layout, Row, Fieldset
 from django import forms
 from configurations.models import *
 from lawyers.models import Lawyer
+from admin_panel import settings
 from litigations.models import Litigation
 from clients.models import *
 from django.utils.translation import gettext_lazy as _
@@ -45,12 +46,12 @@ class LitigationForm(forms.ModelForm):
     dispute_object = forms.ModelChoiceField(queryset=DisputeObject.objects.all(),
                                             label=_('Dispute Object'))
     initial_estimation_value = forms.CharField(label=_('Initial Estimation Value'), required=False)
-    final_value = forms.FloatField(label=_('Final Value'), required=False)
-    revenue = forms.FloatField(label=_('Revenue'), required=False)
-    total_cost = forms.FloatField(label=_('Total Cost'), required=False)
+    final_value = forms.CharField(label=_('Final Value'), required=False)
+    revenue = forms.CharField(label=_('Revenue'), required=False)
+    total_cost = forms.CharField(label=_('Total Cost'), required=False)
     target_value = forms.CharField(label=_('Target Value'), required=False)
-    turnover_margin = forms.FloatField(label=_('Turnover Margin'), required=False)
-    closing_date = forms.DateField(label=_('Closing Date'), required=False)
+    turnover_margin = forms.CharField(label=_('Turnover Margin'), required=False)
+    closing_date = forms.DateField(label=_('Closing Date'), required=False, help_text="dd/mm/yyyy",  input_formats=settings.DATE_INPUT_FORMATS)
     reference = forms.CharField(label=_('reference'), required=False)
     prejudicial_registrations = forms.CharField(label=_('Prejudicial Registrations'), required=False, )
     registration_type = forms.ChoiceField(label=_('Registration Type'), choices=registration_choices,
@@ -65,10 +66,10 @@ class LitigationForm(forms.ModelForm):
     occupied_area = forms.FloatField(label=_('Occupied Area'), required=False, )
     reception_act = forms.ChoiceField(widget=forms.RadioSelect, label=_('Reception Act'),
                                       choices=CHOICES, required=False, )
-    date_receipt_act = forms.DateField(label=_('Date Receipt Act'), required=False, help_text="d/mm/yyyy")
-    purchase_contract = forms.CharField(label=_('Purchase Contract'), required=False, )
-    contract_date = forms.DateField(label=_('Contract Date'),  required=False, help_text="d/mm/yyyy")
-    last_notary_fees = forms.FloatField(label=_('Last Notary Fees'), required=False, )
+    date_receipt_act = forms.DateField(label=_('Date Receipt Act'), required=False, help_text="dd/mm/yyyy", input_formats=settings.DATE_INPUT_FORMATS)
+    purchase_contract = forms.CharField(label=_('Purchase Contract'), required=False)
+    contract_date = forms.DateField(label=_('Contract Date'),  required=False, help_text="dd/mm/yyyy", input_formats=settings.DATE_INPUT_FORMATS)
+    last_notary_fees = forms.CharField(label=_('Last Notary Fees'), required=False, )
     other_constraints_type = forms.ModelChoiceField(queryset=ConstraintType.objects.all(),
                                                     label=_('Other Constraints Type'), required=False, )
 
@@ -99,7 +100,7 @@ class LitigationForm(forms.ModelForm):
     transformation_coefficient = forms.IntegerField(label=_('Transformation Coefficient'),
                                                     required=False, )
     IMU_final_declaration = forms.CharField(label=_('IMU Final Declaration'), required=False)
-    epoch_construction = forms.FloatField(label=_('Epoch Construction'), required=False, )
+    epoch_construction = forms.CharField(label=_('Epoch Construction'), required=False, )
     building_titles = forms.CharField(label=_('Building Titles'), widget=forms.Textarea, required=False, )
     purchase_contract = forms.ChoiceField(widget=forms.RadioSelect,
                                           label=_("Purchase Contract"),

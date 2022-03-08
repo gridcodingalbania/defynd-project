@@ -221,3 +221,8 @@ input[type=number] {
 .fieldBox.field-extension_MQ >  {
     position: relative;
 }
+
+.field-title {
+    color: #333 !important;
+    font-weight: 500 !important;
+}

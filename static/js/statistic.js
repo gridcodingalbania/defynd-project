@@ -3,6 +3,17 @@ function updateField(a, b) {
     margin_value_obj.value = a-b;
 }
 
+function removeLinkFromTitle() {
+	const titles = document.getElementsByClassName("field-title");
+	for(let i =0;i<titles.length;i++) {
+		const hrefLink = titles[i].getElementsByTagName("a");
+		if(hrefLink.length>0){
+			const value = hrefLink[0].innerHTML;
+			titles[i].innerHTML = value;
+		}
+	}
+}
+
 function calculatePercentage(a, b) {
     const total_value_obj = document.getElementById("id_total_value");
 
@@ -14,9 +25,19 @@ function calculatePercentage(a, b) {
 }
 
 
+//function url_uncheck() {
+//    const url_class = document.getElementByClassName("field-title");
+//    console.log(url_class, "Testing .........")
+//    if (url_class.length > 0)
+//        url_class[0].insertAdjacentHTML("");
+//}
+
+
+
 document.addEventListener("DOMContentLoaded", function(event) {
 
     console.log("test?")
+    removeLinkFromTitle();
 
     revue_value = 0;
     total_cost = 0;

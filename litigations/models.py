@@ -61,20 +61,17 @@ class Litigation(models.Model):
     starting_date = models.DateField(_("Starting Date"), max_length=100, null=True)
     target_date = models.DateField(_("Target Data"), max_length=100, null=True)
     closing_date = models.DateField(_("Closing Date"), max_length=100, null=True, blank=True)
-    initial_estimation_value = models.DecimalField(_("Initial Estimation Value"),
-                                                   max_digits=32, decimal_places=2,
-                                                   default=0, blank=True, null=True)  # currency
-    target_value = models.DecimalField(_("Target Value"),
-                                       max_digits=32, decimal_places=2,
-                                       default=0, blank=True, null=True)  # currency
-    final_value = models.DecimalField(_("Final Value"),
-                                      max_digits=50, decimal_places=2,
-                                      default=0, blank=True, null=True)
+    initial_estimation_value = models.CharField(_("Initial Estimation Value"),
+                                                   blank=True, null=True, max_length=30)  # currency
+    target_value = models.CharField(_("Target Value"),
+                                       blank=True, null=True, max_length=30)  # currency
+    final_value = models.CharField(_("Final Value"),
+                                      max_length=30,blank=True, null=True)
 
 
-    revenue = models.IntegerField(_("Revenue"), blank=True, null=True)
-    total_cost = models.IntegerField(_("Total Cost"), blank=True, null=True)
-    turnover_margin = models.IntegerField(_("Turnover Margin"), blank=True, null=True)
+    revenue = models.CharField(_("Revenue"),max_length=30, blank=True, null=True)
+    total_cost = models.CharField(_("Total Cost"), max_length=30,blank=True, null=True)
+    turnover_margin = models.CharField(_("Turnover Margin"), max_length=30,blank=True, null=True)
 
 
     reference = models.CharField(_("Reference"), max_length=100, blank=True, null=True)
@@ -85,9 +82,8 @@ class Litigation(models.Model):
                                          choices=CHOICES,
                                          default=None,
                                          null=True)
-    enrollment_amount = models.DecimalField(_("Enrollment Amount"),
-                                            max_digits=32, decimal_places=2,
-                                            default=0, blank=True, null=True)  # currency
+    enrollment_amount = models.CharField(_("Enrollment Amount"),
+                                            blank=True, null=True, max_length=30)  # currency
     surface_directly_concerned = models.FloatField(_("Surface Directly Concerned"),
                                                    blank=True, null=True)
     residual_surface = models.FloatField(_("Residual Surface"),
@@ -106,8 +102,8 @@ class Litigation(models.Model):
                                      blank=True,
                                      null=True)
     date_receipt_act = models.DateField(_("Date Receipt Act"), blank=True, null=True)
-    last_notary_fees = models.DecimalField(_("Last Notary Fees"),
-                                           max_digits=32, decimal_places=2, blank=True, null=True)  # currency
+    last_notary_fees = models.CharField(_("Last Notary Fees"),
+                                           blank=True, null=True, max_length=30)  # currency
     other_constraints_type = models.ForeignKey(config.ConstraintType,
                                                verbose_name=_("Other Constraints Type"),
                                                on_delete=models.CASCADE, blank=True, null=True)
@@ -156,14 +152,14 @@ class Litigation(models.Model):
                                           on_delete=models.CASCADE, blank=True, null=True)
     transformation_coefficient = models.IntegerField(_("Transformation Coefficient"),
                                                      blank=True, null=True, default=0)
-    IMU_final_declaration = models.DecimalField(_("Fianl Declaration IMU"),
-                                                max_digits=32, decimal_places=2, blank=True, null=True)  # currency
-    epoch_construction = models.DecimalField(_("Epoch Constrution"),
-                                             max_digits=32, decimal_places=2, blank=True, null=True)  # currency
+    IMU_final_declaration = models.CharField(_("Fianl Declaration IMU"),
+                                                blank=True, null=True, max_length=30)  # currency
+    epoch_construction = models.CharField(_("Epoch Constrution"),
+                                             blank=True, null=True, max_length=30)  # currency
     building_titles = models.TextField(_("Building Titles"), blank=True, null=True)
     contract_date = models.DateField(_("Contract Date"), blank=True, null=True)
-    last_notary_fees = models.DecimalField(_("Last Notary Fees"),
-                                           max_digits=32, decimal_places=2, blank=True, null=True)  # currency
+    last_notary_fees = models.CharField(_("Last Notary Fees"),
+                                           blank=True, null=True, max_length=30)  # currency
     constraints_other_nature = models.CharField(_("Constraints Other Nture"),
                                                 max_length=100, blank=True, null=True)
     extension_MQ = models.FloatField(_("Eextension MQ"), blank=True, null=True,
@@ -215,10 +211,8 @@ class Litigation(models.Model):
                                        null=True)
     contract_duration = models.FloatField(_("Contract Duration"),
                                           blank=True, null=True, default=0)
-    contract_fee = models.DecimalField(_("Contract fee"), default=0,
-                                       max_digits=32, decimal_places=2, blank=True, null=True)  # currency
-    residual_rent = models.DecimalField(_("Residual Rent"), default=0,
-                                        max_digits=32, decimal_places=2, blank=True, null=True)  # currency
+    contract_fee = models.CharField(_("Contract fee"),blank=True, null=True, max_length=30)  # currency
+    residual_rent = models.CharField(_("Residual Rent"),blank=True, null=True, max_length=30)  # currency
     need_transfer_user = models.CharField(_("Nees Transfer User"),
                                           max_length=100,
                                           choices=choices,
@@ -234,8 +228,7 @@ class Litigation(models.Model):
     reclamation_intervention_type = models.ForeignKey(config.ReclamationInterventionType,
                                                       verbose_name=_("Reclamation Intervention Type"),
                                                       on_delete=models.CASCADE, blank=True, null=True)
-    reclamation_cost = models.DecimalField(_("Reclamation Cost"), default=0.0,
-                                           max_digits=32, decimal_places=2, blank=True, null=True)  # currency
+    reclamation_cost = models.CharField(_("Reclamation Cost"), blank=True, null=True, max_length=30)  # currency
     time = models.DateTimeField(_("Date"), auto_now_add=True, db_index=True,
                                 blank=True, null=True)
     # if it is concluded with high ranking and associated with cost statement & contract
