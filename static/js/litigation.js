@@ -51,6 +51,18 @@ function hideDiv3() {
     }
 }
 
+function hideDiv4() {
+    const batch = document.getElementById("id_residual_airspace_0");
+    const batch_disfiguration = document.getElementsByClassName("fieldBox field-MC_residui");
+    if (batch && batch.checked) {
+        console.log("Yes")
+        batch_disfiguration[0].style.display = 'block';
+    } else if(batch){
+        console.log("No")
+        batch_disfiguration[0].style.display = 'none';
+    }
+}
+
 // TODO in feature........................................
 function hideDiv2() {
     const lease = document.getElementById("id_lease_agreement_1");
@@ -76,9 +88,12 @@ function listenForRadioChange(yesId, noId, classNames, reversed) {
 
     if(yes_option) {
         yes_option.addEventListener('click', function() {
+
+            console.log("test")
             for(let i = 0;i<classNames.length;i++) {
                 const partial_demolition = document.getElementsByClassName(classNames[i]);
                 const batch_disfiguration = document.getElementsByClassName(classNames[i]);
+                console.log(reversed);
                 partial_demolition[0].style.display = reversed ? 'block' : 'none';
                 batch_disfiguration[0].style.display = reversed ? 'none' : 'block';
             }
@@ -146,9 +161,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
     hideDiv();
     hideDiv2();
     hideDiv3();
-    listenForRadioChange("id_total_demolition_0", "id_total_demolition_1", ["fieldBox field-partial_demolition"], false);
+    hideDiv4();
+    listenForRadioChange("id_total_demolition_0", "id_total_demolition_1", ["fieldBox field-partial_demolition"], true);
     listenForRadioChange("id_batch_disfiguration_0", "id_batch_disfiguration_1", ["form-row field-description"], false);
-    listenForRadioChange("id_lease_agreement_0", "id_lease_agreement_1", ["fieldBox field-contract_duration", "fieldBox field-contract_fee", "fieldBox field-residual_rent"], true);
+    listenForRadioChange("id_lease_agreement_0", "id_lease_agreement_1", ["fieldBox field-contract_duration", "fieldBox field-contract_fee", "fieldBox field-residual_rent"], false);
+    listenForRadioChange("id_residual_airspace_0", "id_residual_airspace_1", ["fieldBox field-MC_residui"], false);
     revue_value = 0;
     total_cost = 0;
     surface_directly_concerned = 0;

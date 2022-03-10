@@ -23,6 +23,15 @@ def increment_litigation_number():
 
 
 class Litigation(models.Model):
+
+    @property
+    def initial_estimation__value(self):
+        return self.initial_estimation_value + "          €" if self.initial_estimation_value else ""
+
+    @property
+    def target__value(self):
+        return self.target_value + "          €" if self.target_value else ""
+
     CHOICES = (
         (None, ''),
         ('Esproprio Agricolo', 'Agricultural expropriation'),

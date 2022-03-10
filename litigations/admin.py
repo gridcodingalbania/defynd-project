@@ -11,7 +11,7 @@ class LitigationAdmin(admin.ModelAdmin):
     __currency_variables = ["initial_estimation_value"]
     list_display = (
         'name', 'time', 'client', 'dispute_matter',
-        'dispute_object', 'initial_estimation_value', 'target_value',
+        'dispute_object', 'initial_estimation__value', 'target__value',
         'registration_type', 'closed', 'origin',
     )
     # filter in the right side of the list appearance
