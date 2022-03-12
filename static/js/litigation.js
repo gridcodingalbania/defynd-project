@@ -222,6 +222,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
     formatInputToTakeCommas("id_turnover_margin");
     formatInputToTakeCommas("id_reclamation_cost");
 
+    formatInputToTakeCommas("id_residual_rent");
+    formatInputToTakeCommas("id_contract_fee");
+
 
 });
 

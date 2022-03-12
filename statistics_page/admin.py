@@ -24,8 +24,8 @@ class StatisticAdmin(admin.ModelAdmin):
         js = ('js/statistic.js',)
 
     list_display = (
-        'title', 'number', 'initial_value', 'objective_value', 'final_value', 'total_value',
-        'revue_value', 'total_cost_value', 'margin_value'
+        'title', 'number', 'initial__value', 'objective__value', 'final__value', 'total__value',
+        'revue__value', 'total__cost_value', 'margin__value'
     )
 
 

@@ -47,13 +47,13 @@ def __make_litigation_decision(litigation):
     contract_uploaded = litigation.upload_pdf != ""
     contract_not_uploaded = not contract_uploaded
 
-    __update_statistic(litigation, 1)
+    __update_statistic(litigation, 4)
     if litigation_is_closed and contract_uploaded:
-        __update_statistic(litigation, 2)
-    elif litigation_is_opened and contract_uploaded:
         __update_statistic(litigation, 3)
-    elif litigation_is_opened and contract_not_uploaded:
-        __update_statistic(litigation, 4)
+    elif litigation_is_opened and contract_uploaded:
+        __update_statistic(litigation, 2)
+    elif litigation_is_closed and contract_not_uploaded:
+        __update_statistic(litigation, 1)
 
 
 # Clear the statistics database and recreate the values based on the litigations
