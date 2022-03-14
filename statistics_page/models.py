@@ -3,40 +3,54 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 
 
+def add_commas(value):
+    input = str(value).split(".")[0]
+    if len(input) <= 3:
+        return str(value)
+    else:
+        response = ""
+        for char in input[::-1]:
+            response = char + response
+            if len("".join(response.split(","))) % 3 == 0:
+                response = "," + response
+        if response[0] == ",":
+            response = response[1:]
+        return response
+
 # Create your models here.
 class Statistics(models.Model):
 
     @property
     def initial__value(self):
-        return str(self.initial_value) + " €" if str(self.initial_value) else ""
+        return add_commas(self.initial_value) + " €" if add_commas(self.initial_value) else ""
 
     @property
     def objective__value(self):
-        return str(self.objective_value) + " €" if str(self.objective_value) else ""
+        return add_commas(self.objective_value) + " €" if add_commas(self.objective_value) else ""
 
     @property
     def final__value(self):
-        return str(self.final_value) + " €" if str(self.final_value) else ""
+        return add_commas(self.final_value) + " €" if add_commas(self.final_value) else ""
 
     @property
     def revue__value(self):
-        return str(self.revue_value) + " €" if str(self.revue_value) else ""
+        return add_commas(self.revue_value) + " €" if add_commas(self.revue_value) else ""
 
     @property
     def total__value(self):
-        return str(self.total_value) + " %" if str(self.total_value) else ""
+        return add_commas(self.total_value) + " %" if add_commas(self.total_value) else ""
 
     @property
     def revue__value(self):
-        return str(self.revue_value) + " €" if str(self.revue_value) else ""
+        return add_commas(self.revue_value) + " €" if add_commas(self.revue_value) else ""
 
     @property
     def total__cost_value(self):
-        return str(self.total_cost_value) + " €" if str(self.total_cost_value) else ""
+        return add_commas(self.total_cost_value) + " €" if add_commas(self.total_cost_value) else ""
 
     @property
     def margin__value(self):
-        return str(self.margin_value) + " €" if str(self.margin_value) else ""
+        return add_commas(self.margin_value) + " €" if add_commas(self.margin_value) else ""
 
 
     title = models.CharField(_("Title"), max_length=100, null=True, blank=True)

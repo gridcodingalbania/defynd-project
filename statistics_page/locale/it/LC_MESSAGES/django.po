@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-05 13:21+0100\n"
-"PO-Revision-Date: 2022-03-06 19:02+0000\n"
+"POT-Creation-Date: 2022-03-14 16:53+0100\n"
+"PO-Revision-Date: 2022-03-14 16:56+0000\n"
 "Last-Translator:   <admin@defynd.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -23,46 +23,62 @@ msgstr ""
 msgid "dashboard_page"
 msgstr "Pagina Dashboard"
 
-#: .\statistics_page\models.py:8
-msgid "Name"
+#: .\statistics_page\models.py:42
+msgid "Title"
 msgstr ""
 
-#: .\statistics_page\models.py:9
+#: .\statistics_page\models.py:43
+msgid "Number"
+msgstr ""
+
+#: .\statistics_page\models.py:44
 msgid "Initial Value"
 msgstr ""
 
-#: .\statistics_page\models.py:10
+#: .\statistics_page\models.py:45
 msgid "Objective Value"
 msgstr ""
 
-#: .\statistics_page\models.py:11
+#: .\statistics_page\models.py:46
 msgid "Final Value"
 msgstr ""
 
-#: .\statistics_page\models.py:12
+#: .\statistics_page\models.py:47
 msgid "Total Value"
 msgstr ""
 
-#: .\statistics_page\models.py:14
+#: .\statistics_page\models.py:49
 msgid "Revue Value"
 msgstr ""
 
-#: .\statistics_page\models.py:15
+#: .\statistics_page\models.py:50
 msgid "Total Cost"
 msgstr ""
 
-#: .\statistics_page\models.py:16
+#: .\statistics_page\models.py:51
 msgid "Margin Value"
 msgstr ""
 
-#: .\statistics_page\models.py:17
-msgid "Description"
-msgstr ""
-
-#: .\statistics_page\models.py:21
+#: .\statistics_page\models.py:55
 msgid "statistic"
 msgstr ""
 
-#: .\statistics_page\models.py:22
+#: .\statistics_page\models.py:56
 msgid "statistics"
 msgstr ""
+
+#: .\statistics_page\utils.py:91
+msgid "Contenzioni in trativa senza contratto"
+msgstr "Contents in trative without contract"
+
+#: .\statistics_page\utils.py:93
+msgid "Contenzioni aperti (not chiusa) con contratto"
+msgstr "Open (not closed) containers with contract"
+
+#: .\statistics_page\utils.py:95
+msgid "Contenzioni chiusi con contratto"
+msgstr "Contents closed with contract"
+
+#: .\statistics_page\utils.py:97
+msgid "Contenzioni in gestione"
+msgstr "Contents under management"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-05 13:21+0100\n"
+"POT-Creation-Date: 2022-03-14 16:53+0100\n"
 "PO-Revision-Date: 2022-03-05 13:23+0000\n"
 "Last-Translator:   <admin@defynd.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -195,10 +195,6 @@ msgstr "Registration"
 msgid "send"
 msgstr "Send"
 
-#: .\clients\views.py:45
-msgid "thank-you-registering"
-msgstr "Thank you for registering. We will contact you soon."
-
 #: .\clients\views.py:82
 msgid "Data Verification Thank You"
 msgstr "Thank you."
@@ -206,6 +202,9 @@ msgstr "Thank you."
 #: .\clients\views.py:84
 msgid "Invalid Link"
 msgstr "Invalid Link"
+
+#~ msgid "thank-you-registering"
+#~ msgstr "Thank you for registering. We will contact you soon."
 
 #~ msgid "code"
 #~ msgstr "Code"

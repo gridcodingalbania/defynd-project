@@ -27,6 +27,31 @@ import { formatDate } from './tools.js';
     }
 
 
+////////////////////////////////////////////////////////////////////////////////
+
+function listenForRadioChange(yesId, noId, id, reversed) {
+    const yes_option = document.getElementById(yesId);
+    const no_option = document.getElementById(noId);
+
+    if(yes_option) {
+        yes_option.addEventListener('click', function() {
+            const elem = document.getElementById(id)
+            if (elem) {
+                elem.style.display = "block";
+            }
+        });
+    }
+
+    if(no_option) {
+        no_option.addEventListener('click', function() {
+            const elem = document.getElementById(id)
+            if (elem) {
+                elem.style.display = "none";
+            }
+
+        });
+    }
+}
 
     function addErrorStyle(id) {
         const container = document.getElementById(id + "_container");
@@ -193,6 +218,12 @@ import { formatDate } from './tools.js';
         listenForAreaChange("id_occupied_area");
         // hide origin from form
         $('#id_origin_container').hide();
+
+        listenForRadioChange("id_residual_airspace_0", "id_residual_airspace_1", "id_MC_residui_container", false);
+        listenForRadioChange("id_lease_agreement_0", "id_lease_agreement_1", "id_contract_duration_container", false);
+        listenForRadioChange("id_lease_agreement_0", "id_lease_agreement_1", "id_contract_fee_container", false);
+        listenForRadioChange("id_lease_agreement_0", "id_lease_agreement_1", "id_residual_rent_container", false);
+        ////////////////////////////////////////////////////////////////////////////
 
         var selectField = $('#id_registration_type'),
             target_value_container = $('#id_target_value_container'),
