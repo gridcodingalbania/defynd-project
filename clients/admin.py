@@ -26,7 +26,7 @@ class CustomerAdmin(admin.ModelAdmin):
         (
             None,
             {
-                'fields': ('code', 'customer_type')
+                'fields': ('code','hubspot_card', 'customer_type')
             }
         ),
         (

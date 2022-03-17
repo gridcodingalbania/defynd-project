@@ -59,7 +59,7 @@ def increment_customer_number():
 class Customer(models.Model):
     code = models.CharField(_("Code"), max_length=20, unique=True,
                             default=increment_customer_number, )  # editable=False
-
+    hubspot_card = models.URLField(verbose_name=_("Hubspot Card"), blank=True, null=True, max_length=7000)
     # fill name from company_name if company or name surname if individual
     name = models.CharField(_("Name"), max_length=100, blank=True, null=True)
 
