@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-14 16:53+0100\n"
-"PO-Revision-Date: 2022-03-05 13:22+0000\n"
+"PO-Revision-Date: 2022-03-20 10:05+0000\n"
 "Last-Translator:   <admin@defynd.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Translated-Using: django-rosetta 0.9.8\n"
+"X-Translated-Using: django-rosetta 0.9.9\n"
 
 #: .\litigations\admin.py:42 .\litigations\forms.py:338
 #: .\litigations\models.py:86
@@ -115,24 +115,22 @@ msgid "esproprio-agricolo"
 msgstr "Agricultural Export"
 
 #: .\litigations\forms.py:30
-#, fuzzy
 #| msgid "expropriation-residential-industrial-building"
 msgid "esproprio-residenziale-libera"
 msgstr "Expropriation Residential Industrial Building"
 
 #: .\litigations\forms.py:31
-#, fuzzy
 #| msgid "expropriation-residential-industrial-building"
 msgid "esproprio-industriale-libera"
 msgstr "Expropriation Residential Industrial Building"
 
 #: .\litigations\forms.py:32
 msgid "esproprio-fabbricato-residenziale"
-msgstr ""
+msgstr "Esproprio Fabbricato Residenziale"
 
 #: .\litigations\forms.py:33
 msgid "esproprio-fabbricato-industriale"
-msgstr ""
+msgstr "Esproprio Fabbricato Industriale"
 
 #: .\litigations\forms.py:39
 msgid "e-mail"

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
@@ -49,9 +48,12 @@ class Statistics(models.Model):
         return add_commas(self.total_cost_value) + " €" if add_commas(self.total_cost_value) else ""
 
     @property
-    def margin__value(self):
-        return add_commas(self.margin_value) + " €" if add_commas(self.margin_value) else ""
+    def ebit__(self):
+        return add_commas(self.ebit) + " €" if add_commas(self.ebit) else ""
 
+    @property
+    def ebit__percent(self):
+        return add_commas(self.ebit_percent) + " %" if add_commas(self.ebit_percent) else ""
 
     title = models.CharField(_("Title"), max_length=100, null=True, blank=True)
     number = models.IntegerField(_("Number"), null=True, blank=True)
@@ -62,7 +64,8 @@ class Statistics(models.Model):
 
     revue_value = models.FloatField(_("Revue Value"), null=True, blank=True)
     total_cost_value = models.FloatField(_("Total Cost"), null=True, blank=True)
-    margin_value = models.FloatField(_("Margin Value"), null=True, blank=True)
+    ebit = models.FloatField(_("EBIT "), null=True, blank=True)
+    ebit_percent = models.FloatField(_("EBIT %"), null=True, blank=True)
 
 
     class Meta:

@@ -15,8 +15,9 @@ __currency_variables = ["initial_estimation_value", "target_value", "aboveground
 def litigation_view(request, lang):
     translation.activate(lang)
     context = {"language": lang}
-    if request.session["message"]:
-        context["message"] = request.session["message"]
+    session_message = request.session.get("message")
+    if session_message:
+        context["message"] = session_message
         request.session["message"]=""
     form = LitigationForm()
     context["form"] = form
@@ -106,7 +107,7 @@ def __removeCommas(form_variable):
 @property
 def revenueValue(self):
     if(self.revenue != None):
-        turnover_margin = revenue - total_cost
-        return turnover_margin
+        EBIT = revenue - total_cost
+        return EBIT
 
 

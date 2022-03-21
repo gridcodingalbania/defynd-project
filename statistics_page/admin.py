@@ -1,7 +1,5 @@
 from django.contrib import admin
 from .models import Statistics
-from litigations.models import Litigation
-from decimal import Decimal
 from .utils import build_statistics_objects
 
 
@@ -25,8 +23,9 @@ class StatisticAdmin(admin.ModelAdmin):
 
     list_display = (
         'title', 'number', 'initial__value', 'objective__value', 'final__value', 'total__value',
-        'revue__value', 'total__cost_value', 'margin__value'
+        'revue__value', 'total__cost_value', 'ebit__', 'ebit__percent'
     )
+
 
 
 # Register your models here.

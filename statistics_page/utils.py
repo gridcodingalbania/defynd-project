@@ -29,12 +29,16 @@ def __update_statistic(litigation, id):
         statistic.final_value = __update_field(statistic.final_value, litigation.final_value)
         statistic.revue_value = __update_field(statistic.revue_value, litigation.revenue)
         statistic.total_cost_value = __update_field(statistic.total_cost_value, litigation.total_cost)
-        statistic.margin_value = __update_field(statistic.margin_value, litigation.turnover_margin)
+        statistic.ebit = __update_field(statistic.ebit, litigation.EBIT)
         statistic.number = statistic.number + 1
         if statistic.initial_value != 0:
-            statistic.total_value = round(statistic.final_value / statistic.initial_value, 2)
+            statistic.total_value = round((statistic.objective_value / statistic.initial_value)*100, 2)
         else:
-            statistic.initial_value = 0
+            statistic.total_value = 0
+        if statistic.number != 0:
+            statistic.ebit_percent = round((statistic.objective_value / statistic.initial_value), 2)
+        else:
+            statistic.ebit_percent = 0
         statistic.save()
     except Statistics.DoesNotExist:
         __create_statistic(id)
@@ -52,7 +56,7 @@ def __make_litigation_decision(litigation):
         __update_statistic(litigation, 3)
     elif litigation_is_opened and contract_uploaded:
         __update_statistic(litigation, 2)
-    elif litigation_is_closed and contract_not_uploaded:
+    elif litigation_is_opened and contract_not_uploaded:
         __update_statistic(litigation, 1)
 
 
@@ -68,7 +72,8 @@ def __reset_statistic_values():
             statistic.total_value = 0
             statistic.revue_value = 0
             statistic.total_cost_value = 0
-            statistic.margin_value = 0
+            statistic.ebit = 0
+            statistic.ebit_percent = 0
             statistic.save()
         except Statistics.DoesNotExist:
             __create_statistic(i)
@@ -85,7 +90,8 @@ def __create_statistic(id):
     statistic.total_value = 0
     statistic.revue_value = 0
     statistic.total_cost_value = 0
-    statistic.margin_value = 0
+    statistic.ebit = 0
+    statistic.ebit_percent = 0
     if id == 1:
         statistic.title = "Contenzioni in trativa senza contratto"
     elif id == 2:

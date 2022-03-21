@@ -1,23 +1,44 @@
 function updateField(a, b) {
-    const turnover_margin_obj = document.getElementById("id_turnover_margin");
-    let valA = 0;
-    let valB = 0;
-    if(a!=0 && a.includes(",")) {
-        valA = +a.split(",").join("")
-    } else {
-        valA = +a;
+    var valA;
+    var valB;
+    console.log(b);
+    valA = a.includes(",") ? +a.split(",").join("") : +a;
+    valB = b.includes(",") ? +b.split(",").join("") : +b;
+    if(!isNaN(valA) && !isNaN(valB)) {
+        const EBIT_object = document.getElementById("id_EBIT");
+        EBIT_object.value = valA-valB;
     }
-    if(b!=0 && b.includes(",")) {
-        valB = +b.split(",").join("")
-    } else {
-        valB = +b;
-    }
-    turnover_margin_obj.value = valA-valB;
+//    let valA = 0;
+//    let valB = 0;
+//    if(a!=0 && a.includes(",")) {
+//        valA = +a.split(",").join("")
+//    } else {
+//        valA = +a;
+//    }
+//    if(b!=0 && b.includes(",")) {
+//        valB = +b.split(",").join("")
+//    } else {
+//        valB = +b;
+//    }
+//    EBIT_obj.value = valA-valB;
 }
 
 function updateField2(c, d) {
     const residual_surface_obj = document.getElementById("id_residual_surface");
     residual_surface_obj.value = c-d;
+}
+
+function updateField3(r, p) {
+    var valR;
+    var valP;
+    valR = r.includes(",") ? +r.split(",").join("") : +r;
+    valP = p.includes(",") ? +p.split(",").join("") : +p;
+    if(!isNaN(valR) && !isNaN(valP)) {
+        const EBIT_object = document.getElementById("id_EBIt_percent");
+        EBIT_object.value = valP == 0 ? 0 : valR * 100 / valP;
+    }
+
+
 }
 
 function addMeterSymbol(className, number) {
@@ -42,12 +63,14 @@ function hideDiv() {
 function hideDiv3() {
     const batch = document.getElementById("id_batch_disfiguration_0");
     const batch_disfiguration = document.getElementsByClassName("form-row field-description");
+    console.log(batch, "getting called")
+
     if (batch && batch.checked) {
-        console.log("Yes")
-        batch_disfiguration[0].style.display = 'none';
-    } else if(batch){
-        console.log("No")
+        console.log("Yes", "batch")
         batch_disfiguration[0].style.display = 'block';
+    } else if(batch){
+        console.log("No", "batch")
+        batch_disfiguration[0].style.display = 'none';
     }
 }
 
@@ -61,6 +84,17 @@ function hideDiv4() {
         console.log("No")
         batch_disfiguration[0].style.display = 'none';
     }
+}
+
+function hideDiv5() {
+    const reclamation_activities = document.getElementById("id_reclamation_activities_0");
+    const reclamation_intervention = document.getElementsByClassName("fieldBox field-reclamation_intervention_type");
+    if (reclamation_activities && reclamation_activities.checked) {
+        reclamation_intervention[0].style.display = 'block';
+    } else if (reclamation_activities) {
+        reclamation_intervention[0].style.display = 'none';
+    }
+
 }
 
 // TODO in feature........................................
@@ -94,8 +128,8 @@ function listenForRadioChange(yesId, noId, classNames, reversed) {
                 const partial_demolition = document.getElementsByClassName(classNames[i]);
                 const batch_disfiguration = document.getElementsByClassName(classNames[i]);
                 console.log(reversed);
-                partial_demolition[0].style.display = reversed ? 'block' : 'none';
-                batch_disfiguration[0].style.display = reversed ? 'none' : 'block';
+                partial_demolition[0].style.display = reversed ? 'flex' : 'none';
+                batch_disfiguration[0].style.display = reversed ? 'none' : 'flex';
             }
         });
     }
@@ -162,10 +196,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
     hideDiv2();
     hideDiv3();
     hideDiv4();
+    hideDiv5();
     listenForRadioChange("id_total_demolition_0", "id_total_demolition_1", ["fieldBox field-partial_demolition"], true);
     listenForRadioChange("id_batch_disfiguration_0", "id_batch_disfiguration_1", ["form-row field-description"], false);
     listenForRadioChange("id_lease_agreement_0", "id_lease_agreement_1", ["fieldBox field-contract_duration", "fieldBox field-contract_fee", "fieldBox field-residual_rent"], false);
     listenForRadioChange("id_residual_airspace_0", "id_residual_airspace_1", ["fieldBox field-MC_residui"], false);
+    listenForRadioChange("id_reclamation_activities_0", "id_reclamation_activities_1", ["fieldBox field-reclamation_intervention_type"], false);
     revue_value = 0;
     total_cost = 0;
     surface_directly_concerned = 0;
@@ -176,7 +212,19 @@ document.addEventListener("DOMContentLoaded", function(event) {
     if(revue_value_obj) {
         revue_value_obj.addEventListener('input', function (evt) {
             revue_value = evt.target.value;
-            updateField(revue_value, total_cost);
+            console.log(total_cost, "test111");
+            updateField(revue_value, total_cost_obj.value);
+            const ebit_value = document.getElementById("id_EBIT").value;
+            updateField3(ebit_value, revue_value);
+        });
+    }
+
+    const ebit_obj = document.getElementById("id_EBIT");
+    if (ebit_obj) {
+        ebit_obj.addEventListener('input', function (evt) {
+            ebit_obj_value = evt.target.value;
+            const revue_obj_value = document.getElementById("id_EBIT").value;
+            updateField3(ebit_obj_value, revue_obj_value);
         });
     }
 
@@ -184,6 +232,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
         total_cost_obj.addEventListener('input', function (evt) {
             total_cost = evt.target.value;
             updateField(revue_value, total_cost);
+            const revue_obj_value = document.getElementById("id_EBIT").value;
+            updateField3(revue_obj_value, revue_value);
         });
     }
 
@@ -219,11 +269,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
     formatInputToTakeCommas("id_revenue");
     formatInputToTakeCommas("id_total_cost");
     formatInputToTakeCommas("id_enrollment_amount");
-    formatInputToTakeCommas("id_turnover_margin");
+    formatInputToTakeCommas("id_EBIT");
     formatInputToTakeCommas("id_reclamation_cost");
 
     formatInputToTakeCommas("id_residual_rent");
     formatInputToTakeCommas("id_contract_fee");
+    formatInputToTakeCommas("id_above_ground_quantification");
 
 
 });

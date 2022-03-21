@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-14 16:53+0100\n"
-"PO-Revision-Date: 2022-02-22 09:32+0000\n"
+"PO-Revision-Date: 2022-03-20 16:36+0000\n"
 "Last-Translator:   <admin@defynd.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Translated-Using: django-rosetta 0.9.8\n"
+"X-Translated-Using: django-rosetta 0.9.9\n"
 
 #: .\litigations\admin.py:42 .\litigations\forms.py:338
 #: .\litigations\models.py:86
@@ -182,7 +182,7 @@ msgstr "Importo_iscrizione"
 
 #: .\litigations\forms.py:60 .\litigations\models.py:96
 msgid "Surface Directly Concerned"
-msgstr "superficie_direttametne_interessata"
+msgstr "Superficie Direttametne Interessata"
 
 #: .\litigations\forms.py:61 .\litigations\models.py:98
 msgid "Residual Surface"

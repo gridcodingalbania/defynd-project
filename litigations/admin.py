@@ -35,7 +35,7 @@ class LitigationAdmin(admin.ModelAdmin):
             None,
             {
                 'fields': (('name', 'closed'),
-                           'client', 'hyperlink', 'upload_pdf'),
+                           ('client', 'value_list'), 'hyperlink', 'upload_pdf'),
             }
         ),
         (
@@ -67,7 +67,7 @@ class LitigationAdmin(admin.ModelAdmin):
             _('Value'),
             {
                 'fields': ('initial_estimation_value', 'target_value', 'final_value',
-                           'revenue', 'total_cost', 'turnover_margin'),
+                           'revenue', 'total_cost', 'EBIT', 'EBIt_percent', 'fee_percentuale'),
                 'classes': ('wide', 'extrapretty')
             }
         ),
@@ -90,7 +90,7 @@ class LitigationAdmin(admin.ModelAdmin):
             _('Information Culture'),
             {
                 'fields': (('culture_type',),  # 'area_type',
-                           'aboveground_quantification',
+                           'above_ground_quantification',
                            'fruit_pendants', 'cultivator_type', 'batch_disfiguration',
                            'description',),
                 'classes': ('wide', 'esproprio_agricolo',),
@@ -162,7 +162,8 @@ class LitigationAdmin(admin.ModelAdmin):
         js = (
             '//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js',  # jquery
             'admin/js/litigation.js',  # project static folder
-            'js/litigation.js'
+            'js/litigation.js',
+            'js/admin_litigation_hide_fields.js'
         )
 
 

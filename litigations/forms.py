@@ -31,6 +31,13 @@ registration_choices = (
     ('Esproprio Industriale Libera', _('esproprio-industriale-libera')),
     ('Esproprio Fabbricato Residenziale', _('esproprio-fabbricato-residenziale')),
     ('Esproprio Fabbricato Industriale', _('esproprio-fabbricato-industriale')),
+        ('Area boschiva', _('Area boschiva')),
+        ('Area industriale con fabbricati', _('Area industriale con fabbricati')),
+        ('Area industriale senza fabbricati', _('Area industriale senza fabbricati')),
+        ('Area Residenziale con fabbricati', _('Area Residenziale con fabbricati')),
+        ('Area Residenziale senza fabbricati', _('Area Residenziale senza fabbricati')),
+        ('Area Agricola con fabbricati', _('Area Agricola con fabbricati')),
+        ('Area Agricola senza fabbricati', _('Area Agricola senza fabbricati'))
 )
 
 
@@ -48,9 +55,10 @@ class LitigationForm(forms.ModelForm):
     initial_estimation_value = forms.CharField(label=_('Initial Estimation Value'), required=False)
     final_value = forms.CharField(label=_('Final Value'), required=False)
     revenue = forms.CharField(label=_('Revenue'), required=False)
+    fee_percentuale = forms.CharField(label=_('Fee Percentuale'), required=False)
     total_cost = forms.CharField(label=_('Total Cost'), required=False)
     target_value = forms.CharField(label=_('Target Value'), required=False)
-    turnover_margin = forms.CharField(label=_('Turnover Margin'), required=False)
+    EBIT = forms.CharField(label=_('Turnover Margin'), required=False)
     closing_date = forms.DateField(label=_('Closing Date'), required=False, help_text="dd/mm/yyyy",  input_formats=settings.DATE_INPUT_FORMATS)
     reference = forms.CharField(label=_('reference'), required=False)
     prejudicial_registrations = forms.CharField(label=_('Prejudicial Registrations'), required=False, )
@@ -81,7 +89,7 @@ class LitigationForm(forms.ModelForm):
                                           # widget=forms.Select(attrs = {'class': 'esproprio_agricolo'}),
                                           label=_('Culture Type'), required=False, )
 
-    aboveground_quantification = forms.CharField(label=_('Above Ground Quantification'), required=False, )
+    above_ground_quantification = forms.CharField(label=_('Above Ground Quantification'), required=False, )
 
     # fruit_pendants = forms.ChoiceField(label="Frutti Pendenti", choices=CHOICES, widget=forms.Select())
     fruit_pendants = forms.ChoiceField(widget=forms.RadioSelect, label=_('Fruit Pendants'),
@@ -126,6 +134,8 @@ class LitigationForm(forms.ModelForm):
                                         choices=CHOICES, required=False, )
     contract_duration = forms.FloatField(label=_("Contract Duration"), required=False, )
     contract_fee = forms.CharField(label=_("Contract Fee"), required=False)
+    EBIT = forms.CharField(label=_("EBIT"), required=False)
+    EBIt_percent = forms.CharField(label=_("EBIt %"), required=False)
     residual_rent = forms.CharField(label=_("Residual Rent"), required=False, )
     need_transfer_user = forms.ChoiceField(widget=forms.RadioSelect,
                                            label=_("Need Transfer User"),
@@ -159,7 +169,7 @@ class LitigationForm(forms.ModelForm):
         final_val = data.get('final_value', False)
         reven = data.get('revenue', False)
         total_cos = data.get('total_cost', False)
-        turnover_marg = data.get('turnover_margin', False)
+        turnover_marg = data.get('EBIT', False)
         closing_dat = data.get('closing_date', False)
 
         temporary_data = data.copy()
@@ -197,7 +207,7 @@ class LitigationForm(forms.ModelForm):
                     self._errors['revenue'] = self.error_class([
                         _('This file is required.')])
                 if not turnover_marg:
-                    self._errors['turnover_margin'] = self.error_class([
+                    self._errors['EBIT'] = self.error_class([
                         _('This file is required.')])
                 if not closing_dat:
                     self._errors['closing_date'] = self.error_class([
@@ -264,9 +274,9 @@ class LitigationForm(forms.ModelForm):
             if not building_titles:
                 self._errors['building_titles'] = self.error_class([
                     _('This file is required.')])
-            if not MC_residui:
-                self._errors['MC_residui'] = self.error_class([
-                    _('This file is required.')])
+            # if not MC_residui:
+            #     self._errors['MC_residui'] = self.error_class([
+            #         _('This file is required.')])
 
             if not total_demolition:
                 self.errors['total_demolition'] = self.error_class([('This file is required.')])
@@ -295,9 +305,9 @@ class LitigationForm(forms.ModelForm):
             if not reclamation_activities:
                 self._errors['reclamation_activities'] = self.error_class([
                     _('This file is required.')])
-            if not reclamation_intervention_type:
-                self._errors['reclamation_intervention_type'] = self.error_class([
-                    _('This file is required.')])
+            # if not reclamation_intervention_type:
+            #     self._errors['reclamation_intervention_type'] = self.error_class([
+            #         _('This file is required.')])
 
         return self.cleaned_data
 
@@ -308,7 +318,7 @@ class LitigationForm(forms.ModelForm):
             'registration_type', 'dispute_matter', 'dispute_object', 'surface_directly_concerned', 'occupied_area',
             'reference', 'enrollment_amount', 'lawyer_reference', 'prejudicial_registrations',
             'origin', 'initial_estimation_value', 'target_value', 'area_address',
-            'residual_surface', 'culture_type', 'aboveground_quantification', 'fruit_pendants',
+            'residual_surface', 'culture_type', 'above_ground_quantification', 'fruit_pendants',
             'cultivator_type', 'batch_disfiguration', 'description', 'reception_act', 'purchase_contract',
             'contract_date', 'social_economic_reform', 'urban_destination', 'transformation_coefficient',
             'IMU_final_declaration', 'epoch_construction', 'building_titles', 'extension_MQ', 'MC_residui',
@@ -344,7 +354,7 @@ class LitigationForm(forms.ModelForm):
                  ),
         Fieldset(_('Edificio'), # edificio agricultural-expropriation
                  Row('culture_type'),  # 'area_type',
-                 Row('aboveground_quantification'),
+                 Row('above_ground_quantification'),
                  Row('fruit_pendants', 'cultivator_type', 'batch_disfiguration'),
                  Row('description'),
                  ),

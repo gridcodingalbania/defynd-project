@@ -39,6 +39,14 @@ class Litigation(models.Model):
         ('Esproprio Industriale Libera', 'Esproprio Industriale Libera'),
         ('Esproprio Fabbricato Residenziale', 'Esproprio Fabbricato Residenziale'),
         ('Esproprio Fabbricato Industriale', 'Esproprio Fabbricato Industriale'),
+        ('Altre destinazioni funzionali', 'Altre destinazioni funzionali'),
+        ('Area boschiva', 'Area boschiva'),
+        ('Area industriale con fabbricati', 'Area industriale con fabbricati'),
+        ('Area industriale senza fabbricati', 'Area industriale senza fabbricati'),
+        ('Area Residenziale con fabbricati', 'Area Residenziale con fabbricati'),
+        ('Area Residenziale senza fabbricati', 'Area Residenziale senza fabbricati'),
+        ('Area Agricola con fabbricati', 'Area Agricola con fabbricati'),
+        ('Area Agricola senza fabbricati', 'Area Agricola senza fabbricati')
     )
 
     choices = [
@@ -51,9 +59,12 @@ class Litigation(models.Model):
         ('value_2', 'value-2'),
     ]
 
+    valueList = [
+        ('25%', '25%'), ('50%', '50%'), ('75%', '75%'), ('90%', '90%'), ('100%', '100%'),
+    ]
 
     name = models.CharField(_("litigation-code"), max_length=20, unique=True,
-                            default=increment_litigation_number, )
+                            default=increment_litigation_number,)
 
     # closed = models.BooleanField(_("closed"), default=True)
 
@@ -71,17 +82,17 @@ class Litigation(models.Model):
     target_date = models.DateField(_("Target Data"), max_length=100, null=True)
     closing_date = models.DateField(_("Closing Date"), max_length=100, null=True, blank=True)
     initial_estimation_value = models.CharField(_("Initial Estimation Value"),
-                                                   blank=True, null=True, max_length=30)  # currency
+                                                blank=True, null=True, max_length=30)  # currency
     target_value = models.CharField(_("Target Value"),
-                                       blank=True, null=True, max_length=30)  # currency
+                                    blank=True, null=True, max_length=30)  # currency
     final_value = models.CharField(_("Final Value"),
-                                      max_length=30,blank=True, null=True)
+                                   max_length=30, blank=True, null=True)
 
-
-    revenue = models.CharField(_("Revenue"),max_length=30, blank=True, null=True)
-    total_cost = models.CharField(_("Total Cost"), max_length=30,blank=True, null=True)
-    turnover_margin = models.CharField(_("Turnover Margin"), max_length=30,blank=True, null=True)
-
+    revenue = models.CharField(_("Revenue"), max_length=30, blank=True, null=True)
+    total_cost = models.CharField(_("Total Cost"), max_length=30, blank=True, null=True)
+    EBIT = models.CharField(_("EBIT"), max_length=30, blank=True, null=True)
+    EBIt_percent = models.CharField(_("EBIt %"), max_length=30, blank=True, null=True)
+    fee_percentuale = models.CharField(_("Fee Percentuale"), max_length=60, blank=True, null=True)
 
     reference = models.CharField(_("Reference"), max_length=100, blank=True, null=True)
     prejudicial_registrations = models.CharField(_("Prejudicial Registrations"),
@@ -92,7 +103,7 @@ class Litigation(models.Model):
                                          default=None,
                                          null=True)
     enrollment_amount = models.CharField(_("Enrollment Amount"),
-                                            blank=True, null=True, max_length=30)  # currency
+                                         blank=True, null=True, max_length=30)  # currency
     surface_directly_concerned = models.FloatField(_("Surface Directly Concerned"),
                                                    blank=True, null=True)
     residual_surface = models.FloatField(_("Residual Surface"),
@@ -112,7 +123,7 @@ class Litigation(models.Model):
                                      null=True)
     date_receipt_act = models.DateField(_("Date Receipt Act"), blank=True, null=True)
     last_notary_fees = models.CharField(_("Last Notary Fees"),
-                                           blank=True, null=True, max_length=30)  # currency
+                                        blank=True, null=True, max_length=30)  # currency
     other_constraints_type = models.ForeignKey(config.ConstraintType,
                                                verbose_name=_("Other Constraints Type"),
                                                on_delete=models.CASCADE, blank=True, null=True)
@@ -139,9 +150,8 @@ class Litigation(models.Model):
                                        default='no',
                                        blank=True,
                                        null=True)
-    above_ground_quantification = models.IntegerField(_("Above Ground Quantification"),
-                                                     help_text=_("Plant Name"),
-                                                     blank=True, null=True, default=0)
+    above_ground_quantification = models.CharField(_("Above Ground Quantification"), blank=True, null=True, max_length=30)  # currency
+
     batch_disfiguration = models.CharField(_("Batch Disfiguration"),
                                            max_length=100,
                                            choices=choices,
@@ -162,13 +172,13 @@ class Litigation(models.Model):
     transformation_coefficient = models.IntegerField(_("Transformation Coefficient"),
                                                      blank=True, null=True, default=0)
     IMU_final_declaration = models.CharField(_("Fianl Declaration IMU"),
-                                                blank=True, null=True, max_length=30)  # currency
-    epoch_construction = models.CharField(_("Epoch Constrution"),
                                              blank=True, null=True, max_length=30)  # currency
+    epoch_construction = models.CharField(_("Epoch Constrution"),
+                                          blank=True, null=True, max_length=30)  # currency
     building_titles = models.TextField(_("Building Titles"), blank=True, null=True)
     contract_date = models.DateField(_("Contract Date"), blank=True, null=True)
     last_notary_fees = models.CharField(_("Last Notary Fees"),
-                                           blank=True, null=True, max_length=30)  # currency
+                                        blank=True, null=True, max_length=30)  # currency
     constraints_other_nature = models.CharField(_("Constraints Other Nture"),
                                                 max_length=100, blank=True, null=True)
     extension_MQ = models.FloatField(_("Eextension MQ"), blank=True, null=True,
@@ -220,8 +230,8 @@ class Litigation(models.Model):
                                        null=True)
     contract_duration = models.FloatField(_("Contract Duration"),
                                           blank=True, null=True, default=0)
-    contract_fee = models.CharField(_("Contract fee"),blank=True, null=True, max_length=30)  # currency
-    residual_rent = models.CharField(_("Residual Rent"),blank=True, null=True, max_length=30)  # currency
+    contract_fee = models.CharField(_("Contract fee"), blank=True, null=True, max_length=30)  # currency
+    residual_rent = models.CharField(_("Residual Rent"), blank=True, null=True, max_length=30)  # currency
     need_transfer_user = models.CharField(_("Nees Transfer User"),
                                           max_length=100,
                                           choices=choices,
@@ -242,13 +252,17 @@ class Litigation(models.Model):
                                 blank=True, null=True)
     # if it is concluded with high ranking and associated with cost statement & contract
     closed = models.BooleanField(_("Closed"), default=False)
+    value_list = models.CharField(_("Value List"), choices=valueList,
+                                  max_length=100,
+                                  default='no',
+                                  blank=True,
+                                  null=True)
     origin = models.CharField(_("Origin"), choices=(
         ('internal', 'interno'),
         ('web', 'web')), max_length=8, default='internal', blank=True, null=True)
 
     def __str__(self):
         return "%s" % (self.name)
-
 
     class Meta:
         db_table = "litigation"

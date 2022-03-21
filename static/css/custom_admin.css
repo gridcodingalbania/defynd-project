@@ -70,6 +70,17 @@ label[for='id_phone'], label[for='id_mobile'] {
     position: relative;
 }
 
+.form-row.field-above_ground_quantification > div:before {
+    content: '€';
+    position: absolute;
+    transform: translateY(calc(50% + 2px));
+    right: 12px;
+}
+
+.form-row.field-above_ground_quantification > div {
+    position: relative;
+}
+
 .form-row.field-target_value > div:before,
 .form-row.field-final_value> div:before {
     content: '€';
@@ -152,14 +163,14 @@ input[type=number] {
     position: relative;
 }
 
-.form-row.field-turnover_margin > div:before {
+.form-row.field-EBIT > div:before {
     content: '€';
     position: absolute;
     transform: translateY(calc(50% + 0px));
     right: 12px;
 }
 
-.form-row.field-turnover_margin > div {
+.form-row.field-EBIT > div {
     position: relative;
 }
 
@@ -212,6 +223,32 @@ input[type=number] {
 }
 
 
+
+.form-row.field-fee_percentuale > div:before {
+    content: '%';
+    position: absolute;
+    transform: translateY(calc(50% + 0px));
+    right: 12px;
+}
+
+.form-row.field-fee_percentuale > div {
+    position: relative;
+}
+
+
+
+.form-row.field-EBIt_percent > div:before {
+    content: '%';
+    position: absolute;
+    transform: translateY(calc(50% + 0px));
+    right: 12px;
+}
+
+.form-row.field-EBIt_percent > div {
+    position: relative;
+}
+
+
 .fieldBox.field-extension_MQ > span:before {
     position: absolute;
     transform: translateY(calc(50% + 26px));
@@ -225,4 +262,34 @@ input[type=number] {
 .field-title {
     color: #333 !important;
     font-weight: 500 !important;
+}
+
+
+
+.fieldBox.field-value_list, .fieldBox.field-client {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.field-closed > .field-closed {
+   margin-right: 150px;
+}
+
+.form-row.field-client.field-value_list {
+    justify-content: space-between;
+}
+
+
+label[for=id_surface_directly_concerned] {
+    width: auto !important;
+}
+
+
+.fieldBox.field-reclamation_intervention_type {
+    flex-direction: column;
+}
+
+.form-row.field-reclamation_intervention_type.field-reclamation_cost {
+    justify-content: space-between;
 }
