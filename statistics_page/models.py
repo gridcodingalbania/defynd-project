@@ -63,9 +63,9 @@ class Statistics(models.Model):
     total_value = models.FloatField(_("Total Value"), null=True, blank=True)
 
     revue_value = models.FloatField(_("Revue Value"), null=True, blank=True)
-    total_cost_value = models.FloatField(_("Total Cost"), null=True, blank=True)
-    ebit = models.FloatField(_("ebit"), null=True, blank=True)
-    ebit_percent = models.FloatField(_("ebit_percent"), null=True, blank=True)
+    total_cost_value = models.FloatField(_("Total Cost Value"), null=True, blank=True)
+    ebit = models.FloatField(_("Ebit"), null=True, blank=True)
+    ebit_percent = models.FloatField(_("Ebit Percent"), null=True, blank=True)
 
 
     class Meta:

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-14 16:53+0100\n"
-"PO-Revision-Date: 2022-03-21 20:11+0000\n"
+"POT-Creation-Date: 2022-03-21 20:44+0100\n"
+"PO-Revision-Date: 2022-03-22 11:11+0000\n"
 "Last-Translator:   <admin@defynd.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -23,65 +23,65 @@ msgstr ""
 msgid "dashboard_page"
 msgstr "Dashboard Page"
 
-#: .\statistics_page\models.py:42
+#: .\statistics_page\models.py:58
 msgid "Title"
 msgstr "Title"
 
-#: .\statistics_page\models.py:43
+#: .\statistics_page\models.py:59
 msgid "Number"
 msgstr ""
 
-#: .\statistics_page\models.py:44
+#: .\statistics_page\models.py:60
 msgid "Initial Value"
 msgstr ""
 
-#: .\statistics_page\models.py:45
+#: .\statistics_page\models.py:61
 msgid "Objective Value"
 msgstr ""
 
-#: .\statistics_page\models.py:46
+#: .\statistics_page\models.py:62
 msgid "Final Value"
 msgstr ""
 
-#: .\statistics_page\models.py:47
+#: .\statistics_page\models.py:63
 msgid "Total Value"
 msgstr ""
 
-#: .\statistics_page\models.py:49
+#: .\statistics_page\models.py:65
 msgid "Revue Value"
 msgstr ""
 
-#: .\statistics_page\models.py:50
-msgid "Total Cost"
+#: .\statistics_page\models.py:66
+msgid "Total Cost Value"
 msgstr ""
 
-#: .\statistics_page\models.py:51
-msgid "Margin Value"
-msgstr ""
+#: .\statistics_page\models.py:67
+msgid "Ebit"
+msgstr "Ebit"
 
-#: .\statistics_page\models.py:55
+#: .\statistics_page\models.py:68
+msgid "Ebit Percent"
+msgstr "Ebit 123"
+
+#: .\statistics_page\models.py:72
 msgid "statistic"
 msgstr ""
 
-#: .\statistics_page\models.py:56
+#: .\statistics_page\models.py:73
 msgid "statistics"
 msgstr ""
 
-#: .\statistics_page\utils.py:91
-msgid "Contenzioni in trativa senza contratto"
-msgstr "Contents in trative without contract"
+#~ msgid "Contenzioni in trativa senza contratto"
+#~ msgstr "Contents in trative without contract"
 
-#: .\statistics_page\utils.py:93
-msgid "Contenzioni aperti (not chiusa) con contratto"
-msgstr "Open disputes (not closed) with contract"
+#~ msgid "Contenzioni aperti (not chiusa) con contratto"
+#~ msgstr "Open disputes (not closed) with contract"
 
-#: .\statistics_page\utils.py:95
-msgid "Contenzioni chiusi con contratto"
-msgstr "Contents closed with contract"
+#~ msgid "Contenzioni chiusi con contratto"
+#~ msgstr "Contents closed with contract"
 
-#: .\statistics_page\utils.py:97
-msgid "Contenzioni in gestione"
-msgstr "Contents under management"
+#~ msgid "Contenzioni in gestione"
+#~ msgstr "Contents under management"
 
 #~ msgid "Name"
 #~ msgstr "Name"

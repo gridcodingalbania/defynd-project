@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-14 16:53+0100\n"
+"POT-Creation-Date: 2022-03-21 20:44+0100\n"
 "PO-Revision-Date: 2022-03-05 13:23+0000\n"
 "Last-Translator:   <admin@defynd.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -113,6 +113,10 @@ msgstr "Address"
 
 #: .\clients\models.py:60
 msgid "Code"
+msgstr ""
+
+#: .\clients\models.py:62
+msgid "Hubspot Card"
 msgstr ""
 
 #: .\clients\models.py:64 .\clients\models.py:74

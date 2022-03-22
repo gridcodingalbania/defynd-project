@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-14 16:53+0100\n"
+"POT-Creation-Date: 2022-03-21 20:44+0100\n"
 "PO-Revision-Date: 2022-03-20 10:05+0000\n"
 "Last-Translator:   <admin@defynd.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,8 +19,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Translated-Using: django-rosetta 0.9.9\n"
 
-#: .\litigations\admin.py:42 .\litigations\forms.py:338
-#: .\litigations\models.py:86
+#: .\litigations\admin.py:42 .\litigations\forms.py:348
+#: .\litigations\models.py:97
 #, fuzzy
 #| msgid "reference"
 msgid "Reference"
@@ -44,13 +44,13 @@ msgstr "Dispute"
 msgid "Value"
 msgstr "Value"
 
-#: .\litigations\admin.py:75 .\litigations\forms.py:334
+#: .\litigations\admin.py:75 .\litigations\forms.py:344
 #, fuzzy
 #| msgid "registration"
 msgid "Registration"
 msgstr "Registration"
 
-#: .\litigations\admin.py:82 .\litigations\forms.py:341
+#: .\litigations\admin.py:82 .\litigations\forms.py:351
 msgid "Area"
 msgstr ""
 
@@ -115,12 +115,10 @@ msgid "esproprio-agricolo"
 msgstr "Agricultural Export"
 
 #: .\litigations\forms.py:30
-#| msgid "expropriation-residential-industrial-building"
 msgid "esproprio-residenziale-libera"
 msgstr "Expropriation Residential Industrial Building"
 
 #: .\litigations\forms.py:31
-#| msgid "expropriation-residential-industrial-building"
 msgid "esproprio-industriale-libera"
 msgstr "Expropriation Residential Industrial Building"
 
@@ -132,474 +130,515 @@ msgstr "Esproprio Fabbricato Residenziale"
 msgid "esproprio-fabbricato-industriale"
 msgstr "Esproprio Fabbricato Industriale"
 
+#: .\litigations\forms.py:34
+msgid "Area boschiva"
+msgstr ""
+
+#: .\litigations\forms.py:35
+msgid "Area industriale con fabbricati"
+msgstr ""
+
+#: .\litigations\forms.py:36
+msgid "Area industriale senza fabbricati"
+msgstr ""
+
+#: .\litigations\forms.py:37
+msgid "Area Residenziale con fabbricati"
+msgstr ""
+
+#: .\litigations\forms.py:38
+msgid "Area Residenziale senza fabbricati"
+msgstr ""
+
 #: .\litigations\forms.py:39
+msgid "Area Agricola con fabbricati"
+msgstr ""
+
+#: .\litigations\forms.py:40
+msgid "Area Agricola senza fabbricati"
+msgstr ""
+
+#: .\litigations\forms.py:46
 msgid "e-mail"
 msgstr "E-mail"
 
-#: .\litigations\forms.py:44
+#: .\litigations\forms.py:51
 msgid "Dispute Matter"
 msgstr "Dispute Matter"
 
-#: .\litigations\forms.py:45 .\litigations\models.py:64
+#: .\litigations\forms.py:52 .\litigations\models.py:75
 #, fuzzy
 #| msgid "purchase-contract"
 msgid "Upload Contract"
 msgstr "Purchase Contract"
 
-#: .\litigations\forms.py:47 .\litigations\models.py:69
+#: .\litigations\forms.py:54 .\litigations\models.py:80
 #, fuzzy
 #| msgid "dispute-object"
 msgid "Dispute Object"
 msgstr "Dispute Object"
 
-#: .\litigations\forms.py:48 .\litigations\models.py:73
+#: .\litigations\forms.py:55 .\litigations\models.py:84
 #, fuzzy
 #| msgid "initial-estimation-value"
 msgid "Initial Estimation Value"
 msgstr "Initial Estimation Value"
 
-#: .\litigations\forms.py:49 .\litigations\models.py:77
+#: .\litigations\forms.py:56 .\litigations\models.py:88
 #, fuzzy
 #| msgid "final-value"
 msgid "Final Value"
 msgstr "Final Value"
 
-#: .\litigations\forms.py:50 .\litigations\models.py:81
+#: .\litigations\forms.py:57 .\litigations\models.py:91
 msgid "Revenue"
 msgstr ""
 
-#: .\litigations\forms.py:51 .\litigations\models.py:82
+#: .\litigations\forms.py:58 .\litigations\models.py:95
+msgid "Fee Percentuale"
+msgstr ""
+
+#: .\litigations\forms.py:59 .\litigations\models.py:92
 #, fuzzy
 #| msgid "total-demolition"
 msgid "Total Cost"
 msgstr "Total Demoliotion"
 
-#: .\litigations\forms.py:52 .\litigations\models.py:75
+#: .\litigations\forms.py:60 .\litigations\models.py:86
 #, fuzzy
 #| msgid "target-value"
 msgid "Target Value"
 msgstr "Target Value"
 
-#: .\litigations\forms.py:53 .\litigations\models.py:83
+#: .\litigations\forms.py:61
 msgid "Turnover Margin"
 msgstr ""
 
-#: .\litigations\forms.py:54 .\litigations\models.py:72
+#: .\litigations\forms.py:62 .\litigations\models.py:83
 #, fuzzy
 #| msgid "closing-data"
 msgid "Closing Date"
 msgstr "Closing Data"
 
-#: .\litigations\forms.py:55
+#: .\litigations\forms.py:63
 msgid "reference"
 msgstr "Reference"
 
-#: .\litigations\forms.py:56 .\litigations\models.py:87
+#: .\litigations\forms.py:64 .\litigations\models.py:98
 #, fuzzy
 #| msgid "prejudicial-registrations"
 msgid "Prejudicial Registrations"
 msgstr "Prejudicial Registration"
 
-#: .\litigations\forms.py:57
+#: .\litigations\forms.py:65
 #, fuzzy
 #| msgid "registration-typology"
 msgid "Registration Type"
 msgstr "Registration typology"
 
-#: .\litigations\forms.py:59 .\litigations\models.py:94
+#: .\litigations\forms.py:67 .\litigations\models.py:105
 #, fuzzy
 #| msgid "enrollment-amount"
 msgid "Enrollment Amount"
 msgstr "Enrollment Amount"
 
-#: .\litigations\forms.py:60 .\litigations\models.py:96
+#: .\litigations\forms.py:68 .\litigations\models.py:107
 #, fuzzy
 #| msgid "surface-directly-concerned"
 msgid "Surface Directly Concerned"
 msgstr "Surface Directly Concerned"
 
-#: .\litigations\forms.py:61 .\litigations\models.py:98
+#: .\litigations\forms.py:69 .\litigations\models.py:109
 #, fuzzy
 #| msgid "residual-surface"
 msgid "Residual Surface"
 msgstr "Residual Surface"
 
-#: .\litigations\forms.py:62 .\litigations\models.py:100
+#: .\litigations\forms.py:70 .\litigations\models.py:111
 #, fuzzy
 #| msgid "technical-reference"
 msgid "Technical Reference"
 msgstr "Technical Reference"
 
-#: .\litigations\forms.py:64 .\litigations\models.py:103
+#: .\litigations\forms.py:72 .\litigations\models.py:114
 #, fuzzy
 #| msgid "lawyer-reference"
 msgid "Lawyer Reference"
 msgstr "Lawyer Reference"
 
-#: .\litigations\forms.py:65 .\litigations\models.py:105
+#: .\litigations\forms.py:73 .\litigations\models.py:116
 #, fuzzy
 #| msgid "area-address"
 msgid "Area Address"
 msgstr "Area Address"
 
-#: .\litigations\forms.py:66 .\litigations\models.py:106
+#: .\litigations\forms.py:74 .\litigations\models.py:117
 #, fuzzy
 #| msgid "occupied-area"
 msgid "Occupied Area"
 msgstr "Occupied  Area"
 
-#: .\litigations\forms.py:67
+#: .\litigations\forms.py:75
 #, fuzzy
 #| msgid "reception-act"
 msgid "Reception Act"
 msgstr "Reception Act"
 
-#: .\litigations\forms.py:69 .\litigations\models.py:113
+#: .\litigations\forms.py:77 .\litigations\models.py:124
 #, fuzzy
 #| msgid "date-receipt-act"
 msgid "Date Receipt Act"
 msgstr "Date Receipt Act"
 
-#: .\litigations\forms.py:70 .\litigations\forms.py:106
+#: .\litigations\forms.py:78 .\litigations\forms.py:114
 #, fuzzy
 #| msgid "purchase-contract"
 msgid "Purchase Contract"
 msgstr "Purchase Contract"
 
-#: .\litigations\forms.py:71 .\litigations\models.py:169
+#: .\litigations\forms.py:79 .\litigations\models.py:179
 #, fuzzy
 #| msgid "contract-date"
 msgid "Contract Date"
 msgstr "Contract Date"
 
-#: .\litigations\forms.py:72 .\litigations\models.py:114
-#: .\litigations\models.py:170
+#: .\litigations\forms.py:80 .\litigations\models.py:125
+#: .\litigations\models.py:180
 #, fuzzy
 #| msgid "last-notary-fees"
 msgid "Last Notary Fees"
 msgstr "Last Notary Fees"
 
-#: .\litigations\forms.py:74 .\litigations\models.py:117
+#: .\litigations\forms.py:82 .\litigations\models.py:128
 #, fuzzy
 #| msgid "other-constraints-type"
 msgid "Other Constraints Type"
 msgstr "Other Constraints Type"
 
-#: .\litigations\forms.py:82 .\litigations\models.py:128
+#: .\litigations\forms.py:90 .\litigations\models.py:139
 #, fuzzy
 #| msgid "culture-type"
 msgid "Culture Type"
 msgstr "Culture Type"
 
-#: .\litigations\forms.py:84 .\litigations\models.py:142
+#: .\litigations\forms.py:92 .\litigations\models.py:153
 #, fuzzy
 #| msgid "aboveground-quantification"
 msgid "Above Ground Quantification"
 msgstr "Aboveground Quantification"
 
-#: .\litigations\forms.py:87 .\litigations\models.py:130
+#: .\litigations\forms.py:95 .\litigations\models.py:141
 #, fuzzy
 #| msgid "fruit-pendants"
 msgid "Fruit Pendants"
 msgstr "Fruit Pendants"
 
-#: .\litigations\forms.py:89 .\litigations\models.py:136
+#: .\litigations\forms.py:97 .\litigations\models.py:147
 #, fuzzy
 #| msgid "cultivator-type"
 msgid "Cultivator Type"
 msgstr "Cultivator Type"
 
-#: .\litigations\forms.py:92 .\litigations\models.py:145
+#: .\litigations\forms.py:100 .\litigations\models.py:155
 #, fuzzy
 #| msgid "batch-disfiguration"
 msgid "Batch Disfiguration"
 msgstr "Batch Disfiguration"
 
-#: .\litigations\forms.py:94 .\litigations\models.py:152
+#: .\litigations\forms.py:102 .\litigations\models.py:162
 #, fuzzy
 #| msgid "description"
 msgid "Description"
 msgstr "Description"
 
-#: .\litigations\forms.py:96
+#: .\litigations\forms.py:104
 #, fuzzy
 #| msgid "social-economic-reform"
 msgid "Social Economic reform"
 msgstr "Social Economic Reform "
 
-#: .\litigations\forms.py:99 .\litigations\models.py:160
+#: .\litigations\forms.py:107 .\litigations\models.py:170
 #, fuzzy
 #| msgid "urban-destination"
 msgid "Urban Destination"
 msgstr "Urban Destination"
 
-#: .\litigations\forms.py:100 .\litigations\models.py:162
+#: .\litigations\forms.py:108 .\litigations\models.py:172
 #, fuzzy
 #| msgid "transformation-coefficient"
 msgid "Transformation Coefficient"
 msgstr "Transformation Coefficient"
 
-#: .\litigations\forms.py:102
+#: .\litigations\forms.py:110
 #, fuzzy
 #| msgid "imu-final-declaration"
 msgid "IMU Final Declaration"
 msgstr "IMU Final Declaration"
 
-#: .\litigations\forms.py:103
+#: .\litigations\forms.py:111
 #, fuzzy
 #| msgid "epoch-construction"
 msgid "Epoch Construction"
 msgstr "Epoch Construction"
 
-#: .\litigations\forms.py:104 .\litigations\models.py:168
+#: .\litigations\forms.py:112 .\litigations\models.py:178
 #, fuzzy
 #| msgid "building-titles"
 msgid "Building Titles"
 msgstr "Building Titles"
 
-#: .\litigations\forms.py:108
+#: .\litigations\forms.py:116
 #, fuzzy
 #| msgid "constraints-other-nature"
 msgid "Constraints Other Nature"
 msgstr "Constraints Other Nature"
 
-#: .\litigations\forms.py:109
+#: .\litigations\forms.py:117
 #, fuzzy
 #| msgid "extension-mq"
 msgid "Extension MQ"
 msgstr "Extension Mq"
 
-#: .\litigations\forms.py:111 .\litigations\models.py:183
+#: .\litigations\forms.py:119 .\litigations\models.py:193
 #, fuzzy
 #| msgid "residual-airspace"
 msgid "Residual Airspace"
 msgstr "Residual Airspace"
 
-#: .\litigations\forms.py:113 .\litigations\models.py:189
+#: .\litigations\forms.py:121 .\litigations\models.py:199
 #, fuzzy
 #| msgid "mc-residui"
 msgid "MC Residui"
 msgstr "Mc Residui"
 
-#: .\litigations\forms.py:115 .\litigations\models.py:191
+#: .\litigations\forms.py:123 .\litigations\models.py:201
 #, fuzzy
 #| msgid "total-demolition"
 msgid "Total Demolition"
 msgstr "Total Demoliotion"
 
-#: .\litigations\forms.py:117 .\litigations\models.py:197
+#: .\litigations\forms.py:125 .\litigations\models.py:207
 #, fuzzy
 #| msgid "partial-demolition"
 msgid "Partial Demolition"
 msgstr "Partial Demolition"
 
-#: .\litigations\forms.py:119 .\litigations\models.py:199
+#: .\litigations\forms.py:127 .\litigations\models.py:209
 #, fuzzy
 #| msgid "storage-state"
 msgid "Storage State"
 msgstr "Storage State"
 
-#: .\litigations\forms.py:122 .\litigations\models.py:209
+#: .\litigations\forms.py:130 .\litigations\models.py:219
 #, fuzzy
 #| msgid "productive-activities"
 msgid "Productive Activities"
 msgstr "Productive Activities"
 
-#: .\litigations\forms.py:125 .\litigations\models.py:215
+#: .\litigations\forms.py:133 .\litigations\models.py:225
 #, fuzzy
 #| msgid "lease-agreement"
 msgid "Lease Agreement"
 msgstr "Lease Agreement"
 
-#: .\litigations\forms.py:127 .\litigations\models.py:221
+#: .\litigations\forms.py:135 .\litigations\models.py:231
 #, fuzzy
 #| msgid "contract-duration"
 msgid "Contract Duration"
 msgstr "Contract Duration"
 
-#: .\litigations\forms.py:128
+#: .\litigations\forms.py:136
 #, fuzzy
 #| msgid "contract-fee"
 msgid "Contract Fee"
 msgstr "Contract Fee"
 
-#: .\litigations\forms.py:129 .\litigations\models.py:224
+#: .\litigations\forms.py:137 .\litigations\models.py:93
+msgid "EBIT"
+msgstr ""
+
+#: .\litigations\forms.py:138 .\litigations\models.py:94
+msgid "EBIt %"
+msgstr ""
+
+#: .\litigations\forms.py:139 .\litigations\models.py:234
 #, fuzzy
 #| msgid "residual-rent"
 msgid "Residual Rent"
 msgstr "Residual Rent "
 
-#: .\litigations\forms.py:131
+#: .\litigations\forms.py:141
 #, fuzzy
 #| msgid "need-transfer-user"
 msgid "Need Transfer User"
 msgstr "Need Transfer User"
 
-#: .\litigations\forms.py:134 .\litigations\models.py:231
+#: .\litigations\forms.py:144 .\litigations\models.py:241
 #, fuzzy
 #| msgid "reclamation-activities"
 msgid "Reclamation Activities"
 msgstr "Reclamation Activities"
 
-#: .\litigations\forms.py:137 .\litigations\models.py:238
+#: .\litigations\forms.py:147 .\litigations\models.py:248
 #, fuzzy
 #| msgid "reclamation-intervention-type"
 msgid "Reclamation Intervention Type"
 msgstr "Reclamation Intervention Type"
 
-#: .\litigations\forms.py:138 .\litigations\models.py:240
+#: .\litigations\forms.py:148 .\litigations\models.py:250
 #, fuzzy
 #| msgid "reclamation-cost"
 msgid "Reclamation Cost"
 msgstr "Reclamation Cost"
 
-#: .\litigations\forms.py:139 .\litigations\models.py:245
+#: .\litigations\forms.py:149 .\litigations\models.py:260
 msgid "Origin"
 msgstr "Origin "
 
-#: .\litigations\forms.py:180
+#: .\litigations\forms.py:190
 msgid "Please register on the site to continue with the dispute form!"
 msgstr ""
 
-#: .\litigations\forms.py:186 .\litigations\forms.py:189
-#: .\litigations\forms.py:192 .\litigations\forms.py:195
-#: .\litigations\forms.py:198 .\litigations\forms.py:201
-#: .\litigations\forms.py:204 .\litigations\forms.py:226
-#: .\litigations\forms.py:241 .\litigations\forms.py:244
-#: .\litigations\forms.py:263 .\litigations\forms.py:266
-#: .\litigations\forms.py:269 .\litigations\forms.py:279
-#: .\litigations\forms.py:282 .\litigations\forms.py:285
-#: .\litigations\forms.py:288 .\litigations\forms.py:291
-#: .\litigations\forms.py:294 .\litigations\forms.py:297
-#: .\litigations\forms.py:300
+#: .\litigations\forms.py:196 .\litigations\forms.py:199
+#: .\litigations\forms.py:202 .\litigations\forms.py:205
+#: .\litigations\forms.py:208 .\litigations\forms.py:211
+#: .\litigations\forms.py:214 .\litigations\forms.py:236
+#: .\litigations\forms.py:251 .\litigations\forms.py:254
+#: .\litigations\forms.py:273 .\litigations\forms.py:276
+#: .\litigations\forms.py:289 .\litigations\forms.py:292
+#: .\litigations\forms.py:295 .\litigations\forms.py:298
+#: .\litigations\forms.py:301 .\litigations\forms.py:304
+#: .\litigations\forms.py:307
 msgid "This file is required."
 msgstr ""
 
-#: .\litigations\forms.py:324
+#: .\litigations\forms.py:334
 #, fuzzy
 #| msgid "litigation-form"
 msgid "Litigation Form"
 msgstr "Litigation Form"
 
-#: .\litigations\forms.py:345
+#: .\litigations\forms.py:355
 msgid "Edificio"
 msgstr "Building"
 
-#: .\litigations\forms.py:370
+#: .\litigations\forms.py:380
 msgid "contact-information"
 msgstr "Contact Information"
 
-#: .\litigations\models.py:55
+#: .\litigations\models.py:66
 msgid "litigation-code"
 msgstr "Litigation Code"
 
-#: .\litigations\models.py:61
+#: .\litigations\models.py:72
 msgid "client"
 msgstr "Client"
 
-#: .\litigations\models.py:63
+#: .\litigations\models.py:74
 msgid "HyperLink to Economics Sheet"
 msgstr ""
 
-#: .\litigations\models.py:67
+#: .\litigations\models.py:78
 #, fuzzy
 #| msgid "controversy-matter"
 msgid "Controversy Matter"
 msgstr "Controversy Matter"
 
-#: .\litigations\models.py:70
+#: .\litigations\models.py:81
 #, fuzzy
 #| msgid "starting-data"
 msgid "Starting Date"
 msgstr "Starting Data"
 
-#: .\litigations\models.py:71
+#: .\litigations\models.py:82
 #, fuzzy
 #| msgid "target-data"
 msgid "Target Data"
 msgstr "Target Data"
 
-#: .\litigations\models.py:89
+#: .\litigations\models.py:100
 #, fuzzy
 #| msgid "registration-typology"
 msgid "Registration Typology"
 msgstr "Registration typology"
 
-#: .\litigations\models.py:107
+#: .\litigations\models.py:118
 #, fuzzy
 #| msgid "reception-act"
 msgid "Reception Area"
 msgstr "Reception Act"
 
-#: .\litigations\models.py:122
+#: .\litigations\models.py:133
 msgid "User"
 msgstr ""
 
-#: .\litigations\models.py:143
-msgid "Plant Name"
-msgstr ""
-
-#: .\litigations\models.py:153
+#: .\litigations\models.py:163
 #, fuzzy
 #| msgid "social-economic-reform"
 msgid "Social Economic Reform"
 msgstr "Social Economic Reform "
 
-#: .\litigations\models.py:164
+#: .\litigations\models.py:174
 #, fuzzy
 #| msgid "imu-final-declaration"
 msgid "Fianl Declaration IMU"
 msgstr "IMU Final Declaration"
 
-#: .\litigations\models.py:166
+#: .\litigations\models.py:176
 #, fuzzy
 #| msgid "epoch-construction"
 msgid "Epoch Constrution"
 msgstr "Epoch Construction"
 
-#: .\litigations\models.py:172
+#: .\litigations\models.py:182
 #, fuzzy
 #| msgid "constraints-other-nature"
 msgid "Constraints Other Nture"
 msgstr "Constraints Other Nature"
 
-#: .\litigations\models.py:174
+#: .\litigations\models.py:184
 #, fuzzy
 #| msgid "extension-mq"
 msgid "Eextension MQ"
 msgstr "Extension Mq"
 
-#: .\litigations\models.py:177
+#: .\litigations\models.py:187
 #, fuzzy
 #| msgid "purchase-contract"
 msgid "Purchase Constract"
 msgstr "Purchase Contract"
 
-#: .\litigations\models.py:223
+#: .\litigations\models.py:233
 #, fuzzy
 #| msgid "contract-fee"
 msgid "Contract fee"
 msgstr "Contract Fee"
 
-#: .\litigations\models.py:225
+#: .\litigations\models.py:235
 #, fuzzy
 #| msgid "need-transfer-user"
 msgid "Nees Transfer User"
 msgstr "Need Transfer User"
 
-#: .\litigations\models.py:241
+#: .\litigations\models.py:251
 msgid "Date"
 msgstr "Date "
 
-#: .\litigations\models.py:244
+#: .\litigations\models.py:254
 msgid "Closed"
 msgstr ""
 
-#: .\litigations\models.py:256 .\litigations\templates\litigation_page.html:10
+#: .\litigations\models.py:255
+#, fuzzy
+#| msgid "value"
+msgid "Value List"
+msgstr "Value"
+
+#: .\litigations\models.py:270 .\litigations\templates\litigation_page.html:10
 msgid "litigation"
 msgstr "Litigation"
 
-#: .\litigations\models.py:257
+#: .\litigations\models.py:271
 msgid "litigations"
 msgstr "Litigations"
 

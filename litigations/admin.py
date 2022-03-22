@@ -158,6 +158,7 @@ class LitigationAdmin(admin.ModelAdmin):
             request, object_id, form_url,
         )
 
+
     class Media:
         js = (
             '//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js',  # jquery

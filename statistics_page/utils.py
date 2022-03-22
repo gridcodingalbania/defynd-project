@@ -31,14 +31,18 @@ def __update_statistic(litigation, id):
         statistic.total_cost_value = __update_field(statistic.total_cost_value, litigation.total_cost)
         statistic.ebit = __update_field(statistic.ebit, litigation.EBIT)
         statistic.number = statistic.number + 1
+        objective_or_final_value = 0
+        if statistic.id == 4 or statistic.id == 2:
+            objective_or_final_value = statistic.objective_value
+        elif statistic.id == 3:
+            objective_or_final_value = statistic.final_value
+
         if statistic.initial_value != 0:
-            statistic.total_value = round((statistic.objective_value / statistic.initial_value)*100, 2)
+            statistic.total_value = round((objective_or_final_value * 100) / statistic.initial_value, 2)
         else:
             statistic.total_value = 0
-        if statistic.number != 0:
-            statistic.ebit_percent = round((statistic.objective_value / statistic.initial_value), 2)
-        else:
-            statistic.ebit_percent = 0
+
+        statistic.ebit_percent = statistic.ebit_percent + float(litigation.EBIt_percent)
         statistic.save()
     except Statistics.DoesNotExist:
         __create_statistic(id)
@@ -103,9 +107,20 @@ def __create_statistic(id):
     statistic.save()
 
 
+def __make_post_processing():
+    for i in range(1, 5):
+        statistic = Statistics.objects.get(id=i)
+        if statistic.number != 0:
+            statistic.ebit_percent = round(statistic.ebit_percent / statistic.number, 2)
+        else:
+            statistic.ebit_percent = 0
+        statistic.save()
+
+
 # Start the statistic objects
 def build_statistics_objects():
     litigation_list = Litigation.objects.all()
     __reset_statistic_values()
     for litigation in litigation_list:
         __make_litigation_decision(litigation)
+    __make_post_processing()
