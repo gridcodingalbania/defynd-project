@@ -3,7 +3,7 @@ from .models import Item, CostStatement, CostStatementItem, Hypothesis, ItemCate
 from import_export.admin import ImportExportModelAdmin
 from import_export import resources
 
-#
+
 # class ItemCategoryAdmin(admin.ModelAdmin):
 #     list_display = ('name', 'code')
 #     fieldsets = [

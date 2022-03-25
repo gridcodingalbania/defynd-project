@@ -1,26 +1,14 @@
 function updateField(a, b) {
-    var valA;
-    var valB;
-    console.log(b);
-    valA = a.includes(",") ? +a.split(",").join("") : +a;
-    valB = b.includes(",") ? +b.split(",").join("") : +b;
+    var valA = 0;
+    var valB = 0;
+
+    if(a) {valA = a.includes(",") ? +a.split(",").join("") : +a;}
+    if(b) {valB = b.includes(",") ? +b.split(",").join("") : +b;}
+
     if(!isNaN(valA) && !isNaN(valB)) {
         const EBIT_object = document.getElementById("id_EBIT");
         EBIT_object.value = valA-valB;
     }
-//    let valA = 0;
-//    let valB = 0;
-//    if(a!=0 && a.includes(",")) {
-//        valA = +a.split(",").join("")
-//    } else {
-//        valA = +a;
-//    }
-//    if(b!=0 && b.includes(",")) {
-//        valB = +b.split(",").join("")
-//    } else {
-//        valB = +b;
-//    }
-//    EBIT_obj.value = valA-valB;
 }
 
 function updateField2(c, d) {
@@ -29,10 +17,11 @@ function updateField2(c, d) {
 }
 
 function updateField3(r, p) {
-    var valR;
-    var valP;
-    valR = r.includes(",") ? +r.split(",").join("") : +r;
-    valP = p.includes(",") ? +p.split(",").join("") : +p;
+    var valR = 0;
+    var valP = 0;
+    if(r){valR = r.includes(",") ? +r.split(",").join("") : +r;}
+    if(p){valP = p.includes(",") ? +p.split(",").join("") : +p;}
+
     if(!isNaN(valR) && !isNaN(valP)) {
         const EBIT_object = document.getElementById("id_EBIt_percent");
         EBIT_object.value = valP == 0 ? 0 : valR * 100 / valP;
@@ -231,6 +220,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     if(total_cost_obj) {
         total_cost_obj.addEventListener('input', function (evt) {
             total_cost = evt.target.value;
+            console.log(total_cost, "test")
             updateField(revue_value, total_cost);
             const revue_obj_value = document.getElementById("id_EBIT").value;
             updateField3(revue_obj_value, revue_value);

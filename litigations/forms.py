@@ -66,7 +66,7 @@ class LitigationForm(forms.ModelForm):
                                           widget=forms.Select())
     enrollment_amount = forms.CharField(label=_('Enrollment Amount'), required=False, )
     surface_directly_concerned = forms.FloatField(label=_('Surface Directly Concerned'), required=False, )
-    residual_surface = forms.FloatField(label="", required=False, help_text=_('Residual Surface'))
+    residual_surface = forms.FloatField(label="", required=False, help_text=_('Residual Surface'), disabled=True)
     technical_reference = forms.CharField(label=_('Technical Reference'), required=False,)
     lawyer_reference = forms.ModelChoiceField(queryset=Lawyer.objects.all(),
                                               label=_('Lawyer Reference'), required=False)
@@ -134,8 +134,8 @@ class LitigationForm(forms.ModelForm):
                                         choices=CHOICES, required=False, )
     contract_duration = forms.FloatField(label=_("Contract Duration"), required=False, )
     contract_fee = forms.CharField(label=_("Contract Fee"), required=False)
-    EBIT = forms.CharField(label=_("EBIT"), required=False)
-    EBIt_percent = forms.CharField(label=_("EBIt %"), required=False)
+    EBIT = forms.CharField(label=_("EBIT"), required=False, disabled=True)
+    EBIt_percent = forms.CharField(label=_("EBIt %"), required=False, disabled=True)
     residual_rent = forms.CharField(label=_("Residual Rent"), required=False, )
     need_transfer_user = forms.ChoiceField(widget=forms.RadioSelect,
                                            label=_("Need Transfer User"),

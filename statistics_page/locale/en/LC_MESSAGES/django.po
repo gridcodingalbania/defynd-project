@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-21 20:44+0100\n"
-"PO-Revision-Date: 2022-03-22 11:11+0000\n"
+"PO-Revision-Date: 2022-03-22 17:15+0000\n"
 "Last-Translator:   <admin@defynd.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -45,7 +45,7 @@ msgstr ""
 
 #: .\statistics_page\models.py:63
 msgid "Total Value"
-msgstr ""
+msgstr "Moltiplicatore"
 
 #: .\statistics_page\models.py:65
 msgid "Revue Value"
@@ -61,7 +61,7 @@ msgstr "Ebit"
 
 #: .\statistics_page\models.py:68
 msgid "Ebit Percent"
-msgstr "Ebit 123"
+msgstr "Ebit %"
 
 #: .\statistics_page\models.py:72
 msgid "statistic"
