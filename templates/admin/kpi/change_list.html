@@ -61,16 +61,16 @@
             {% if data.id == 4 %}
             <div class="table-row">
               <span class="row-title">Valore iniziale totale <br/>Espropri in gestione</span>
-              <span class="row-value">{{ data.initial_value}}</span>
+              <span class="row-value"><span class="euro-sign"> € </span>{{ data.initial_value}}</span>
             </div>
             <div class="table-row">
               <span class="row-title">Valore Obiettivo totale<br/>Espropri in gestione</span>
-              <span class="row-value">{{ data.total_value}}</span>
+              <span class="row-value"><span class="euro-sign"> € </span>{{ data.total_value}}</span>
             </div>
             {% elif data.id == 1 %}
             <div class="table-row">
               <span class="row-title">Valore Obiettivo<br/>Espropri in tratattiva</span>
-              <span class="row-value">{{ data.objective_value}}</span>
+              <span class="row-value"><span class="euro-sign"> € </span>{{ data.objective_value}}</span>
             </div>
             {% endif %}
          {% endfor %}
@@ -80,11 +80,11 @@
         <div class="table-row">
 
           <span class="row-title">Percentuale Di <br/> Inceremento Media</span>
-          <span class="row-value">Value 4</span>
+          <span class="row-value"><span class="sign"> + </span>Value  <span class="sign"> % </span></span>
         </div>
         <div class="table-row">
           <span class="row-title">EbitDa</span>
-          <span class="row-value">Value 5</span>
+          <span class="row-value"><span class="sign"> + </span>Value <span class="sign"> %* </span></span>
         </div>
       </div>
     </div>
