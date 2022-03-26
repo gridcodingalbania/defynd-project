@@ -41,8 +41,8 @@ def __update_statistic(litigation, id):
             statistic.total_value = round((objective_or_final_value * 100) / statistic.initial_value, 2)
         else:
             statistic.total_value = 0
-
-        statistic.ebit_percent = statistic.ebit_percent + float(litigation.EBIt_percent)
+        if litigation.EBIT_percent is not None:
+            statistic.ebit_percent = statistic.ebit_percent + float(litigation.EBIt_percent)
         statistic.save()
     except Statistics.DoesNotExist:
         __create_statistic(id)
