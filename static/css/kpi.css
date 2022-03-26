@@ -13,7 +13,7 @@
     border-radius: 50%;
     border: 2px solid #00FFFF;
     padding: 20px 43px;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .circle > span {
@@ -35,9 +35,9 @@
 .tabular-container {
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .table-side {
@@ -51,7 +51,6 @@
 .table-row {
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
     padding: 20px 0px;
 }
@@ -59,4 +58,15 @@
 .row-value {
     font-size: 20px;
     font-weight: bold;
+    margin-left: 40px;
+}
+
+.bottom-title {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.month-value {
+    font-size: 2rem;
+
 }

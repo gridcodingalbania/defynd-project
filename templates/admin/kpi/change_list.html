@@ -54,34 +54,43 @@
 
     </div>
 
+
     <div class="tabular-container">
-      <div class="table-side">
-        <div class="table-row">
-          <span class="row-title">Title 1</span>
-          <span class="row-value">Value 1</span>
-        </div>
-        <div class="table-row">
-          <span class="row-title">Title 2</span>
-          <span class="row-value">Value 2</span>
-        </div>
-        <div class="table-row">
-          <span class="row-title">Title 3</span>
-          <span class="row-value">Value 3</span>
-        </div>
-      </div>
+       <div class="table-side">
+         {% for data in statistics %}
+            {% if data.id == 4 %}
+            <div class="table-row">
+              <span class="row-title">Valore iniziale totale <br/>Espropri in gestione</span>
+              <span class="row-value">{{ data.initial_value}}</span>
+            </div>
+            <div class="table-row">
+              <span class="row-title">Valore Obiettivo totale<br/>Espropri in gestione</span>
+              <span class="row-value">{{ data.total_value}}</span>
+            </div>
+            {% elif data.id == 1 %}
+            <div class="table-row">
+              <span class="row-title">Valore Obiettivo<br/>Espropri in tratattiva</span>
+              <span class="row-value">{{ data.objective_value}}</span>
+            </div>
+            {% endif %}
+         {% endfor %}
+       </div>
 
       <div class="table-side">
         <div class="table-row">
-          <span class="row-title">Title 4</span>
+
+          <span class="row-title">Percentuale Di <br/> Inceremento Media</span>
           <span class="row-value">Value 4</span>
         </div>
         <div class="table-row">
-          <span class="row-title">Title 5</span>
+          <span class="row-title">EbitDa</span>
           <span class="row-value">Value 5</span>
         </div>
       </div>
     </div>
-
+   <div class="bottom-title">
+     <span> <span class="month-value">15 mesi</span> tempo medio chiusura contenzioso **</span>
+   </div>
   </div>
 
 
