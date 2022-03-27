@@ -66,7 +66,7 @@ class LitigationForm(forms.ModelForm):
                                           widget=forms.Select())
     enrollment_amount = forms.CharField(label=_('Enrollment Amount'), required=False, )
     surface_directly_concerned = forms.FloatField(label=_('Surface Directly Concerned'), required=False, )
-    residual_surface = forms.FloatField(label="", required=False, help_text=_('Residual Surface'), disabled=True)
+    residual_surface = forms.FloatField(label="", required=False, help_text=_('Residual Surface'), disabled=False)
     technical_reference = forms.CharField(label=_('Technical Reference'), required=False,)
     lawyer_reference = forms.ModelChoiceField(queryset=Lawyer.objects.all(),
                                               label=_('Lawyer Reference'), required=False)
@@ -134,8 +134,8 @@ class LitigationForm(forms.ModelForm):
                                         choices=CHOICES, required=False, )
     contract_duration = forms.FloatField(label=_("Contract Duration"), required=False, )
     contract_fee = forms.CharField(label=_("Contract Fee"), required=False)
-    EBIT = forms.CharField(label=_("EBIT"), required=False, disabled=True)
-    EBIt_percent = forms.CharField(label=_("EBIt %"), required=False, disabled=True)
+    EBIT = forms.CharField(label=_("EBIT"), required=False, disabled=False)
+    EBIt_percent = forms.CharField(label=_("EBIt %"), required=False, disabled=False)
     residual_rent = forms.CharField(label=_("Residual Rent"), required=False, )
     need_transfer_user = forms.ChoiceField(widget=forms.RadioSelect,
                                            label=_("Need Transfer User"),
@@ -173,6 +173,17 @@ class LitigationForm(forms.ModelForm):
         closing_dat = data.get('closing_date', False)
 
         temporary_data = data.copy()
+
+        # print(self.cleaned_data["EBIT"], "the ebut")
+        #
+        # if "," in reven:
+
+        # self.cleaned_data["EBIT"] = str(int(reven) - int(total_cos))
+        # if int(reven) - int(total_cos) == 0:
+        #     print("difference is 0")
+        #     print(self.cleaned_data)
+        #     self.cleaned_data["EBIT"] = 0
+        #     self.cleaned_data["EBIt_percent"] = 0
 
         if sdc and oa:
             if sdc < oa:

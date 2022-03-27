@@ -196,34 +196,29 @@ document.addEventListener("DOMContentLoaded", function(event) {
     surface_directly_concerned = 0;
     occupied_area = 0;
 
-    const revue_value_obj = document.getElementById("id_revenue");
-    const total_cost_obj = document.getElementById("id_total_cost");
-    if(revue_value_obj) {
-        revue_value_obj.addEventListener('input', function (evt) {
-            revue_value = evt.target.value;
-            console.log(total_cost, "test111");
-            updateField(revue_value, total_cost_obj.value);
-            const ebit_value = document.getElementById("id_EBIT").value;
-            updateField3(ebit_value, revue_value);
+    const revenue_element = document.getElementById("id_revenue");
+    if(revenue_element) {
+        revenue_element.addEventListener('input', function (evt) {
+            const revenue_value = evt.target.value;
+            const total_cost_value = document.getElementById("id_total_cost").value;
+            updateField(revenue_value, total_cost_value);
+            setTimeout(()=>{
+                const ebit_value = document.getElementById("id_EBIT").value;
+                updateField3(ebit_value, revenue_value);
+            }, 100);
         });
     }
 
-    const ebit_obj = document.getElementById("id_EBIT");
-    if (ebit_obj) {
-        ebit_obj.addEventListener('input', function (evt) {
-            ebit_obj_value = evt.target.value;
-            const revue_obj_value = document.getElementById("id_EBIT").value;
-            updateField3(ebit_obj_value, revue_obj_value);
-        });
-    }
-
-    if(total_cost_obj) {
-        total_cost_obj.addEventListener('input', function (evt) {
-            total_cost = evt.target.value;
-            console.log(total_cost, "test")
-            updateField(revue_value, total_cost);
-            const revue_obj_value = document.getElementById("id_EBIT").value;
-            updateField3(revue_obj_value, revue_value);
+    const total_const_element = document.getElementById("id_total_cost");
+    if(total_const_element) {
+        total_const_element.addEventListener('input', function (evt) {
+            const total_cost_value = evt.target.value;
+            const revenue_value = document.getElementById("id_revenue").value;
+            updateField(revenue_value, total_cost_value);
+            setTimeout(()=>{
+                const ebit_value = document.getElementById("id_EBIT").value;
+                updateField3(ebit_value, revenue_value);
+            }, 100);
         });
     }
 

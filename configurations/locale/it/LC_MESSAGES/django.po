@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-21 20:44+0100\n"
-"PO-Revision-Date: 2022-02-22 09:42+0000\n"
+"PO-Revision-Date: 2022-03-26 22:28+0000\n"
 "Last-Translator:   <admin@defynd.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -56,7 +56,7 @@ msgstr ""
 
 #: .\configurations\models.py:50
 msgid "reclamation-intervention-types"
-msgstr "tipologia_intervento_bonifica"
+msgstr "Tipologia Intervento Bonifica"
 
 #: .\configurations\models.py:61
 msgid "urban-destination"

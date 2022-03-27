@@ -293,3 +293,13 @@ label[for=id_surface_directly_concerned] {
 .form-row.field-reclamation_intervention_type.field-reclamation_cost {
     justify-content: space-between;
 }
+
+#id_EBIT, #id_EBIt_percent {
+    pointer-events: none;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;
+  background-color: rgba(239, 239, 239, 0.3);
+  color: rgb(84, 84, 84);
+}
