@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-21 20:44+0100\n"
-"PO-Revision-Date: 2022-03-14 16:56+0000\n"
+"PO-Revision-Date: 2022-03-29 10:13+0000\n"
 "Last-Translator:   <admin@defynd.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Translated-Using: django-rosetta 0.9.8\n"
+"X-Translated-Using: django-rosetta 0.9.9\n"
 
 #: .\statistics_page\apps.py:7
 msgid "dashboard_page"
@@ -25,51 +25,51 @@ msgstr "Pagina Dashboard"
 
 #: .\statistics_page\models.py:58
 msgid "Title"
-msgstr ""
+msgstr "Titolo"
 
 #: .\statistics_page\models.py:59
 msgid "Number"
-msgstr ""
+msgstr "Numero"
 
 #: .\statistics_page\models.py:60
 msgid "Initial Value"
-msgstr ""
+msgstr "Valore iniziale"
 
 #: .\statistics_page\models.py:61
 msgid "Objective Value"
-msgstr ""
+msgstr "Valore Obiettivo "
 
 #: .\statistics_page\models.py:62
 msgid "Final Value"
-msgstr ""
+msgstr "Valore finale"
 
 #: .\statistics_page\models.py:63
 msgid "Total Value"
-msgstr ""
+msgstr "Valore totale"
 
 #: .\statistics_page\models.py:65
 msgid "Revue Value"
-msgstr ""
+msgstr "Valore di revisione"
 
 #: .\statistics_page\models.py:66
 msgid "Total Cost Value"
-msgstr ""
+msgstr "Costo totale"
 
 #: .\statistics_page\models.py:67
 msgid "Ebit"
-msgstr ""
+msgstr "Ebit"
 
 #: .\statistics_page\models.py:68
 msgid "Ebit Percent"
-msgstr ""
+msgstr "Ebit %"
 
 #: .\statistics_page\models.py:72
 msgid "statistic"
-msgstr ""
+msgstr "statistica"
 
 #: .\statistics_page\models.py:73
 msgid "statistics"
-msgstr ""
+msgstr "statistiche"
 
 #~ msgid "Contenzioni in trativa senza contratto"
 #~ msgstr "Contents in trative without contract"

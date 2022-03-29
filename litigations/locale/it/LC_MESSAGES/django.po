@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-21 20:44+0100\n"
-"PO-Revision-Date: 2022-03-20 16:36+0000\n"
+"PO-Revision-Date: 2022-03-29 10:08+0000\n"
 "Last-Translator:   <admin@defynd.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -34,7 +34,7 @@ msgstr ""
 
 #: .\litigations\admin.py:67
 msgid "Value"
-msgstr ""
+msgstr "Valore"
 
 #: .\litigations\admin.py:75 .\litigations\forms.py:344
 msgid "Registration"
@@ -104,43 +104,43 @@ msgstr ""
 
 #: .\litigations\forms.py:31
 msgid "esproprio-industriale-libera"
-msgstr ""
+msgstr "esproprio industriale libera"
 
 #: .\litigations\forms.py:32
 msgid "esproprio-fabbricato-residenziale"
-msgstr ""
+msgstr "esproprio fabbricato residenziale"
 
 #: .\litigations\forms.py:33
 msgid "esproprio-fabbricato-industriale"
-msgstr ""
+msgstr "esproprio fabbricato industriale"
 
 #: .\litigations\forms.py:34
 msgid "Area boschiva"
-msgstr ""
+msgstr "Zona boschiva"
 
 #: .\litigations\forms.py:35
 msgid "Area industriale con fabbricati"
-msgstr ""
+msgstr "Zona industriale con fabbricati"
 
 #: .\litigations\forms.py:36
 msgid "Area industriale senza fabbricati"
-msgstr ""
+msgstr "Zona industriale senza fabbricati"
 
 #: .\litigations\forms.py:37
 msgid "Area Residenziale con fabbricati"
-msgstr ""
+msgstr "Zona Residenziale con fabbricati"
 
 #: .\litigations\forms.py:38
 msgid "Area Residenziale senza fabbricati"
-msgstr ""
+msgstr "Zona Residenziale senza fabbricati"
 
 #: .\litigations\forms.py:39
 msgid "Area Agricola con fabbricati"
-msgstr ""
+msgstr "Zona Agricola con fabbricati"
 
 #: .\litigations\forms.py:40
 msgid "Area Agricola senza fabbricati"
-msgstr ""
+msgstr "Zona Agricola senza fabbricati"
 
 #: .\litigations\forms.py:46
 msgid "e-mail"
@@ -170,11 +170,11 @@ msgstr "Valore finale"
 
 #: .\litigations\forms.py:57 .\litigations\models.py:91
 msgid "Revenue"
-msgstr ""
+msgstr "Revenue"
 
 #: .\litigations\forms.py:58 .\litigations\models.py:95
 msgid "Fee Percentuale"
-msgstr ""
+msgstr "Fee Percentuale"
 
 #: .\litigations\forms.py:59 .\litigations\models.py:92
 #, fuzzy
@@ -428,11 +428,11 @@ msgstr "codice_cliente"
 
 #: .\litigations\models.py:74
 msgid "HyperLink to Economics Sheet"
-msgstr ""
+msgstr "Collegamento ipertestuale al foglio di economia"
 
 #: .\litigations\models.py:78
 msgid "Controversy Matter"
-msgstr ""
+msgstr "Questione di controversia"
 
 #: .\litigations\models.py:81
 #, fuzzy

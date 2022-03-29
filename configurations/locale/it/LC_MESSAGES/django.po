@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-21 20:44+0100\n"
-"PO-Revision-Date: 2022-03-26 22:28+0000\n"
+"PO-Revision-Date: 2022-03-28 12:25+0000\n"
 "Last-Translator:   <admin@defynd.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Translated-Using: django-rosetta 0.9.8\n"
+"X-Translated-Using: django-rosetta 0.9.9\n"
 
 #: .\configurations\models.py:6 .\configurations\models.py:18
 #: .\configurations\models.py:30 .\configurations\models.py:42
@@ -28,31 +28,31 @@ msgstr "nome"
 
 #: .\configurations\models.py:13
 msgid "area-type"
-msgstr ""
+msgstr "Tipo di area"
 
 #: .\configurations\models.py:14
 msgid "area-types"
-msgstr ""
+msgstr "Tipi di area"
 
 #: .\configurations\models.py:25
 msgid "constraint-type"
-msgstr ""
+msgstr "Tipo di vincolo"
 
 #: .\configurations\models.py:26
 msgid "constraint-types"
-msgstr ""
+msgstr "Tipi di vincolo"
 
 #: .\configurations\models.py:37
 msgid "culture-type"
-msgstr ""
+msgstr "Tipo culturale"
 
 #: .\configurations\models.py:38
 msgid "culture-types"
-msgstr ""
+msgstr "Tipi di cultura"
 
 #: .\configurations\models.py:49
 msgid "reclamation-intervention-type"
-msgstr ""
+msgstr "Tipo intervento di bonifica"
 
 #: .\configurations\models.py:50
 msgid "reclamation-intervention-types"
@@ -64,7 +64,7 @@ msgstr "destinazione_urbanistica "
 
 #: .\configurations\models.py:62
 msgid "urban-destinations"
-msgstr ""
+msgstr "destinazioni urbane"
 
 #: .\configurations\models.py:73
 msgid "dispute-matter"
