@@ -12,12 +12,18 @@
 .circle {
     border-radius: 50%;
     border: 10px solid #00FFFF;
-    padding: 20px 43px;
+    width: 130px;
+    height: 130px;
     margin-top: 40px;
+    position: relative;
 }
 
 .circle > span {
     font-size: 4.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .circle-title {
@@ -69,11 +75,14 @@
 }
 .bottom-title {
     width: 100%;
-    margin-top: 40px;
+    margin-top: 80px;
     margin-left: 20px;
 }
 
 .month-value {
-    font-size: 2rem;
+    font-size: 3rem;
 
+}
+.month-title {
+    font-size: 18px;
 }

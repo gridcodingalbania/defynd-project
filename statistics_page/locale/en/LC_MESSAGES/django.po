@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-21 20:44+0100\n"
-"PO-Revision-Date: 2022-03-22 17:15+0000\n"
+"POT-Creation-Date: 2022-03-31 08:31+0200\n"
+"PO-Revision-Date: 2022-03-31 08:27+0000\n"
 "Last-Translator:   <admin@defynd.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -23,53 +23,56 @@ msgstr ""
 msgid "dashboard_page"
 msgstr "Dashboard Page"
 
-#: .\statistics_page\models.py:58
+#: .\statistics_page\forms.py:7 .\statistics_page\models.py:67
+msgid "Moltiplicatore"
+msgstr "Moltiplicatore"
+
+#: .\statistics_page\models.py:62
 msgid "Title"
 msgstr "Title"
 
-#: .\statistics_page\models.py:59
+#: .\statistics_page\models.py:63
 msgid "Number"
 msgstr ""
 
-#: .\statistics_page\models.py:60
+#: .\statistics_page\models.py:64
 msgid "Initial Value"
 msgstr ""
 
-#: .\statistics_page\models.py:61
+#: .\statistics_page\models.py:65
 msgid "Objective Value"
 msgstr ""
 
-#: .\statistics_page\models.py:62
+#: .\statistics_page\models.py:66
 msgid "Final Value"
 msgstr ""
 
-#: .\statistics_page\models.py:63
-msgid "Total Value"
-msgstr "Moltiplicatore"
-
-#: .\statistics_page\models.py:65
+#: .\statistics_page\models.py:69
 msgid "Revue Value"
 msgstr ""
 
-#: .\statistics_page\models.py:66
+#: .\statistics_page\models.py:70
 msgid "Total Cost Value"
 msgstr ""
 
-#: .\statistics_page\models.py:67
+#: .\statistics_page\models.py:71
 msgid "Ebit"
 msgstr "Ebit"
 
-#: .\statistics_page\models.py:68
+#: .\statistics_page\models.py:72
 msgid "Ebit Percent"
 msgstr "Ebit %"
 
-#: .\statistics_page\models.py:72
+#: .\statistics_page\models.py:76
 msgid "statistic"
 msgstr ""
 
-#: .\statistics_page\models.py:73
+#: .\statistics_page\models.py:77
 msgid "statistics"
 msgstr ""
+
+#~ msgid "Total Value"
+#~ msgstr "Moltiplicatore"
 
 #~ msgid "Contenzioni in trativa senza contratto"
 #~ msgstr "Contents in trative without contract"

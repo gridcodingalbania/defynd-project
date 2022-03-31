@@ -6,7 +6,6 @@ from statistics_page.models import Statistics
 class KPIAdmin(admin.ModelAdmin):
     actions = None
 
-
     def has_add_permission(self, request, obj=None):
         return False
 

@@ -29,7 +29,11 @@ class Statistics(models.Model):
 
     @property
     def final__value(self):
-        return add_commas(self.final_value) + " €" if add_commas(self.final_value) else ""
+        print(self)
+        if self.id==4 or self.id==2 or self.id==1:
+            return '-'
+        else:
+            return add_commas(self.final_value) + " €" if add_commas(self.final_value) else ""
 
     @property
     def revue__value(self):
@@ -37,7 +41,7 @@ class Statistics(models.Model):
 
     @property
     def total__value(self):
-        return add_commas(self.total_value) + " %" if add_commas(self.total_value) else ""
+        return add_commas(self.total_value).split(".")[0] + " %" if add_commas(self.total_value) else ""
 
     @property
     def revue__value(self):
@@ -60,7 +64,7 @@ class Statistics(models.Model):
     initial_value = models.FloatField(_("Initial Value"), null=True, blank=True)
     objective_value = models.FloatField(_("Objective Value"), null=True, blank=True)
     final_value = models.FloatField(_("Final Value"), null=True, blank=True)
-    total_value = models.FloatField(_("Total Value"), null=True, blank=True)
+    total_value = models.FloatField(_("Moltiplicatore"), null=True, blank=True)
 
     revue_value = models.FloatField(_("Revue Value"), null=True, blank=True)
     total_cost_value = models.FloatField(_("Total Cost Value"), null=True, blank=True)

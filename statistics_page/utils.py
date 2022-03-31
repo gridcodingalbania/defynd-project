@@ -38,7 +38,7 @@ def __update_statistic(litigation, id):
             objective_or_final_value = statistic.final_value
 
         if statistic.initial_value != 0:
-            statistic.total_value = round((objective_or_final_value * 100) / statistic.initial_value, 2)
+            statistic.total_value = round((objective_or_final_value * 100) / statistic.initial_value)
         else:
             statistic.total_value = 0
 

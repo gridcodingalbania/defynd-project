@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-21 20:44+0100\n"
+"POT-Creation-Date: 2022-03-31 08:31+0200\n"
 "PO-Revision-Date: 2022-03-20 16:36+0000\n"
 "Last-Translator:   <admin@defynd.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Translated-Using: django-rosetta 0.9.9\n"
 
-#: .\litigations\admin.py:42 .\litigations\forms.py:348
+#: .\litigations\admin.py:42 .\litigations\forms.py:359
 #: .\litigations\models.py:97
 msgid "Reference"
 msgstr "Registrazione"
@@ -36,11 +36,11 @@ msgstr ""
 msgid "Value"
 msgstr ""
 
-#: .\litigations\admin.py:75 .\litigations\forms.py:344
+#: .\litigations\admin.py:75 .\litigations\forms.py:355
 msgid "Registration"
 msgstr "Registrazione"
 
-#: .\litigations\admin.py:82 .\litigations\forms.py:351
+#: .\litigations\admin.py:82 .\litigations\forms.py:362
 msgid "Area"
 msgstr "Area"
 
@@ -387,34 +387,34 @@ msgstr "costo_bonifica"
 msgid "Origin"
 msgstr "Origine"
 
-#: .\litigations\forms.py:190
+#: .\litigations\forms.py:201
 msgid "Please register on the site to continue with the dispute form!"
 msgstr ""
 "Si prega di registrarsi al sito per continuare con il modulo di "
 "contestazione!"
 
-#: .\litigations\forms.py:196 .\litigations\forms.py:199
-#: .\litigations\forms.py:202 .\litigations\forms.py:205
-#: .\litigations\forms.py:208 .\litigations\forms.py:211
-#: .\litigations\forms.py:214 .\litigations\forms.py:236
-#: .\litigations\forms.py:251 .\litigations\forms.py:254
-#: .\litigations\forms.py:273 .\litigations\forms.py:276
-#: .\litigations\forms.py:289 .\litigations\forms.py:292
-#: .\litigations\forms.py:295 .\litigations\forms.py:298
-#: .\litigations\forms.py:301 .\litigations\forms.py:304
-#: .\litigations\forms.py:307
+#: .\litigations\forms.py:207 .\litigations\forms.py:210
+#: .\litigations\forms.py:213 .\litigations\forms.py:216
+#: .\litigations\forms.py:219 .\litigations\forms.py:222
+#: .\litigations\forms.py:225 .\litigations\forms.py:247
+#: .\litigations\forms.py:262 .\litigations\forms.py:265
+#: .\litigations\forms.py:284 .\litigations\forms.py:287
+#: .\litigations\forms.py:300 .\litigations\forms.py:303
+#: .\litigations\forms.py:306 .\litigations\forms.py:309
+#: .\litigations\forms.py:312 .\litigations\forms.py:315
+#: .\litigations\forms.py:318
 msgid "This file is required."
 msgstr "Questo campo è obbligatorio."
 
-#: .\litigations\forms.py:334
+#: .\litigations\forms.py:345
 msgid "Litigation Form"
 msgstr "Modulo di contenzioso"
 
-#: .\litigations\forms.py:355
+#: .\litigations\forms.py:366
 msgid "Edificio"
 msgstr ""
 
-#: .\litigations\forms.py:380
+#: .\litigations\forms.py:391
 msgid "contact-information"
 msgstr "Informazioni sui contatti"
 

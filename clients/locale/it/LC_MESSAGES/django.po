@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-21 20:44+0100\n"
+"POT-Creation-Date: 2022-03-31 08:31+0200\n"
 "PO-Revision-Date: 2022-02-23 20:20+0000\n"
 "Last-Translator:   <admin@defynd.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -99,9 +99,7 @@ msgstr ""
 "in db"
 
 #: .\clients\forms.py:132 .\clients\forms.py:134 .\clients\forms.py:136
-#: .\clients\forms.py:138 .\clients\forms.py:148 .\clients\forms.py:150
-#: .\clients\forms.py:152 .\clients\forms.py:154 .\clients\forms.py:167
-#: .\clients\forms.py:169 .\clients\forms.py:171 .\clients\forms.py:173
+#: .\clients\forms.py:138
 msgid "Required Field"
 msgstr "Campo obligatorio"
 

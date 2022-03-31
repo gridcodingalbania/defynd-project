@@ -144,14 +144,14 @@ class ContactForm(forms.ModelForm):
             birthday = data.get('birthday', None)
             phone = data.get('phone', None)
 
-            if not first_name:
-                self._errors['first_name'] = self.error_class([_('Required Field')])
-            if not last_name:
-                self._errors['last_name'] = self.error_class([_('Required Field')])
-            if not birthday:
-                self._errors['birthday'] = self.error_class([_('Required Field')])
-            if not phone:
-                self._errors['phone'] = self.error_class([_('Required Field')])
+            # if not first_name:
+            #     self._errors['first_name'] = self.error_class([_('Required Field')])
+            # if not last_name:
+            #     self._errors['last_name'] = self.error_class([_('Required Field')])
+            # if not birthday:
+            #     self._errors['birthday'] = self.error_class([_('Required Field')])
+            # if not phone:
+            #     self._errors['phone'] = self.error_class([_('Required Field')])
             # if not fiscal_code:
             #     self._errors['fiscal_code'] = self.error_class([
             #         'Questo campo è obbligatorio.'])
@@ -163,14 +163,14 @@ class ContactForm(forms.ModelForm):
             vat_number = data.get('vat_number', None)
             role = data.get('role', None)
 
-            if not company_name:
-                self._errors['company_name'] = self.error_class([_('Required Field')])
-            if not fiscal_code:
-                self._errors['fiscal_code'] = self.error_class([_('Required Field')])
-            if not vat_number:
-                self._errors['vat_number'] = self.error_class([_('Required Field')])
-            if not role:
-                self._errors['role'] = self.error_class([_('Required Field')])
+            # if not company_name:
+            #     self._errors['company_name'] = self.error_class([_('Required Field')])
+            # if not fiscal_code:
+            #     self._errors['fiscal_code'] = self.error_class([_('Required Field')])
+            # if not vat_number:
+            #     self._errors['vat_number'] = self.error_class([_('Required Field')])
+            # if not role:
+            #     self._errors['role'] = self.error_class([_('Required Field')])
         return self.cleaned_data
 
     class Meta:
