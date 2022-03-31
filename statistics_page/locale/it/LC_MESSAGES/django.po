@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-31 08:31+0200\n"
-"PO-Revision-Date: 2022-03-31 08:31+0000\n"
+"POT-Creation-Date: 2022-03-21 20:44+0100\n"
+"PO-Revision-Date: 2022-03-29 10:13+0000\n"
 "Last-Translator:   <admin@defynd.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -17,62 +17,59 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Translated-Using: django-rosetta 0.9.8\n"
+"X-Translated-Using: django-rosetta 0.9.9\n"
 
 #: .\statistics_page\apps.py:7
 msgid "dashboard_page"
 msgstr "Pagina Dashboard"
 
-#: .\statistics_page\forms.py:7 .\statistics_page\models.py:67
-msgid "Moltiplicatore"
-msgstr "Moltiplicatore"
+#: .\statistics_page\models.py:58
+msgid "Title"
+msgstr "Titolo"
+
+#: .\statistics_page\models.py:59
+msgid "Number"
+msgstr "Numero"
+
+#: .\statistics_page\models.py:60
+msgid "Initial Value"
+msgstr "Valore iniziale"
+
+#: .\statistics_page\models.py:61
+msgid "Objective Value"
+msgstr "Valore Obiettivo "
 
 #: .\statistics_page\models.py:62
-msgid "Title"
-msgstr ""
+msgid "Final Value"
+msgstr "Valore finale"
 
 #: .\statistics_page\models.py:63
-msgid "Number"
-msgstr ""
-
-#: .\statistics_page\models.py:64
-msgid "Initial Value"
-msgstr ""
+msgid "Total Value"
+msgstr "Valore totale"
 
 #: .\statistics_page\models.py:65
-msgid "Objective Value"
-msgstr ""
+msgid "Revue Value"
+msgstr "Valore di revisione"
 
 #: .\statistics_page\models.py:66
-msgid "Final Value"
-msgstr ""
-
-#: .\statistics_page\models.py:69
-msgid "Revue Value"
-msgstr ""
-
-#: .\statistics_page\models.py:70
 msgid "Total Cost Value"
-msgstr ""
+msgstr "Costo totale"
 
-#: .\statistics_page\models.py:71
+#: .\statistics_page\models.py:67
 msgid "Ebit"
-msgstr ""
+msgstr "Ebit"
+
+#: .\statistics_page\models.py:68
+msgid "Ebit Percent"
+msgstr "Ebit %"
 
 #: .\statistics_page\models.py:72
-msgid "Ebit Percent"
-msgstr ""
-
-#: .\statistics_page\models.py:76
 msgid "statistic"
-msgstr ""
+msgstr "statistica"
 
-#: .\statistics_page\models.py:77
+#: .\statistics_page\models.py:73
 msgid "statistics"
-msgstr ""
-
-#~ msgid "Total Value"
-#~ msgstr "Moltiplicatore"
+msgstr "statistiche"
 
 #~ msgid "Contenzioni in trativa senza contratto"
 #~ msgstr "Contents in trative without contract"

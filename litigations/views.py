@@ -38,22 +38,22 @@ def litigation_view(request, lang):
                 record.client = customer[0]
             record.save()
 
-            try:
-                context = form.cleaned_data
-                context['id'] = record.id
-                context['name'] = record.name
-                current_site = get_current_site(request)
-                context['domain'] = current_site.domain
-                # send email from notification module
-                send_email_template(
-                    email=None, context=context,
-                    notification_type='litigation_form',
-                    notify_on="form_submit",
-                    request=request)
+            # try:
+            #     context = form.cleaned_data
+            #     context['id'] = record.id
+            #     context['name'] = record.name
+            #     current_site = get_current_site(request)
+            #     context['domain'] = current_site.domain
+            #     # send email from notification module
+            #     send_email_template(
+            #         email=None, context=context,
+            #         notification_type='litigation_form',
+            #         notify_on="form_submit",
+            #         request=request)
 
-            except Exception as error:
-                print("Print error: ", error)
-                return f'    {error}'
+            # except Exception as error:
+            #     print("Print error: ", error)
+            #     return f'    {error}'
             form = LitigationForm()
             return render(request, "litigation_page.html", {
                 "language": lang,
