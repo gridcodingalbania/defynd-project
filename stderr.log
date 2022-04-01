@@ -76,3 +76,63 @@ Not Found: /defynd/static/images/favicon.ico
 
 OSError: LSAPI: Socket read/write error
 Not Found: /defynd/static/images/favicon.ico
+Not Found: /defynd/static/images/favicon.ico
+Not Found: /defynd/static/images/favicon.ico
+Not Found: /defynd/static/images/favicon.ico
+Not Found: /defynd/static/images/favicon.ico
+Not Found: /defynd/static/images/favicon.ico
+Not Found: /defynd/static/images/favicon.ico
+Not Found: /defynd/static/material/js/custom-elements.min.js.map
+Not Found: /defynd/static/material/js/custom-elements.min.js.map
+/home/gridcoding/virtualenv/projects/defynd/3.7/lib/python3.7/site-packages/material/base.py:144: UserWarning: Can't equally divide container 12 for [<material.base.Span object at 0x2ac4b8799690>, <material.base.Span object at 0x2ac4b8799750>, <material.base.Span object at 0x2ac4b8799790>] span elements
+  .format(container_size, self.elements)
+Not Found: /defynd/static/images/favicon.ico
+Not Found: /defynd/static/images/favicon.ico
+Statistics object (4)
+Statistics object (3)
+Statistics object (2)
+Statistics object (1)
+Statistics object (4)
+Statistics object (3)
+Statistics object (2)
+Statistics object (1)
+Not Found: /defynd/static/admin/img/icon_searchbox_rosetta.png
+Statistics object (4)
+Statistics object (3)
+Statistics object (2)
+Statistics object (1)
+Statistics object (4)
+Statistics object (3)
+Statistics object (2)
+Statistics object (1)
+
+Not Found: /defynd/static/images/favicon.ico
+Statistics object (4)
+Statistics object (3)
+Statistics object (2)
+Statistics object (1)
+Statistics object (4)
+Statistics object (3)
+Statistics object (2)
+Statistics object (1)
+Not Found: /defynd/static/images/favicon.ico
+Statistics object (4)
+Statistics object (3)
+Statistics object (2)
+Statistics object (1)
+Not Found: /defynd/static/images/favicon.ico
+Statistics object (4)
+Statistics object (3)
+Statistics object (2)
+Statistics object (1)
+Statistics object (4)
+Statistics object (3)
+Statistics object (2)
+Statistics object (1)
+Not Found: /defynd/static/images/favicon.ico
+Not Found: /defynd/static/images/favicon.ico
+Statistics object (4)
+Statistics object (3)
+Statistics object (2)
+Statistics object (1)
+OSError: LSAPI: Socket read/write error
