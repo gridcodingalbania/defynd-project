@@ -37,6 +37,11 @@ function calculatePercentage(a, b) {
 document.addEventListener("DOMContentLoaded", function(event) {
 
     console.log("test?")
+
+    const total_values = document.getElementsByClassName("field-total_value");
+    for(let i = 0;i<total_values.length;i++) {
+        total_values[i].innerHTML = total_values[i].innerHTML.split(".")[0] + " %";
+    }
     removeLinkFromTitle();
 
     revue_value = 0;
