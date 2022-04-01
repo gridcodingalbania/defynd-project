@@ -39,9 +39,9 @@ class Statistics(models.Model):
     def revue__value(self):
         return add_commas(self.revue_value) + " €" if add_commas(self.revue_value) else ""
 
-    @property
-    def total__value(self):
-        return add_commas(self.total_value).split(".")[0] + " %" if add_commas(self.total_value) else ""
+    # @property
+    # def total__value(self):
+    #     return add_commas(self.total_value).split(".")[0] + " %" if add_commas(self.total_value) else ""
 
     @property
     def revue__value(self):

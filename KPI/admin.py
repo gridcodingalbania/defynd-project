@@ -4,6 +4,8 @@ from statistics_page.models import Statistics
 
 # Register your models here.
 class KPIAdmin(admin.ModelAdmin):
+    # admin.site.site_header = 'My Site Admin Panel'
+    # admin.site.site_title = 'My Site Title'
     actions = None
 
     def has_add_permission(self, request, obj=None):

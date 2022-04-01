@@ -74,7 +74,7 @@ class Customer(models.Model):
     first_name = models.CharField(_("Name"), max_length=100, blank=True, null=True)
     last_name = models.CharField(_("Last Name"), max_length=100, blank=True, null=True)
 
-    email = models.EmailField(_("e-mail"), null=True, unique=True, )
+    email = models.EmailField(_("e-mail"), null=True, unique=True)
     phone_prefix = models.CharField(max_length=100,
                                     choices=phone_prefixes,
                                     default=None,
