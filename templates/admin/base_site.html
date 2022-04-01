@@ -12,10 +12,10 @@
 {% endblock %}
 
 {% block userlinks %}
-    <a href="{{ request|switch_i18n:'en' }}">English
+    <a href="https://projects.gridcoding.com/defynd/en/admin/">English
         <img class="i18n_flag" style="width: 16px;" src="{% static 'images/en.png' %}"/>
     </a> /
-    <a href="{{ request|switch_i18n:'it' }}">Italian
+    <a href="https://projects.gridcoding.com/defynd/it/admin/">Italian
         <img class="i18n_flag" style="width: 16px;" src="{% static 'images/it.jpg' %}"/>
     </a> /
     {% if user.is_active and user.is_staff %}
