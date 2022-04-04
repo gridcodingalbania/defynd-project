@@ -17,3 +17,7 @@ class KPI(models.Model):
     ebit_da = models.FloatField(null=True, blank=True)
 
     any_messi = models.CharField(max_length=500, null=True, blank=True)
+    
+    class Meta:
+        verbose_name = "KPI"
+        verbose_name_plural = "KPI"
