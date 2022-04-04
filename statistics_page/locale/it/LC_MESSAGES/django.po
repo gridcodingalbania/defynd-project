@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-21 20:44+0100\n"
-"PO-Revision-Date: 2022-03-29 10:13+0000\n"
+"POT-Creation-Date: 2022-04-03 22:50+0200\n"
+"PO-Revision-Date: 2022-04-03 15:11+0000\n"
 "Last-Translator:   <admin@defynd.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -17,59 +17,62 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Translated-Using: django-rosetta 0.9.9\n"
+"X-Translated-Using: django-rosetta 0.9.8\n"
 
 #: .\statistics_page\apps.py:7
 msgid "dashboard_page"
 msgstr "Pagina Dashboard"
 
-#: .\statistics_page\models.py:58
+#: .\statistics_page\forms.py:7 .\statistics_page\models.py:41
+msgid "Moltiplicatore"
+msgstr "Moltiplicatore"
+
+#: .\statistics_page\forms.py:8 .\statistics_page\models.py:36
 msgid "Title"
 msgstr "Titolo"
 
-#: .\statistics_page\models.py:59
+#: .\statistics_page\forms.py:9 .\statistics_page\models.py:37
 msgid "Number"
 msgstr "Numero"
 
-#: .\statistics_page\models.py:60
+#: .\statistics_page\forms.py:10 .\statistics_page\models.py:38
 msgid "Initial Value"
 msgstr "Valore iniziale"
 
-#: .\statistics_page\models.py:61
+#: .\statistics_page\forms.py:11 .\statistics_page\models.py:39
 msgid "Objective Value"
 msgstr "Valore Obiettivo "
 
-#: .\statistics_page\models.py:62
+#: .\statistics_page\forms.py:12 .\statistics_page\models.py:40
 msgid "Final Value"
 msgstr "Valore finale"
 
-#: .\statistics_page\models.py:63
-msgid "Total Value"
-msgstr "Valore totale"
-
-#: .\statistics_page\models.py:65
+#: .\statistics_page\forms.py:13 .\statistics_page\models.py:43
 msgid "Revue Value"
 msgstr "Valore di revisione"
 
-#: .\statistics_page\models.py:66
+#: .\statistics_page\forms.py:14 .\statistics_page\models.py:44
 msgid "Total Cost Value"
 msgstr "Costo totale"
 
-#: .\statistics_page\models.py:67
+#: .\statistics_page\forms.py:15 .\statistics_page\models.py:45
 msgid "Ebit"
 msgstr "Ebit"
 
-#: .\statistics_page\models.py:68
+#: .\statistics_page\forms.py:16 .\statistics_page\models.py:46
 msgid "Ebit Percent"
 msgstr "Ebit %"
 
-#: .\statistics_page\models.py:72
+#: .\statistics_page\models.py:50
 msgid "statistic"
 msgstr "statistica"
 
-#: .\statistics_page\models.py:73
+#: .\statistics_page\models.py:51
 msgid "statistics"
 msgstr "statistiche"
+
+#~ msgid "Total Value"
+#~ msgstr "Valore totale"
 
 #~ msgid "Contenzioni in trativa senza contratto"
 #~ msgstr "Contents in trative without contract"

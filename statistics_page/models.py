@@ -19,45 +19,19 @@ def add_commas(value):
 # Create your models here.
 class Statistics(models.Model):
 
-    @property
-    def initial__value(self):
-        return add_commas(self.initial_value) + " €" if add_commas(self.initial_value) else ""
 
-    @property
-    def objective__value(self):
-        return add_commas(self.objective_value) + " €" if add_commas(self.objective_value) else ""
-
-    @property
-    def final__value(self):
-        print(self)
-        if self.id==4 or self.id==2 or self.id==1:
-            return '-'
-        else:
-            return add_commas(self.final_value) + " €" if add_commas(self.final_value) else ""
-
-    @property
-    def revue__value(self):
-        return add_commas(self.revue_value) + " €" if add_commas(self.revue_value) else ""
 
     # @property
-    # def total__value(self):
-    #     return add_commas(self.total_value).split(".")[0] + " %" if add_commas(self.total_value) else ""
+    # def final__value(self):
+    #     print(self)
+    #     if self.id==4 or self.id==2 or self.id==1:
+    #         return '-'
+    #     else:
+    #         return add_commas(self.final_value) + " €" if add_commas(self.final_value) else ""
 
-    @property
-    def revue__value(self):
-        return add_commas(self.revue_value) + " €" if add_commas(self.revue_value) else ""
-
-    @property
-    def total__cost_value(self):
-        return add_commas(self.total_cost_value) + " €" if add_commas(self.total_cost_value) else ""
-
-    @property
-    def ebit__(self):
-        return add_commas(self.ebit) + " €" if add_commas(self.ebit) else ""
-
-    @property
-    def ebit__percent(self):
-        return add_commas(self.ebit_percent) + " %" if add_commas(self.ebit_percent) else ""
+    # @property
+    # def ebit__percent(self):
+    #     return add_commas(self.ebit_percent) + " %" if add_commas(self.ebit_percent) else ""
 
     title = models.CharField(_("Title"), max_length=100, null=True, blank=True)
     number = models.IntegerField(_("Number"), null=True, blank=True)

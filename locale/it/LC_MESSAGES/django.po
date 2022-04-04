@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-31 08:31+0200\n"
+"POT-Creation-Date: 2022-04-03 22:50+0200\n"
 "PO-Revision-Date: 2022-02-22 11:30+0000\n"
 "Last-Translator:   <admin@defynd.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,8 +19,41 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Translated-Using: django-rosetta 0.9.8\n"
 
-#: .\KPI\templates\admin\base_site.html:3
-msgid "Django site admin"
+#: .\templates\admin\KPI\kpi\change_list.html:8
+msgid "Kpis --test"
+msgstr ""
+
+#: .\templates\admin\KPI\kpi\change_list.html:35
+#: .\templates\rosetta\languages.html:8
+msgid "Home"
+msgstr ""
+
+#: .\templates\admin\KPI\kpi\change_list.html:51
+msgid " Contenziosi in gestione "
+msgstr ""
+
+#: .\templates\admin\KPI\kpi\change_list.html:54
+msgid "Contenziosi definiti"
+msgstr ""
+
+#: .\templates\admin\KPI\kpi\change_list.html:76
+msgid "Valore iniziale totale"
+msgstr ""
+
+#: .\templates\admin\KPI\kpi\change_list.html:123
+msgid "Please correct the error below."
+msgstr ""
+
+#: .\templates\admin\KPI\kpi\change_list.html:123
+msgid "Please correct the errors below."
+msgstr ""
+
+#: .\templates\admin\KPI\kpi\change_list.html:148
+msgid "Filter"
+msgstr ""
+
+#: .\templates\admin\KPI\kpi\change_list.html:150
+msgid "Clear all filters"
 msgstr ""
 
 #: .\templates\admin\base_site.html:24
@@ -33,27 +66,6 @@ msgstr ""
 
 #: .\templates\admin\base_site.html:30
 msgid "Log out"
-msgstr ""
-
-#: .\templates\admin\kpi\change_list.html:33
-#: .\templates\rosetta\languages.html:8
-msgid "Home"
-msgstr ""
-
-#: .\templates\admin\kpi\change_list.html:122
-msgid "Please correct the error below."
-msgstr ""
-
-#: .\templates\admin\kpi\change_list.html:122
-msgid "Please correct the errors below."
-msgstr ""
-
-#: .\templates\admin\kpi\change_list.html:147
-msgid "Filter"
-msgstr ""
-
-#: .\templates\admin\kpi\change_list.html:149
-msgid "Clear all filters"
 msgstr ""
 
 #: .\templates\rosetta\languages.html:5 .\templates\rosetta\languages.html:8

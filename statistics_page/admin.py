@@ -19,11 +19,11 @@ class StatisticAdmin(admin.ModelAdmin):
         return False
 
     class Media:
-        js = ('js/statistic.js',)
+        js = ('js/statistic_page.js',)
 
     list_display = (
-        'title', 'number', 'initial__value', 'objective__value', 'final__value', 'total_value',
-        'revue__value', 'total__cost_value', 'ebit__', 'ebit__percent'
+        'title', 'number', 'initial_value', 'objective_value', 'final_value', 'total_value',
+        'revue_value', 'total_cost_value', 'ebit', 'ebit_percent'
     )
 
 

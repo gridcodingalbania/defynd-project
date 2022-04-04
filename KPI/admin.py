@@ -30,3 +30,5 @@ class KPIAdmin(admin.ModelAdmin):
 
 
 admin.site.register(KPI, KPIAdmin)
+
+

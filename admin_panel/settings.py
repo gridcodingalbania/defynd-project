@@ -172,14 +172,21 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
-STATIC_URL = 'https://projects.gridcoding.com/defynd/static/'
+
+PRODUCTION_MODE = True
+
+if PRODUCTION_MODE:
+    MEDIA_URL = 'https://projects.gridcoding.com/defynd/media/'
+    STATIC_URL = 'https://projects.gridcoding.com/defynd/static/'
+else:
+    MEDIA_URL = '/media/'
+    STATIC_URL = '/static/'
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, "assets")
-
-MEDIA_URL = 'https://projects.gridcoding.com/defynd/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 LOCALE_PATHS = (
