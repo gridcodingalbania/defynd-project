@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-04-03 22:50+0200\n"
-"PO-Revision-Date: 2022-02-22 11:34+0000\n"
+"PO-Revision-Date: 2022-04-03 22:05+0000\n"
 "Last-Translator:   <admin@defynd.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -19,41 +19,10 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Translated-Using: django-rosetta 0.9.8\n"
 
-#: .\contracts\apps.py:7
-msgid "contracts-app"
+#: .\KPI\apps.py:8
+msgid "Kpi"
+msgstr "Kpi"
+
+#: .\KPI\templates\admin\base_site.html:3
+msgid "Django site admin"
 msgstr ""
-
-#: .\contracts\models.py:23
-msgid "Code"
-msgstr "Code"
-
-#: .\contracts\models.py:25
-msgid "Name"
-msgstr "Nome"
-
-#: .\contracts\models.py:26
-msgid "Date"
-msgstr "Date"
-
-#: .\contracts\models.py:27
-msgid "Sign Date"
-msgstr "Cliente"
-
-#: .\contracts\models.py:28
-msgid "Client"
-msgstr "Cliente"
-
-#: .\contracts\models.py:30
-msgid "Url"
-msgstr ""
-
-#: .\contracts\models.py:34
-msgid "Contract"
-msgstr "contratto"
-
-#: .\contracts\models.py:35
-msgid "Contracts"
-msgstr "Contratti"
-
-#~ msgid "Cost Statement"
-#~ msgstr "Dichiarazione dei costi"

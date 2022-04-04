@@ -30,3 +30,9 @@ class KPIAdmin(admin.ModelAdmin):
 
 
 admin.site.register(KPI, KPIAdmin)
+
+
+admin.site.site_header = "Kpi"
+# admin.site.index_title = "Litigation Management System"
+# admin.site.site_title = "DEFYND"
+# admin.site.header = "DEFYND"

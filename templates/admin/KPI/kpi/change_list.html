@@ -1,9 +1,11 @@
 {% extends "admin/change_list.html" %}
-{% load i18n admin_urls static admin_list %}
+
 {% load add_comma %}
+{% load i18n %}
 
 {% block extrastyle %}
   {{ block.super }}
+   <title>{% translate "Kpis --test" %}</title>
   <link rel="stylesheet" type="text/css" href="{% static 'admin/css/changelists.css' %}">
   <link rel="stylesheet" type="text/css" href="{% static 'css/kpi.css' %}">
   {% if cl.formset %}
@@ -46,9 +48,10 @@
         <div class="data-container">
           <span class="circle-title">
             {% if statistic.id == 4 %}
-              Contenziosi in gestione
+            {% blocktranslate %} Contenziosi in gestione {% endblocktranslate %}
+
             {% elif statistic.id == 3 %}
-              Contenziosi definiti
+             {% translate 'Contenziosi definiti' %}
             {% elif statistic.id == 2 %}
               Contenziosi aperti
             {% elif statistic.id == 1 %}
@@ -70,7 +73,7 @@
          {% for data in statistics %}
             {% if data.id == 4 %}
             <div class="table-row">
-              <span class="row-title">Valore iniziale totale <br/>Espropri in gestione</span>
+              <span class="row-title">{% translate  'Valore iniziale totale' %}<br/>Espropri in gestione </span>
               <span class="row-value"><span class="euro-sign"> € </span>{{ data.initial_value | comma_format}}</span>
             </div>
             <div class="table-row">
