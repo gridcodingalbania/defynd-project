@@ -8,15 +8,72 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-03 22:50+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2022-04-05 09:24+0200\n"
+"PO-Revision-Date: 2022-04-05 09:30+0000\n"
+"Last-Translator:   <admin@defynd.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.9.8\n"
+
+#: .\KPI\admin.py:21
+msgid "contenziosi_in_gestione"
+msgstr "Contenziosi In Gestione "
+
+#: .\KPI\admin.py:22 .\KPI\admin.py:23
+msgid "contenziosi_definiti"
+msgstr ""
+
+#: .\KPI\admin.py:24
+msgid "contenziosi_aperti"
+msgstr ""
+
+#: .\KPI\admin.py:25
+msgid "contenziosi_in_trattativa"
+msgstr ""
+
+#: .\KPI\admin.py:27
+msgid "initial_total_value"
+msgstr ""
+
+#: .\KPI\admin.py:28 .\KPI\admin.py:30
+msgid "espropri_in_gestione"
+msgstr ""
+
+#: .\KPI\admin.py:29
+msgid "valore_obiettivo_totale"
+msgstr ""
+
+#: .\KPI\admin.py:31
+msgid "valore_obiettivo"
+msgstr ""
+
+#: .\KPI\admin.py:32
+msgid "espropri_in_tratattiva"
+msgstr ""
+
+#: .\KPI\admin.py:33
+msgid "percentuale_di"
+msgstr ""
+
+#: .\KPI\admin.py:34
+msgid "inceremento_media"
+msgstr ""
+
+#: .\KPI\admin.py:35
+msgid "ebitDa"
+msgstr ""
+
+#: .\KPI\admin.py:36
+msgid "mesi"
+msgstr ""
+
+#: .\KPI\admin.py:37
+msgid "tempo_medio_chiusura_contenzioso"
+msgstr ""
 
 #: .\KPI\apps.py:8
 msgid "Kpi"

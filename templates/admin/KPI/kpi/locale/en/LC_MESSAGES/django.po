@@ -1,0 +1,26 @@
+#: .\templates\admin\KPI\kpi\change_list.html:8
+msgid "Kpis --test"
+msgstr ""
+
+#: .\templates\admin\KPI\kpi\change_list.html:35
+msgid "Home"
+msgstr ""
+
+#: .\templates\admin\KPI\kpi\change_list.html:124
+msgid "Please correct the error below."
+msgstr ""
+
+#: .\templates\admin\KPI\kpi\change_list.html:124
+msgid "Please correct the errors below."
+msgstr ""
+
+#: .\templates\admin\KPI\kpi\change_list.html:149
+msgid "Filter"
+msgstr ""
+
+#: .\templates\admin\KPI\kpi\change_list.html:151
+msgid "Clear all filters"
+msgstr ""
+
+#~ msgid " Valore iniziale totale "
+#~ msgstr "Total Initial Value"
