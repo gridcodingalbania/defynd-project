@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import KPI
 from statistics_page.models import Statistics
+from django.utils.translation import ugettext_lazy as _
 
 # Register your models here.
 class KPIAdmin(admin.ModelAdmin):
@@ -17,6 +18,8 @@ class KPIAdmin(admin.ModelAdmin):
     def changelist_view(self, request, extra_context=None):
         response = Statistics.objects.all()
         extra_context = extra_context or {"statistics": response}
+        extra_context["initial_total_value"] = _("initial_total_value")
+        # extra_context["initial_total_value"] = _("initial_total_value")
         return super(KPIAdmin, self).changelist_view(
             request, extra_context=extra_context,
         )
@@ -33,6 +36,6 @@ admin.site.register(KPI, KPIAdmin)
 
 
 admin.site.site_header = "Kpi"
-# admin.site.index_title = "Litigation Management System"
-# admin.site.site_title = "DEFYND"
-# admin.site.header = "DEFYND"
+# admin.site.index_title = " "
+# admin.site.site_title = " "
+# admin.site.header = " "
