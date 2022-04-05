@@ -18,8 +18,23 @@ class KPIAdmin(admin.ModelAdmin):
     def changelist_view(self, request, extra_context=None):
         response = Statistics.objects.all()
         extra_context = extra_context or {"statistics": response}
+        extra_context["contenziosi_in_gestione"] = _("contenziosi_in_gestione")
+        extra_context["contenziosi_definiti"] = _("contenziosi_definiti")
+        extra_context["contenziosi_definiti"] = _("contenziosi_definiti")
+        extra_context["contenziosi_aperti"] = _("contenziosi_aperti")
+        extra_context["contenziosi_in_trattativa"] = _("contenziosi_in_trattativa")
+
         extra_context["initial_total_value"] = _("initial_total_value")
-        # extra_context["initial_total_value"] = _("initial_total_value")
+        extra_context["espropri_in_gestione"] = _("espropri_in_gestione")
+        extra_context["valore_obiettivo_totale"] = _("valore_obiettivo_totale")
+        extra_context["espropri_in_gestione"] = _("espropri_in_gestione")
+        extra_context["valore_obiettivo"] = _("valore_obiettivo")
+        extra_context["espropri_in_tratattiva"] = _("espropri_in_tratattiva")
+        extra_context["percentuale_di"] = _("percentuale_di")
+        extra_context["inceremento_media"] = _("inceremento_media")
+        extra_context["ebitDa"] = _("ebitDa")
+        extra_context["mesi"] = _("mesi")
+        extra_context["tempo_medio_chiusura_contenzioso"] = _("tempo_medio_chiusura_contenzioso")
         return super(KPIAdmin, self).changelist_view(
             request, extra_context=extra_context,
         )

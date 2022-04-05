@@ -41,6 +41,8 @@
 
 {% block coltype %}flex{% endblock %}
 
+
+
 {% block content %}
   <div class="kpi-container">
     <div class="circle-container">
@@ -48,14 +50,13 @@
         <div class="data-container">
           <span class="circle-title">
             {% if statistic.id == 4 %}
-            {% blocktranslate %} Contenziosi in gestione {% endblocktranslate %}
-
+                {{contenziosi_in_gestione}}
             {% elif statistic.id == 3 %}
-             {% translate 'Contenziosi definiti' %}
+             {{ contenziosi_definiti }}
             {% elif statistic.id == 2 %}
-              Contenziosi aperti
+                {{contenziosi_aperti}}
             {% elif statistic.id == 1 %}
-              Contenziosi in trattativa
+                {{contenziosi_in_trattativa}}
             {% endif %}
 
           </span>
@@ -74,16 +75,16 @@
             {% if data.id == 4 %}
             <div class="table-row">
 
-              <span class="row-title">{{initial_total_value}}<br/>Espropri in gestione </span>
+              <span class="row-title">{{initial_total_value}}<br/>{{espropri_in_gestione}} </span>
               <span class="row-value"><span class="euro-sign"> € </span>{{ data.initial_value | comma_format}}</span>
             </div>
             <div class="table-row">
-              <span class="row-title">Valore Obiettivo totale<br/>Espropri in gestione</span>
+              <span class="row-title">{{valore_obiettivo_totale}}<br/>{{espropri_in_gestione}}</span>
               <span class="row-value"><span class="euro-sign"> € </span>{{ data.objective_value | comma_format}}</span>
             </div>
             {% elif data.id == 1 %}
             <div class="table-row">
-              <span class="row-title">Valore Obiettivo<br/>Espropri in tratattiva</span>
+              <span class="row-title">{{valore_obiettivo}}<br/>{{espropri_in_tratattiva}}</span>
               <span class="row-value"><span class="euro-sign"> € </span>{{ data.objective_value | comma_format}}</span>
             </div>
             {% endif %}
@@ -94,22 +95,21 @@
         <div class="table-row">
           {% for item in statistics %}
           {% if item.id == 3 %}
-          <span class="row-title">Percentuale Di <br/> Inceremento Media</span>
+          <span class="row-title">{{percentuale_di }}<br/>{{ inceremento_media}}</span>
           <span class="row-value"><span class="sign"> + </span>{{ item.total_value }}  <span class="sign"> % </span></span>
           {% endif %}
         {% endfor %}
         </div>
         <div class="table-row">
-          <span class="row-title">EbitDa</span>
+          <span class="row-title">{{ebitDa}}</span>
           <span class="row-value"><span class="sign"> + </span>35.5% <span class="sign"> %* </span></span>
         </div>
       </div>
     </div>
    <div class="bottom-title">
-     <span class="month-title"> <span class="month-value">15 mesi</span> tempo medio chiusura contenzioso</span>
+     <span class="month-title"> <span class="month-value">{{mesi}}</span>{{ tempo_medio_chiusura_contenzioso}}</span>
    </div>
   </div>
-
 
   <div id="content-main" style="display: none">
     {% block object-tools %}
